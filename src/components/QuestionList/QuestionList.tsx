@@ -12,12 +12,43 @@ interface QuestionListProps {
 
 const QuestionList = ({ questions }: QuestionListProps) => {
   const [revealedAnswers, setRevealedAnswers] = useState<Record<number, boolean>>({});
+  const [selectedAnswers, setSelectedAnswers] = useState<Record<number, number>>({});
 
   const toggleReveal = (questionId: number) => {
     setRevealedAnswers((prev) => ({
       ...prev,
       [questionId]: !prev[questionId],
     }));
+  };
+
+  const handleOptionSelect = (questionId: number, optionIndex: number) => {
+    if (!revealedAnswers[questionId]) {
+      setSelectedAnswers((prev) => ({
+        ...prev,
+        [questionId]: optionIndex,
+      }));
+    }
+  };
+
+  const getOptionClassName = (questionId: number, optionIndex: number, isCorrect: boolean) => {
+    const baseClass = styles.optionItem;
+    const isSelected = selectedAnswers[questionId] === optionIndex;
+    const isRevealed = revealedAnswers[questionId];
+
+    if (!isRevealed && isSelected) {
+      return `${baseClass} ${styles.selected}`;
+    }
+
+    if (isRevealed) {
+      if (isCorrect) {
+        return `${baseClass} ${styles.correct}`;
+      }
+      if (isSelected && !isCorrect) {
+        return `${baseClass} ${styles.incorrect}`;
+      }
+    }
+
+    return baseClass;
   };
 
   return (
@@ -52,11 +83,8 @@ const QuestionList = ({ questions }: QuestionListProps) => {
             {question.options.map((option, index) => (
               <div
                 key={index}
-                className={`${styles.optionItem} ${
-                  revealedAnswers[question.id] && question.correctAnswer === index
-                    ? styles.correct
-                    : ''
-                }`}
+                className={getOptionClassName(question.id, index, question.correctAnswer === index)}
+                onClick={() => handleOptionSelect(question.id, index)}
               >
                 <span className={styles.optionLetter}>
                   {String.fromCharCode(1488 + index)}.
