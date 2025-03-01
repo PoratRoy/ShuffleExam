@@ -1,7 +1,7 @@
 'use client';
 
 import type React from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Upload, FileText, ChevronDown } from 'lucide-react';
 import { Question } from '@/models/types/exam';
 import { sampleQuestions } from '@/models/resources/simpleQestions';
@@ -11,51 +11,83 @@ import styles from "./ExamViewer.module.css";
 
 const ExamViewer = () => {
   const [file, setFile] = useState<File | null>(null);
-  const [questions, setQuestions] = useState<Question[]>(sampleQuestions);
+  const [questions, setQuestions] = useState<Question[]>([]);
   const [isUploading, setIsUploading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
+    setError(null);
+
     if (selectedFile && selectedFile.type === 'application/pdf') {
       setFile(selectedFile);
-      // In a real app, we would parse the PDF here
-      // For now, we'll just use the sample questions
       setIsUploading(true);
-      setTimeout(() => {
+
+      try {
+        const formData = new FormData();
+        formData.append('file', selectedFile);
+
+        const response = await fetch('/api/convertPdf', {
+          method: 'POST',
+          body: formData
+        });
+        console.log('ROY response: ', response)
+        if (!response.ok) {
+          throw new Error('Failed to process PDF');
+        }
+
+        const data = await response.json();
+        console.log("data: ", data)
+        // setQuestions(data.questions);
+      } catch (err) {
+        setError('Error processing PDF. Please try again.');
+        console.error('Error:', err);
+      } finally {
         setIsUploading(false);
-      }, 1500);
+      }
     }
+  };
+
+  const handleButtonClick = () => {
+    fileInputRef.current?.click();
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.uploadSection}>
-        <label className={styles.fileInput}>
-          <input
-            type="file"
-            accept=".pdf"
-            onChange={handleFileChange}
-            className={styles.hiddenInput}
-          />
-          <Button
-            variant="outline"
-            className={styles.uploadButton}
-            disabled={isUploading}
-          >
-            {isUploading ? (
-              <>
-                <ChevronDown className={`${styles.icon} ${styles.bounce}`} />
-                <span>Uploading...</span>
-              </>
-            ) : (
-              <>
-                <Upload className={styles.icon} />
-                <span>Upload PDF File</span>
-              </>
-            )}
-          </Button>
-        </label>
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept=".pdf"
+          onChange={handleFileChange}
+          className={styles.hiddenInput}
+        />
+        <Button
+          variant="outline"
+          className={styles.uploadButton}
+          disabled={isUploading}
+          onClick={handleButtonClick}
+        >
+          {isUploading ? (
+            <>
+              <ChevronDown className={`${styles.icon} ${styles.bounce}`} />
+              <span>Uploading...</span>
+            </>
+          ) : (
+            <>
+              <Upload className={styles.icon} />
+              <span>Upload PDF File</span>
+            </>
+          )}
+        </Button>
       </div>
+
+      {error && (
+        <div className={styles.error}>
+          {error}
+        </div>
+      )}
 
       {file && !isUploading && (
         <div className={styles.fileInfo}>
@@ -64,12 +96,14 @@ const ExamViewer = () => {
         </div>
       )}
 
-      <div className={styles.examContainer}>
-        <div className={styles.examHeader}>
-          <h2 className={styles.examTitle}>Main Test Title</h2>
+      {questions.length > 0 && (
+        <div className={styles.examContainer}>
+          <div className={styles.examHeader}>
+            <h2 className={styles.examTitle}>Main Test Title</h2>
+          </div>
+          <QuestionList questions={questions} />
         </div>
-        <QuestionList questions={questions} />
-      </div>
+      )}
     </div>
   );
 };
