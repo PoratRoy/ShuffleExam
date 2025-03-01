@@ -37,12 +37,12 @@ const QuestionList = ({ questions }: QuestionListProps) => {
                 {revealedAnswers[question.id] ? (
                   <>
                     <EyeOff className={styles.buttonIcon} />
-                    <span>Hide result</span>
+                    <span>הסתרת תשובה</span>
                   </>
                 ) : (
                   <>
                     <Eye className={styles.buttonIcon} />
-                    <span>Reveal result</span>
+                    <span>הצגת תשובה</span>
                   </>
                 )}
               </div>
