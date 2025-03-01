@@ -16,6 +16,8 @@ export async function POST(req: NextRequest) {
     const env = process.env.GEMINI_API_KEY;
     if(env){
         console.log("Using env key")
+    }else{
+        console.log("Using default key")
     }
 
     const genAI = new GoogleGenerativeAI(env || '');
