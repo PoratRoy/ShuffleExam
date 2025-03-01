@@ -58,7 +58,9 @@ const QuestionList = ({ questions }: QuestionListProps) => {
                     : ''
                 }`}
               >
-                <span className={styles.optionLetter}>a.</span>
+                <span className={styles.optionLetter}>
+                  {String.fromCharCode(1488 + index)}.
+                </span>
                 <span className={styles.optionText}>{option}</span>
                 {revealedAnswers[question.id] && question.correctAnswer === index && (
                   <Check className={styles.correctIcon} />

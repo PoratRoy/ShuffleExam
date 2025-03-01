@@ -1,13 +1,13 @@
 'use client';
 
-import type React from 'react';
+import React, { useEffect } from 'react';
 import { useState, useRef } from 'react';
 import { Upload, FileText, ChevronDown } from 'lucide-react';
 import { Question } from '@/models/types/exam';
-import { sampleQuestions } from '@/models/resources/simpleQestions';
 import QuestionList from '../QuestionList/QuestionList';
 import { Button } from '../UI/Button/Button';
-import styles from "./ExamViewer.module.css";
+import styles from './ExamViewer.module.css';
+import { sampleQuestions, shuffleQuestionOptions } from '@/utils/questions';
 
 const ExamViewer = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -15,6 +15,11 @@ const ExamViewer = () => {
   const [isUploading, setIsUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const shuffledQuestions = sampleQuestions.map((q) => shuffleQuestionOptions(q));
+    setQuestions(shuffledQuestions);
+  }, []);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
@@ -30,15 +35,15 @@ const ExamViewer = () => {
 
         const response = await fetch('/api/convertPdf', {
           method: 'POST',
-          body: formData
+          body: formData,
         });
-        console.log('ROY response: ', response)
+        console.log('ROY response: ', response);
         if (!response.ok) {
           throw new Error('Failed to process PDF');
         }
 
         const data = await response.json();
-        console.log("data: ", data)
+        console.log('data: ', data);
         // setQuestions(data.questions);
       } catch (err) {
         setError('Error processing PDF. Please try again.');
@@ -83,11 +88,7 @@ const ExamViewer = () => {
         </Button>
       </div>
 
-      {error && (
-        <div className={styles.error}>
-          {error}
-        </div>
-      )}
+      {error && <div className={styles.error}>{error}</div>}
 
       {file && !isUploading && (
         <div className={styles.fileInfo}>
@@ -99,7 +100,7 @@ const ExamViewer = () => {
       {questions.length > 0 && (
         <div className={styles.examContainer}>
           <div className={styles.examHeader}>
-            <h2 className={styles.examTitle}>Main Test Title</h2>
+            <h2 className={styles.examTitle}>מבחן</h2>
           </div>
           <QuestionList questions={questions} />
         </div>
