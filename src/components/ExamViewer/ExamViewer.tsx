@@ -1,13 +1,14 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useState, useRef } from 'react';
-import { Upload, FileText, ChevronDown } from 'lucide-react';
-import { Question } from '@/models/types/exam';
+import { Upload, FileText } from 'lucide-react';
+import { Question, RawExam } from '@/models/types/exam';
+import { rawQestionsToQuestions, shuffleQuestionOptions } from '@/utils/questions';
 import QuestionList from '../QuestionList/QuestionList';
 import { Button } from '../UI/Button/Button';
 import styles from './ExamViewer.module.css';
-import { sampleQuestions, shuffleQuestionOptions } from '@/utils/questions';
+import { PROMPT } from '@/models/resources/prompt';
 
 const ExamViewer = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -15,11 +16,6 @@ const ExamViewer = () => {
   const [isUploading, setIsUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    const shuffledQuestions = sampleQuestions.map((q) => shuffleQuestionOptions(q));
-    setQuestions(shuffledQuestions);
-  }, []);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
@@ -31,60 +27,75 @@ const ExamViewer = () => {
 
       try {
         const formData = new FormData();
-        formData.append('file', selectedFile);
+        formData.append('pdf', selectedFile);
+        formData.append('prompt', PROMPT);
 
-        const response = await fetch('/api/convertPdf', {
+        const response = await fetch('/api/geminiAPI', {
           method: 'POST',
           body: formData,
         });
-        console.log('ROY response: ', response);
+
         if (!response.ok) {
           throw new Error('Failed to process PDF');
         }
 
         const data = await response.json();
-        console.log('data: ', data);
-        // setQuestions(data.questions);
+        
+        if (data.result) {
+          try {
+            // Remove markdown formatting if present
+            const cleanJson = data.result.replace(/```json\n|\n```/g, '').trim();
+            const jsonContent = JSON.parse(cleanJson) as RawExam[];
+            
+            if (Array.isArray(jsonContent)) {
+              const questions = rawQestionsToQuestions(jsonContent)
+              const shuffledQuestions = questions.map((q) => shuffleQuestionOptions(q));
+              setQuestions(shuffledQuestions);
+            } else {
+              setError('Invalid response format from API');
+            }
+          } catch (err) {
+            console.error('Parse error:', err);
+            setError('Failed to parse the exam questions. Please try again.');
+          }
+        } else {
+          throw new Error('Invalid response format');
+        }
       } catch (err) {
         setError('Error processing PDF. Please try again.');
         console.error('Error:', err);
       } finally {
         setIsUploading(false);
       }
+    } else if (selectedFile) {
+      setError('Please upload a PDF file');
     }
   };
 
-  const handleButtonClick = () => {
+  const handleUploadClick = () => {
     fileInputRef.current?.click();
   };
 
   return (
     <div className={styles.container}>
+      <input
+        type="file"
+        accept=".pdf"
+        onChange={handleFileChange}
+        className={styles.hiddenInput}
+        ref={fileInputRef}
+      />
+
       <div className={styles.uploadSection}>
-        <input
-          ref={fileInputRef}
-          type="file"
-          accept=".pdf"
-          onChange={handleFileChange}
-          className={styles.hiddenInput}
-        />
         <Button
-          variant="outline"
-          className={styles.uploadButton}
+          onClick={handleUploadClick}
           disabled={isUploading}
-          onClick={handleButtonClick}
+          className={styles.uploadButton}
         >
-          {isUploading ? (
-            <>
-              <ChevronDown className={`${styles.icon} ${styles.bounce}`} />
-              <span>Uploading...</span>
-            </>
-          ) : (
-            <>
-              <Upload className={styles.icon} />
-              <span>Upload PDF File</span>
-            </>
-          )}
+          <div className={styles.buttonContent}>
+            <Upload className={styles.buttonIcon} />
+            <span>{isUploading ? 'מעבד...' : 'העלאת מבחן'}</span>
+          </div>
         </Button>
       </div>
 
@@ -92,8 +103,8 @@ const ExamViewer = () => {
 
       {file && !isUploading && (
         <div className={styles.fileInfo}>
-          <FileText className={styles.icon} />
-          <span>{file.name}</span>
+          <FileText className={styles.fileIcon} />
+          <span className={styles.fileName}>{file.name}</span>
         </div>
       )}
 

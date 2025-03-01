@@ -9,3 +9,9 @@ export interface Exam {
   title: string;
   questions: Question[];
 }
+
+export type RawExam = {
+  question: string;
+  correctRes: string;
+  results: string[];
+}

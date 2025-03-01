@@ -1,5 +1,4 @@
-import { rawQuestions } from '@/models/resources/simpleQestions';
-import { Question } from '@/models/types/exam';
+import { Question, RawExam } from '@/models/types/exam';
 
 const shuffleArray = <T>(array: T[]): T[] => {
   const shuffled = [...array];
@@ -20,13 +19,11 @@ export const shuffleQuestionOptions = (question: Question): Question => {
   };
 };
 
-// Convert raw questions to Question interface format without shuffling
-export const sampleQuestions: Question[] = rawQuestions.map((q, index) => {
-  const allOptions = [q.correctRes, ...q.results];
-  return {
-    id: index + 1,
+export const rawQestionsToQuestions = (question: RawExam[]): Question[] => {
+  return question.map((q, i) => ({
+    id: i + 1,
     text: q.question,
-    options: allOptions,
+    options: [q.correctRes, ...q.results],
     correctAnswer: 0, // correct answer is always the first option
-  };
-});
+  }));
+};
