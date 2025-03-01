@@ -27,14 +27,20 @@
   align-items: flex-start;
   gap: 1rem;
   margin-bottom: 1rem;
+  width: 100%;
+}
+
+.questionInfo{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
 }
 
 .questionTitle {
   font-size: 1rem;
-  font-weight: 500;
   color: #1f2937;
   flex: 1;
-  width: 75%;
+  width: 100%;
   min-width: 300px;
 }
 

@@ -43,7 +43,6 @@ const ExamViewer = () => {
         
         if (data.result) {
           try {
-            // Remove markdown formatting if present
             const cleanJson = data.result.replace(/```json\n|\n```/g, '').trim();
             const jsonContent = JSON.parse(cleanJson) as RawExam[];
             

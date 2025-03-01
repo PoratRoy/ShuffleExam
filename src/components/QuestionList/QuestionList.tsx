@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { Check, Eye, EyeOff } from 'lucide-react';
 import { Question } from '@/models/types/exam';
 import { Button } from '../UI/Button/Button';
-import styles from "./QuestionList.module.css";
+import styles from './QuestionList.module.css';
+import { formatOptionText } from '@/utils/format';
 
 interface QuestionListProps {
   questions: Question[];
@@ -56,14 +57,14 @@ const QuestionList = ({ questions }: QuestionListProps) => {
       {questions.map((question) => (
         <div key={question.id} className={styles.questionItem}>
           <div className={styles.questionHeader}>
-            <h3 className={styles.questionTitle}>
-              {question.id}. {question.text}
-            </h3>
-            <Button
-              variant="secondary"
-              size="sm"
-              onClick={() => toggleReveal(question.id)}
-            >
+            <section className={styles.questionInfo}>
+              {question.text.split('\n').map((part, index) => (
+                <div key={index} className={styles.questionTitle}>
+                  {part}
+                </div>
+              ))}
+            </section>
+            <Button variant="secondary" size="sm" onClick={() => toggleReveal(question.id)}>
               <div className={styles.buttonContent}>
                 {revealedAnswers[question.id] ? (
                   <>
@@ -86,10 +87,8 @@ const QuestionList = ({ questions }: QuestionListProps) => {
                 className={getOptionClassName(question.id, index, question.correctAnswer === index)}
                 onClick={() => handleOptionSelect(question.id, index)}
               >
-                <span className={styles.optionLetter}>
-                  {String.fromCharCode(1488 + index)}.
-                </span>
-                <span className={styles.optionText}>{option}</span>
+                <span className={styles.optionLetter}>{String.fromCharCode(1488 + index)}.</span>
+                <span className={styles.optionText}>{formatOptionText(option)}</span>
                 {revealedAnswers[question.id] && question.correctAnswer === index && (
                   <Check className={styles.correctIcon} />
                 )}
