@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
 
     const genAI = new GoogleGenerativeAI(env || '');
     const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
-
+    console.log("roy")
     const result = await model.generateContent([
       {
         text: prompt
@@ -34,9 +34,8 @@ export async function POST(req: NextRequest) {
         },
       },
     ]);
-
-    const response = await result.response;
-    const text = response.text();
+    console.log("result", result)
+    const text = result.response.text();
 
     return NextResponse.json({ result: text }, { status: 200 });
   } catch (error: any) {
