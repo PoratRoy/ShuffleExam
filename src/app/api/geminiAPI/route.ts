@@ -13,8 +13,12 @@ export async function POST(req: NextRequest) {
 
     const arrayBuffer = await pdfFile.arrayBuffer();
     const base64Pdf = Buffer.from(arrayBuffer).toString('base64');
+    const env = process.env.GEMINI_API_KEY;
+    if(env){
+        console.log("Using env key")
+    }
 
-    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
+    const genAI = new GoogleGenerativeAI(env || '');
     const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
 
     const result = await model.generateContent([

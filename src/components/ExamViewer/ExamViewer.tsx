@@ -40,7 +40,7 @@ const ExamViewer = () => {
         }
 
         const data = await response.json();
-        
+        console.log("data", data)
         if (data.result) {
           try {
             const cleanJson = data.result.replace(/```json\n|\n```/g, '').trim();
