@@ -64,7 +64,7 @@ const QuestionList = ({ questions }: QuestionListProps) => {
                 </div>
               ))}
             </section>
-            <Button variant="secondary" size="sm" onClick={() => toggleReveal(question.id)}>
+            <Button variant="secondary" onClick={() => toggleReveal(question.id)}>
               <div className={styles.buttonContent}>
                 {revealedAnswers[question.id] ? (
                   <>
