@@ -1,46 +1,36 @@
 'use client';
 
-import { useState } from 'react';
-import { Check, Eye, EyeOff } from 'lucide-react';
-import { Question } from '@/models/types/exam';
-import { Button } from '../UI/Button/Button';
+import { Check, X } from 'lucide-react';
+import { useExam } from '@/context/ExamContext';
+import CodeBlock from '../CodeBlock/CodeBlock';
 import styles from './QuestionList.module.css';
 import { formatOptionText } from '@/utils/format';
+import { parseQuestionContent } from '@/utils/parseQuestionContent';
 
-interface QuestionListProps {
-  questions: Question[];
-}
-
-const QuestionList = ({ questions }: QuestionListProps) => {
-  const [revealedAnswers, setRevealedAnswers] = useState<Record<number, boolean>>({});
-  const [selectedAnswers, setSelectedAnswers] = useState<Record<number, number>>({});
-
-  const toggleReveal = (questionId: number) => {
-    setRevealedAnswers((prev) => ({
-      ...prev,
-      [questionId]: !prev[questionId],
-    }));
-  };
+const QuestionList = () => {
+  const { examState, selectAnswer } = useExam();
+  const { questions, selectedAnswers, examResults, isExamFinished } = examState;
 
   const handleOptionSelect = (questionId: number, optionIndex: number) => {
-    if (!revealedAnswers[questionId]) {
-      setSelectedAnswers((prev) => ({
-        ...prev,
-        [questionId]: optionIndex,
-      }));
+    if (!isExamFinished) {
+      selectAnswer(questionId, optionIndex);
     }
+  };
+
+  const getQuestionResult = (questionId: number) => {
+    return examResults?.find((result) => result.questionId === questionId);
   };
 
   const getOptionClassName = (questionId: number, optionIndex: number, isCorrect: boolean) => {
     const baseClass = styles.optionItem;
     const isSelected = selectedAnswers[questionId] === optionIndex;
-    const isRevealed = revealedAnswers[questionId];
+    const questionResult = getQuestionResult(questionId);
 
-    if (!isRevealed && isSelected) {
+    if (!isExamFinished && isSelected) {
       return `${baseClass} ${styles.selected}`;
     }
 
-    if (isRevealed) {
+    if (isExamFinished && questionResult) {
       if (isCorrect) {
         return `${baseClass} ${styles.correct}`;
       }
@@ -54,34 +44,47 @@ const QuestionList = ({ questions }: QuestionListProps) => {
 
   return (
     <div className={styles.container}>
-      {questions.map((question) => (
+      {questions.map((question, questionIndex) => (
         <div key={question.id} className={styles.questionItem}>
+          <div className={styles.questionNumber}>
+            שאלה {questionIndex + 1}
+          </div>
           <div className={styles.questionHeader}>
             <section className={styles.questionInfo}>
-              {question.text.split('\n').map((part, index) => (
-                <div key={index} className={styles.questionTitle}>
-                  {part}
+              {parseQuestionContent(question.question).map((part, index) => (
+                <div key={index} className={styles.question}>
+                  {part.type === 'text' ? (
+                    part.content.split('\n').map((line, lineIndex) => (
+                      <div className={styles.questionText} key={lineIndex}>
+                        {line}
+                      </div>
+                    ))
+                  ) : (
+                    <div className={styles.questionCode}>
+                      <CodeBlock code={part.content} language={part.language} />
+                    </div>
+                  )}
                 </div>
               ))}
             </section>
-            <Button variant="secondary" size="sm" onClick={() => toggleReveal(question.id)}>
-              <div className={styles.buttonContent}>
-                {revealedAnswers[question.id] ? (
-                  <>
-                    <EyeOff className={styles.buttonIcon} />
-                    <span>הסתרת תשובה</span>
-                  </>
+            {isExamFinished && (
+              <div className={styles.resultIndicator}>
+                {getQuestionResult(question.id)?.isCorrect ? (
+                  <div className={styles.correctResult}>
+                    <Check className={styles.resultIcon} />
+                    <span>נכון</span>
+                  </div>
                 ) : (
-                  <>
-                    <Eye className={styles.buttonIcon} />
-                    <span>הצגת תשובה</span>
-                  </>
+                  <div className={styles.incorrectResult}>
+                    <X className={styles.resultIcon} />
+                    <span>שגוי</span>
+                  </div>
                 )}
               </div>
-            </Button>
+            )}
           </div>
           <div className={styles.optionsContainer}>
-            {question.options.map((option, index) => (
+            {question.answers.map((option, index) => (
               <div
                 key={index}
                 className={getOptionClassName(question.id, index, question.correctAnswer === index)}
@@ -89,7 +92,7 @@ const QuestionList = ({ questions }: QuestionListProps) => {
               >
                 <span className={styles.optionLetter}>{String.fromCharCode(1488 + index)}.</span>
                 <span className={styles.optionText}>{formatOptionText(option)}</span>
-                {revealedAnswers[question.id] && question.correctAnswer === index && (
+                {isExamFinished && question.correctAnswer === index && (
                   <Check className={styles.correctIcon} />
                 )}
               </div>

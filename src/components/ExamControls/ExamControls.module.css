@@ -1,0 +1,57 @@
+.controlsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+}
+
+.scoreSection {
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  border: 2px solid #10b981;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scoreText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #059669;
+}
+
+.percentageText {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .buttonsContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .buttonsContainer button {
+    width: 100%;
+  }
+}
