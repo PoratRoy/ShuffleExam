@@ -1,10 +1,11 @@
 export interface QuestionPart {
-  type: 'text' | 'code';
+  type: 'text' | 'code' | 'image';
   content: string;
   language?: string;
+  imagePath?: string;
 }
 
-export function parseQuestionContent(questionText: string): QuestionPart[] {
+export function parseQuestionContent(questionText: string, hasImage?: string): QuestionPart[] {
   const parts: QuestionPart[] = [];
   const codeBlockRegex = /```(\w+)?\n?([\s\S]*?)```/g;
   let lastIndex = 0;
@@ -54,6 +55,22 @@ export function parseQuestionContent(questionText: string): QuestionPart[] {
       type: 'text',
       content: questionText
     });
+  }
+
+  // Add image if hasImage is provided
+  if (hasImage) {
+    // Extract the image name from the hasImage string (e.g., "{IMG-12}" -> "IMG-12")
+    const imageName = hasImage.replace(/[{}]/g, '');
+    const imagePath = `/src/assets/${imageName}.png`;
+    
+    // Only add image part if imageName is valid
+    if (imageName.trim()) {
+      parts.push({
+        type: 'image',
+        content: imageName,
+        imagePath: imagePath
+      });
+    }
   }
 
   return parts;

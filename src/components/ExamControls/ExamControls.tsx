@@ -3,7 +3,7 @@
 import React from 'react';
 import { useExam } from '@/context/ExamContext';
 import { Button } from '../UI/Button/Button';
-import { Questions } from '@/models/resources/questions';
+import { MapExams } from '@/models/resources/exams';
 import styles from './ExamControls.module.css';
 
 const ExamControls: React.FC = () => {
@@ -18,7 +18,8 @@ const ExamControls: React.FC = () => {
   };
 
   const handleShuffleExam = () => {
-    shuffleExam(Questions);
+    const currentExamQuestions = MapExams[examState.currentExamType].questions;
+    shuffleExam(currentExamQuestions);
   };
 
   return (

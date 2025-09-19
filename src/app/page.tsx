@@ -1,19 +1,35 @@
 'use client';
 
+import { Suspense } from 'react';
 import styles from './page.module.css';
 import QuestionList from '@/components/QuestionList/QuestionList';
 import ExamControls from '@/components/ExamControls/ExamControls';
+import Navbar from '@/components/Navbar/Navbar';
 import { ExamProvider } from '@/context/ExamContext';
-import { Questions } from '@/models/resources/questions';
+import { useExamTypeQuery } from '@/hooks/useExamTypeQuery';
 
-export default function Home() {
+function HomeContent() {
+  const { examType, setExamType, isReady } = useExamTypeQuery('java');
+
+  if (!isReady) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <ExamProvider initialQuestions={Questions}>
+    <ExamProvider initialExamType={examType} onExamTypeChange={setExamType}>
+      <Navbar />
       <main className={styles.main}>
-        <h1 className={styles.title}>Shuffle Exam</h1>
         <ExamControls />
         <QuestionList />
       </main>
     </ExamProvider>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HomeContent />
+    </Suspense>
   );
 }

@@ -1,0 +1,81 @@
+.navbar {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: ltr; /* Keep navbar LTR for better layout */
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.examOptions {
+  display: flex;
+  gap: 1rem;
+}
+
+.examButton {
+  background-color: transparent;
+  border: 2px solid #34495e;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.examButton:hover {
+  background-color: #34495e;
+  border-color: #3498db;
+}
+
+.examButton.active {
+  background-color: #3498db;
+  border-color: #3498db;
+  color: white;
+}
+
+.examButton.active:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.examButton:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .examOptions {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .examButton {
+    flex: 1;
+    text-align: center;
+  }
+}

@@ -1,7 +1,9 @@
 'use client';
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { Question } from '@/models/types/exam';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { Question, ExamType } from '@/models/types/exam';
+import { MapExams } from '@/models/resources/exams';
+import { shuffleQuestions, selectFirstQuestions } from '@/utils/shuffleQuestions';
 
 export interface ExamResult {
   questionId: number;
@@ -10,6 +12,7 @@ export interface ExamResult {
 }
 
 export interface ExamState {
+  currentExamType: ExamType;
   questions: Question[];
   selectedAnswers: Record<number, number>;
   examResults: ExamResult[] | null;
@@ -23,6 +26,7 @@ interface ExamContextType {
   finishExam: () => void;
   clearResults: () => void;
   shuffleExam: (allQuestions: Question[]) => void;
+  switchExamType: (examType: ExamType) => void;
 }
 
 const ExamContext = createContext<ExamContextType | undefined>(undefined);
@@ -37,20 +41,40 @@ export const useExam = () => {
 
 interface ExamProviderProps {
   children: ReactNode;
-  initialQuestions: Question[];
+  initialExamType?: ExamType;
+  onExamTypeChange?: (examType: ExamType) => void;
 }
 
 export const ExamProvider: React.FC<ExamProviderProps> = ({ 
   children, 
-  initialQuestions 
+  initialExamType = 'java',
+  onExamTypeChange
 }) => {
-  const [examState, setExamState] = useState<ExamState>({
-    questions: initialQuestions.slice(0, 20), // Start with first 20 questions
+  const [examState, setExamState] = useState<ExamState>(() => ({
+    currentExamType: initialExamType,
+    questions: selectFirstQuestions(MapExams[initialExamType].questions, 20), // Start with first 20 questions, handling linked questions
     selectedAnswers: {},
     examResults: null,
     score: 0,
     isExamFinished: false,
-  });
+  }));
+
+  // Update exam state when initialExamType changes (from URL parsing)
+  useEffect(() => {
+    if (examState.currentExamType !== initialExamType) {
+      const examQuestions = MapExams[initialExamType].questions;
+      const selectedQuestions = selectFirstQuestions(examQuestions, 20);
+
+      setExamState({
+        currentExamType: initialExamType,
+        questions: selectedQuestions,
+        selectedAnswers: {},
+        examResults: null,
+        score: 0,
+        isExamFinished: false,
+      });
+    }
+  }, [initialExamType, examState.currentExamType]);
 
   const selectAnswer = (questionId: number, answerIndex: number) => {
     if (examState.isExamFinished) return;
@@ -97,17 +121,36 @@ export const ExamProvider: React.FC<ExamProviderProps> = ({
   };
 
   const shuffleExam = (allQuestions: Question[]) => {
-    // Shuffle all questions and take first 20
-    const shuffled = [...allQuestions].sort(() => Math.random() - 0.5);
-    const selectedQuestions = shuffled.slice(0, 20);
+    // Use utility function to shuffle questions and handle linked questions
+    const selectedQuestions = shuffleQuestions(allQuestions, 20);
+
+    setExamState(prev => ({
+      ...prev,
+      questions: selectedQuestions,
+      selectedAnswers: {},
+      examResults: null,
+      score: 0,
+      isExamFinished: false,
+    }));
+  };
+
+  const switchExamType = (examType: ExamType) => {
+    const examQuestions = MapExams[examType].questions;
+    const selectedQuestions = selectFirstQuestions(examQuestions, 20);
 
     setExamState({
+      currentExamType: examType,
       questions: selectedQuestions,
       selectedAnswers: {},
       examResults: null,
       score: 0,
       isExamFinished: false,
     });
+
+    // Notify parent component about exam type change (for URL updates)
+    if (onExamTypeChange) {
+      onExamTypeChange(examType);
+    }
   };
 
   return (
@@ -117,6 +160,7 @@ export const ExamProvider: React.FC<ExamProviderProps> = ({
       finishExam,
       clearResults,
       shuffleExam,
+      switchExamType,
     }}>
       {children}
     </ExamContext.Provider>

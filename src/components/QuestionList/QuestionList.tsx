@@ -3,6 +3,7 @@
 import { Check, X } from 'lucide-react';
 import { useExam } from '@/context/ExamContext';
 import CodeBlock from '../CodeBlock/CodeBlock';
+import QuestionImage from '../QuestionImage/QuestionImage';
 import styles from './QuestionList.module.css';
 import { formatOptionText } from '@/utils/format';
 import { parseQuestionContent } from '@/utils/parseQuestionContent';
@@ -51,7 +52,7 @@ const QuestionList = () => {
           </div>
           <div className={styles.questionHeader}>
             <section className={styles.questionInfo}>
-              {parseQuestionContent(question.question).map((part, index) => (
+              {parseQuestionContent(question.question, question.hasImage).map((part, index) => (
                 <div key={index} className={styles.question}>
                   {part.type === 'text' ? (
                     part.content.split('\n').map((line, lineIndex) => (
@@ -59,11 +60,15 @@ const QuestionList = () => {
                         {line}
                       </div>
                     ))
-                  ) : (
+                  ) : part.type === 'code' ? (
                     <div className={styles.questionCode}>
                       <CodeBlock code={part.content} language={part.language} />
                     </div>
-                  )}
+                  ) : part.type === 'image' && part.imagePath ? (
+                    <div className={styles.questionImage}>
+                      <QuestionImage imageName={part.content} imagePath={part.imagePath} />
+                    </div>
+                  ) : null}
                 </div>
               ))}
             </section>

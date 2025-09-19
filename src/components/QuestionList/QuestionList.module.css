@@ -66,6 +66,13 @@
   right: 45vw;
 }
 
+.questionImage {
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .resultIndicator {
   display: flex;
   align-items: center;

@@ -1,0 +1,36 @@
+.imageContainer {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.questionImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .imageContainer {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+  }
+  
+  .questionImage {
+    max-width: 100%;
+  }
+}
+
+/* RTL support */
+[dir="rtl"] .imageContainer {
+  direction: ltr; /* Keep images in LTR for proper display */
+}
