@@ -11,11 +11,13 @@ public class Base {
     System.out.print("1");
   }
 }
+
 public class Derived extends Base {
   public Derived() {
     System.out.print("2");
   }
 }
+
 public class Program {
   public static void main(String[] args) {
     Derived obj = new Derived();
@@ -24,9 +26,9 @@ public class Program {
 }
 \`\`\``,
     answers: [
-      'יודפס 12 Super Class.',
+      'יודפס Super Class 12.',
       'התוכנית לא תרוץ מכיוון שקיימת שגיאת קומפילציה.',
-      'יודפס 21 Super Class.',
+      'יודפס Super Class 21.',
       'יודפס Super Class 2.',
     ],
     correctAnswer: 0,
@@ -55,12 +57,14 @@ class A {
     return num == ((A)obj).num;
   }
 }
+
 class B {
   private int num;
   B() {
     num = 7;
   }
 }
+
 public class Program {
   public static void main(String[] args) {
     A a = new A();
@@ -71,7 +75,7 @@ public class Program {
 \`\`\``,
     answers: [
       'הוספת קוד לפני שורה 7 if (obj instanceof A), ואחרת נחזיר false.',
-      'החלפת שורה 20 בקוד System.out.println(b.equals(a));',
+      'החלפת שורה 22 בקוד System.out.println(b.equals(a));',
       'החלפת שורה 6 בקוד public boolean equals(B b).',
       'החלפת שורה 6 בקוד public boolean equals(A a).',
     ],
@@ -90,11 +94,13 @@ public class A {
     return name.equals(((A)obj).name);
   }
 }
+
 public class B extends A {
   public B(String name) {
     super(name);
   }
 }
+
 public class Program {
   public static void main(String[] args) {
     String name1 = new String("Alice");
@@ -131,16 +137,19 @@ class Mammal {
     System.out.println("Mammal eats food");
   }
 }
+
 class Cattle extends Mammal {
   void eat(Cattle c) {
     System.out.println("Cattle eats hay");
   }
 }
+
 class Horse extends Cattle {
   void eat(Horse h) {
     System.out.println("Horse eats hay");
   }
 }
+
 public class Program {
   public static void main(String[] args) {
     Horse h = new Horse();
@@ -188,11 +197,13 @@ class Base {
     System.out.println("Base::show() called");
   }
 }
+
 class Derived extends Base {
   public void show() {
     System.out.println("Derived::show() called");
   }
 }
+
 public class Program {
   public static void main(String[] args) {
     Base b = new Derived();
@@ -235,6 +246,7 @@ class A {
     System.out.println("from class A");
   }
 }
+
 class B extends A {
   protected void someMeth() {
     System.out.println("from class B");
@@ -309,12 +321,14 @@ class Parent {
     return "from parent";
   }
 }
+
 class Child extends Parent {
   String name = "child";
   String message() {
     return "from child";
   }
 }
+
 public class Program {
   public static void main(String[] args) {
     Parent p = new Child();
@@ -335,6 +349,7 @@ class Parent {
     return "from " + name;
   }
 }
+
 class Child extends Parent {
   static String name = "child";
   String message() {
@@ -344,6 +359,7 @@ class Child extends Parent {
     return message() + m;
   }
 }
+
 public class Program {
   public static void main(String[] args) {
     Parent p = new Child();
@@ -366,7 +382,9 @@ public class Program {
 public class A {
   private int a;
 }
+
 import java.util.Arrays;
+
 public class B {
   static int n = 3;
   private A[] arr;
@@ -434,10 +452,12 @@ class A {
   public A() {}
   public String toString() { return str; }
 }
+
 class B extends A {
   B() {}
   B(String s) { super(s); }
 }
+
 public class Program {
   public static void main(String[] args) {
     System.out.print(new A());
@@ -458,9 +478,11 @@ public class A {
   public int func() { return num + 2; }
   public String toString() { return func(); }
 }
+
 public class B extends A {
   public int func() { return super.func() * 2; }
 }
+
 public class Program {
   public static void main(String[] args) {
     B b = new B();
@@ -480,16 +502,19 @@ public class Program {
 public class A {
   public abstract void func();
 }
+
 public class B extends A {
   public void func() {
     System.out.print("B");
   }
 }
+
 public class C extends A {
   public void func() {
     System.out.print("C");
   }
 }
+
 public class Program {
   public static void main(String[] args) {
     A[] arr = new A[3];
@@ -662,19 +687,21 @@ class A {
     return value == a.value;
   }
 }
+
 class B extends A {
   private int extraValue;
   public B(int value, int extraValue) {
     super(value);
     this.extraValue = extraValue;
   }
-  @Override
+
   public boolean equals(Object obj) {
     if (!super.equals(obj)) return false;
     B b = (B) obj;
     return extraValue == b.extraValue;
   }
 }
+
 public class Program {
   public static void main(String[] args) {
     A a1 = new A(10);
@@ -682,10 +709,10 @@ public class Program {
     B b1 = new B(10, 20);
     B b2 = new B(10, 20);
     B b3 = new B(10, 30);
-    System.out.print(a1.equals(a2)); // Line 1
-    System.out.print(b1.equals(b2)); // Line 2
-    System.out.print(b1.equals(b3)); // Line 3
-    System.out.print(a1.equals(b1)); // Line 4
+    System.out.print(a1.equals(a2));
+    System.out.print(b1.equals(b2));
+    System.out.print(b1.equals(b3));
+    System.out.print(a1.equals(b1));
   }
 }
 \`\`\``,
@@ -701,20 +728,22 @@ class Vehicle {
     System.out.println("Vehicle");
   }
 }
+
 class Car extends Vehicle {
   public void print() {
     System.out.println("Car");
   }
 }
+
 public class Program {
   public static void main(String[] args) {
     Vehicle v1 = new Car();
     Vehicle v2 = new Vehicle();
     Car c = (Car) v1;
-    v1.print(); // Line 1
-    v2.print(); // Line 2
-    c.print();  // Line 3
-    ((Car) v2).print(); // Line 4
+    v1.print();
+    v2.print();
+    c.print();
+    ((Car) v2).print();
   }
 }
 \`\`\``,
@@ -733,14 +762,15 @@ public class Program {
 class A {
   public int getValue() { return 10; }
 }
+
 class B extends A {
-  @Override
   public int getValue() { return 20; }
 }
+
 class C extends B {
-  @Override
   public int getValue() { return super.getValue() + 10; }
 }
+
 public class Program {
   public static void main(String[] args) {
     A a = new C();
@@ -764,7 +794,6 @@ class Employee {
     this.id = id;
   }
 
-  @Override
   public boolean equals(Object obj) {
     if (this == obj) return true;
     if (obj == null || getClass() != obj.getClass()) return false;
@@ -772,7 +801,6 @@ class Employee {
     return id == emp.id;
   }
 
-  @Override
   public String toString() {
     return name + " (" + id + ")";
   }
@@ -786,7 +814,6 @@ class Manager extends Employee {
     this.departmentId = departmentId;
   }
 
-  @Override
   public boolean equals(Object obj) {
     if (!super.equals(obj)) return false;
     Manager m = (Manager) obj;
@@ -800,9 +827,9 @@ public class Program {
     Manager m1 = new Manager("Jane", 102, 201);
     Manager m2 = new Manager("Jane", 102, 202);
 
-    System.out.println(e1.equals(m1)); // Line 1
-    System.out.println(m1.equals(m2)); // Line 2
-    System.out.println(m1);            // Line 3
+    System.out.println(e1.equals(m1));
+    System.out.println(m1.equals(m2));
+    System.out.println(m1);
   }
 }
 \`\`\``,
@@ -858,6 +885,7 @@ public class A {
     this.y = y;
   }
 }
+
 public class B {
   private A[] arr;
   public B(int n) {
@@ -900,6 +928,7 @@ Class A {
     System.out.println("from class A");
   }
 }
+
 Class B extends A {
   protected void someMeth() {
     System.out.println("from class B");
@@ -922,6 +951,7 @@ public class A {
     System.out.println("Hi from A");
   }
 }
+
 public class B extends A {
   private int x,y;
   public void func() {
@@ -929,6 +959,7 @@ public class B extends A {
     System.out.println("Hi from B");
   }
 }
+
 public class Program {
   public static void main(String[] args) {
     System.out.println(A.ADULT);
@@ -951,7 +982,9 @@ class A {
   public A(int x) { this.x = x; }
   public String toString() { return x+\"\"; }
 }
+
 import java.util.Arrays;
+
 public class Program {
   public static void main(String[] args) {
     A[] arr = new A[3];
@@ -972,7 +1005,7 @@ public class Program {
 class Person {
   protected String name;
   public Person(String name) { this.name = name; }
-  @Override
+
   public boolean equals(Object obj) {
     if (this == obj) return true;
     if (obj == null) return false;
@@ -1061,7 +1094,7 @@ class Person {
   },
   {
     id: 48,
-    question: 'בחרו את המשפט המדויק ביותר העוסק בעיקרון ההכמסה.',
+    question: 'בחרו את המשפט המדויק ביותר העוסק בעיקרון ההכמסה(Encapsulation).',
     answers: [
       'ככלל, נעדיף להגדיר משתני מחלקה כפרטיים ולהוסיף עבורם מתודות get ו-set לפי הצורך.',
       'נגדיר משתני מחלקה כפרטיים רק במידה ויש צורך לבצע בדיקת תקינות בבנאי.',
@@ -1258,7 +1291,6 @@ public class Program{
 public class A{
 private int num;
 public A(int num){ this.num = num; }
-@Override
 public int toString(){ return num; } 
 }
 public class B{
@@ -1318,7 +1350,7 @@ public class A{
 }
 public class B extends A{
   private int x,y;
-  public void func(){ super.func(); System.out.println("Hi from B"); } // דריסה של final
+  public void func(){ super.func(); System.out.println("Hi from B"); }
 }
 public class Program{
   public static void main(String[] args){
@@ -1580,10 +1612,10 @@ class A{ private int n; A(int n){this.n=n;} }
 class B{ private abstract int f(); }
 public class Program{
   public static void main(String[] a){
-    // 1: A x = new A();
-    // 2: A y = new A(5);
-    // 3: private int z = 3;
-    // 4: abstract void g();
+    A x = new A();
+    A y = new A(5);
+    private int z = 3;
+    abstract void g();
   }
 }
 \`\`\``,
@@ -1626,14 +1658,14 @@ class A{
 }
 class B extends A{
   private int t;
-  public void f(){ System.out.println("B"); } // 1
+  public void f(){ System.out.println("B"); }
 }
 public class Program{
   public static void main(String[] a){
     System.out.println(A.K);
     B b = new B();
-    b.t = 7; // 2
-    A.K = 9; // 3
+    b.t = 7;
+    A.K = 9;
   }
 }
 \`\`\``,
@@ -1660,10 +1692,10 @@ abstract class Shape { abstract double area(); }
 class Circle extends Shape { double area(){ return 1; } }
 public class Program {
   public static void main(String[] a){
-    // 1: Shape s = new Shape();
-    // 2: Circle c = new Shape();
-    // 3: Shape s = new Circle();
-    // 4: abstract Shape x;
+    Shape s = new Shape();
+    Circle c = new Shape();
+    Shape s = new Circle();
+    abstract Shape x;
   }
 }
 \`\`\``,
@@ -1776,7 +1808,7 @@ class B extends A { }
 public class Program{
   public static void main(String[] a){
     A[] arr = new B[2];
-    arr[0] = new A(); // שורה בעייתית
+    arr[0] = new A();
   }
 }
 \`\`\``,
@@ -1832,7 +1864,9 @@ public class Program{ public static void main(String[] a){ System.out.print(new 
     question: `מה יודפס?
 \`\`\`
 class Node{ int v; Node(int v){this.v=v;} }
+
 import java.util.Arrays;
+
 public class Program{
   public static void main(String[] a){
     Node[] arr = { new Node(1) };
@@ -1849,7 +1883,7 @@ public class Program{
     question: `איזו קביעה נכונה?
 \`\`\`
 class A { A make(){ return this; } }
-class B extends A { @Override B make(){ return this; } }
+class B extends A { B make(){ return this; } }
 \`\`\``,
     answers: [
       'הקוד חוקי – החזרה קוֹוַרְיָאנְטִית מותרת.',
@@ -1877,10 +1911,10 @@ public class Program{ public static void main(String[] a){ new B(); } }
 import java.util.*;
 public class Program{
   public static void main(String[] a){
-    List<Number> x = new ArrayList<Number>();   // A
-    List<Integer> y = new ArrayList<Integer>(); // B
-    // C: x = y;
-    // D: y = (List<Integer>) x;
+    List<Number> x = new ArrayList<Number>();
+    List<Integer> y = new ArrayList<Integer>();
+    x = y;
+    y = (List<Integer>) x;
   }
 }
 \`\`\``,

@@ -54,7 +54,7 @@ const ExamControls: React.FC = () => {
               ציון: {examState.score} / {examState.questions.length * 5}
             </span>
             <span className={styles.percentageText}>
-              ({Math.round((examState.score / (examState.questions.length * 5)) * 100)}%)
+              {examState.questions.length - examState.score / 5} תוצאות לא נכונות
             </span>
           </div>
         )}
