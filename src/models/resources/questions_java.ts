@@ -1779,12 +1779,7 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: [
-      'שגיאת זמן ריצה.',
-      'הודפס OK.',
-      'שגיאת קומפילציה.',
-      'לא יודפס דבר אך אין חריגה.',
-    ],
+    answers: ['שגיאת זמן ריצה.', 'הודפס OK.', 'שגיאת קומפילציה.', 'לא יודפס דבר אך אין חריגה.'],
     correctAnswer: 0,
   },
   {
@@ -1918,12 +1913,7 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: [
-      'C לא חוקית.',
-      'A לא חוקית.',
-      'B לא חוקית.',
-      'D תקינה לחלוטין ללא אזהרות.',
-    ],
+    answers: ['C לא חוקית.', 'A לא חוקית.', 'B לא חוקית.', 'D תקינה לחלוטין ללא אזהרות.'],
     correctAnswer: 0,
   },
   {
@@ -1974,6 +1964,466 @@ public class Program{ public static void main(String[] a){ new Init(); new Init(
       'private, protected או public.',
       'רק final.',
       'abstract אסור ל-top-level.',
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 101,
+    question: `מה יודפס להרצה הבאה?
+\`\`\`code
+class A {
+  public A() { System.out.print("A"); }
+}
+class B extends A {
+  public B() { System.out.print("B"); }
+}
+class C extends B {
+  public C() { System.out.print("C"); }
+}
+public class Program {
+  public static void main(String[] args) {
+    new C();
+  }
+}
+\`\`\`
+`,
+    answers: ['ABC', 'CBA', 'BAC', 'התוכנית לא תתקמפל'],
+    correctAnswer: 0,
+  },
+  {
+    id: 102,
+    question: `בחרו את שורת הקוד שגורמת לדריסה חוקית (override) של doIt במחלקה B:
+\`\`\`code
+class A {
+  protected Number doIt(Integer x) { return x + 1; }
+}
+class B extends A {
+  // XXX
+}
+\`\`\`
+`,
+    answers: [
+      'public Integer doIt(Integer x) { return x + 2; }',
+      'protected Object doIt(Integer x) { return x + 2; }',
+      'private Number doIt(Integer x) { return x + 2; }',
+      'protected Number doIt(Number x) { return x.intValue() + 2; }',
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 103,
+    question: `מה תוצאת ההרצה?
+\`\`\`code
+class Parent {
+  static void say() { System.out.print("P"); }
+  void talk() { System.out.print("p"); }
+}
+class Child extends Parent {
+  static void say() { System.out.print("C"); }
+  void talk() { System.out.print("c"); }
+}
+public class Program {
+  public static void main(String[] args) {
+    Parent ref = new Child();
+    ref.say();
+    ref.talk();
+  }
+}
+\`\`\`
+`,
+    answers: ['Pc', 'Cc', 'Cp', 'CcP'],
+    correctAnswer: 0,
+  },
+  {
+    id: 104,
+    question: `איזו אפשרות משלימה נכון את ה-XXX כדי למנוע שינוי מצב אובייקט חיצוני (העתקה מגינה)?
+\`\`\`code
+class Point {
+  private int x,y;
+  public Point(int x,int y){this.x=x;this.y=y;}
+  public int getX(){return x;}
+  public int getY(){return y;}
+}
+class Segment {
+  private Point start;
+  public Segment(Point start){
+    // XXX
+  }
+}
+\`\`\`
+`,
+    answers: [
+      'this.start = new Point(start.getX(), start.getY());',
+      'this.start = start;',
+      'this.start = (Point) ((Object)start);',
+      'this.start = null; start = null;',
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 105,
+    question: `מה תהיה תוצאת ההרצה (כל מחלקה בקובץ נפרד)?
+\`\`\`code
+interface I {
+  default void f(){ System.out.print("I"); }
+}
+abstract class A implements I {
+  public void f(){ System.out.print("A"); }
+}
+class B extends A {
+  // לא דריסה
+}
+public class Program {
+  public static void main(String[] args) {
+    I x = new B();
+    x.f();
+  }
+}
+\`\`\`
+`,
+    answers: ['A', 'I', 'שגיאת קומפילציה', 'אין הדפסה כלל'],
+    correctAnswer: 0,
+  },
+  {
+    id: 106,
+    question: `מה יודפס?
+\`\`\`code
+class A {
+  int v = get();
+  int get(){ System.out.print("a"); return 1; }
+  A(){ System.out.print("A"); }
+}
+class B extends A {
+  int w = get();
+  int get(){ System.out.print("b"); return 2; }
+  B(){ System.out.print("B"); }
+}
+public class Program {
+  public static void main(String[] args) {
+    new B();
+  }
+}
+\`\`\`
+`,
+    answers: ['babAB', 'abAB', 'aabAB', 'baAB'],
+    correctAnswer: 0,
+  },
+  {
+    id: 107,
+    question: `איזו אפשרות נכונה לגבי הקוד?
+\`\`\`code
+class A {
+  public final void doWork(){}
+}
+class B extends A {
+  // מה לגבי doWork?
+}
+\`\`\`
+`,
+    answers: [
+      'לא ניתן לדרוס את doWork ב-B.',
+      'ניתן לדרוס את doWork רק עם אותו חתימה.',
+      'ניתן לדרוס אם משנים את הגישה ל-private.',
+      'ניתן לדרוס אם הופכים את B ל-final.',
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 108,
+    question: `מה יקרה בהרצה?
+\`\`\`code
+class A { }
+class B extends A { }
+public class Program {
+  public static void main(String[] args) {
+    A[] arr = new B[2];
+    arr[0] = new B();
+    arr[1] = new A();
+    System.out.print("OK");
+  }
+}
+\`\`\`
+`,
+    answers: [
+      'יזרק RuntimeException (ArrayStoreException).',
+      'OK',
+      'שגיאת קומפילציה',
+      'יזרק ClassCastException',
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 109,
+    question: `בחרו את המימוש הנכון ל-equals בהתאם לחוזה (רפלקסיבי, סימטרי, מעברי) על בסיס מזהה ייחודי id:
+\`\`\`code
+class User {
+  private final String id;
+  private String name;
+  public User(String id,String name){ this.id=id; this.name=name; }
+  @Override public boolean equals(Object o){
+    // XXX
+  }
+}
+\`\`\`
+`,
+    answers: [
+      'if(this==o) return true; if(!(o instanceof User)) return false; User u=(User)o; return id!=null && id.equals(u.id);',
+      'return this.name.equals(((User)o).name);',
+      'return o!=null && o.getClass()==getClass() && ((User)o).name.equals(name);',
+      'return true;',
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 110,
+    question: `מה יודפס?
+\`\`\`code
+class Base {
+  Base(){ print(); }
+  void print(){ System.out.print("B"); }
+}
+class Der extends Base {
+  private int x = 42;
+  void print(){ System.out.print(x); }
+}
+public class Program {
+  public static void main(String[] args) {
+    new Der();
+  }
+}
+\`\`\`
+`,
+    answers: ['0', '42', 'B', 'שגיאת קומפילציה'],
+    correctAnswer: 0,
+  },
+  {
+    id: 111,
+    question: `מה יודפס?
+\`\`\`code
+class Counter {
+  private static int c = 0;
+  public Counter(){ c++; }
+  public static int get(){ return c; }
+}
+public class Program {
+  public static void main(String[] args) {
+    Counter a = new Counter();
+    Counter b = new Counter();
+    System.out.println(a.get());
+  }
+}
+\`\`\`
+`,
+    answers: ['2', '1', '0', 'שגיאת קומפילציה'],
+    correctAnswer: 0,
+  },
+  {
+    id: 112,
+    question: `בהמשך לשאלה הקודמת, מה יודפס עכשיו?
+\`\`\`code
+class Counter {
+  private static int c = 0;
+  public Counter(){ c++; }
+  public static int get(){ return c; }
+}
+public class Program {
+  public static void main(String[] args) {
+    System.out.println(Counter.get());
+  }
+}
+\`\`\`
+`,
+    answers: ['0', '1', '2', 'שגיאת קומפילציה'],
+    correctAnswer: 0,
+    linkTo: [111],
+  },
+  {
+    id: 113,
+    question: `איזו אפשרות משלימה נכון כדי ליצור העתקה עמוקה של מערך אובייקטים מסוג Node?
+\`\`\`code
+class Node {
+  int v;
+  Node(int v){ this.v=v; }
+}
+class Bag {
+  private Node[] nodes;
+  Bag(Bag other){
+    nodes = new Node[other.nodes.length];
+    for(int i=0;i<nodes.length;i++){
+      // XXX
+    }
+  }
+}
+\`\`\`
+`,
+    answers: [
+      'nodes[i] = new Node(other.nodes[i].v);',
+      'nodes[i] = other.nodes[i];',
+      'nodes = other.nodes.clone();',
+      'nodes[i].v = other.nodes[i].v;',
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 114,
+    question: `מה יקרה?
+\`\`\`code
+abstract class Shape {
+  abstract double area();
+}
+class Circle extends Shape {
+  private double r;
+  Circle(double r){ this.r=r; }
+  double area(){ return Math.PI*r*r; }
+}
+public class Program {
+  public static void main(String[] args) {
+    Shape s = new Shape();
+    System.out.print(s.area());
+  }
+}
+\`\`\`
+`,
+    answers: [
+      'שגיאת קומפילציה (לא ניתן ליצור מופע ממחלקה אבסטרקטית).',
+      'התוכנית תרוץ ותדפיס 0.',
+      'יזרק RuntimeException',
+      'התוכנית תרוץ ותדפיס את שטח העיגול',
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 115,
+    question: `מה חוקיות הדריסה?
+\`\`\`code
+class A {
+  public Number g(){ return 1; }
+}
+class B extends A {
+  @Override
+  public Integer g(){ return 2; }
+}
+\`\`\`
+`,
+    answers: [
+      'חוקי — טיפוס חזרה covariant.',
+      'לא חוקי — לא ניתן לשנות טיפוס חזרה בדריסה.',
+      'לא חוקי — Integer אינו Number.',
+      'חוקי רק אם g ב-A הוא final.',
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 116,
+    question: `מה יודפס?
+\`\`\`code
+class A {
+  private void ping(){ System.out.print("A"); }
+  public void call(){ ping(); }
+}
+class B extends A {
+  void ping(){ System.out.print("B"); }
+}
+public class Program {
+  public static void main(String[] args) {
+    new B().call();
+  }
+}
+\`\`\`
+`,
+    answers: ['A', 'B', 'AB', 'שגיאת קומפילציה'],
+    correctAnswer: 0,
+  },
+  {
+    id: 117,
+    question: `איזו הצהרה נכונה לגבי casting בקוד הבא?
+\`\`\`code
+class Animal {}
+class Dog extends Animal {}
+public class Program {
+  public static void main(String[] args) {
+    Animal a = new Animal();
+    Dog d = (Dog) a;
+  }
+}
+\`\`\`
+`,
+    answers: [
+      'יזרק ClassCastException בזמן ריצה.',
+      'שגיאת קומפילציה.',
+      'הקוד ירוץ ללא חריגה.',
+      'המרה תעבוד אם Dog הוא abstract.',
+    ],
+    correctAnswer: 0,
+  },
+  {
+    id: 118,
+    question: `בחרו את ההשלמה הנכונה ל-XXX כדי לממש hashCode עקבי עם equals מהשאלה:
+\`\`\`code
+class User {
+  private final String id;
+  private String name;
+  public User(String id,String name){ this.id=id; this.name=name; }
+  @Override public boolean equals(Object o){
+    if(this==o) return true;
+    if(!(o instanceof User)) return false;
+    User u=(User)o;
+    return id!=null && id.equals(u.id);
+  }
+  @Override public int hashCode(){
+    // XXX
+  }
+}
+\`\`\`
+`,
+    answers: [
+      'return id==null ? 0 : id.hashCode();',
+      'return name.hashCode();',
+      'return super.hashCode();',
+      'return 42;',
+    ],
+    correctAnswer: 0,
+    linkTo: [119],
+  },
+  {
+    id: 119,
+    question: `מה יודפס?
+\`\`\`code
+class X {
+  static { System.out.print("S"); }
+  { System.out.print("I"); }
+  X(){ System.out.print("C"); }
+}
+public class Program {
+  public static void main(String[] args) {
+    new X();
+    new X();
+  }
+}
+\`\`\`
+`,
+    answers: ['SICIC', 'SSII CC', 'SIIC', 'IICS'],
+    correctAnswer: 0,
+  },
+  {
+    id: 120,
+    question: `איזו אפשרות נכונה לגבי גישת בנאים?
+\`\`\`code
+class Base {
+  Base(int x){ }
+}
+class Sub extends Base {
+  Sub(){
+    // XXX
+  }
+}
+\`\`\`
+`,
+    answers: [
+      'על Sub לקרוא ל-super עם ארגומנט: super(0);',
+      'אין צורך בקריאת super, תתבצע אוטומטית.',
+      'יש להוסיף בנאי ברירת מחדל ל-Base במקום.',
+      'ניתן לקרוא ל-this() במקום super() וזה מספיק.',
     ],
     correctAnswer: 0,
   },
