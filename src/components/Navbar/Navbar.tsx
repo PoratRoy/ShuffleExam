@@ -33,6 +33,7 @@ const Navbar: React.FC = () => {
               {exam.name}
             </button>
           ))}
+          <span>מותאם למחשב</span>
         </div>
       </div>
     </nav>

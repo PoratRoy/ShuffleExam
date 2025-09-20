@@ -836,8 +836,8 @@ public class Program {
     answers: [
       'false\nfalse\nJane (102)',
       'false\ntrue\nJane (102)',
+      'true\nfalse\nJohn (101)',
       'true\nfalse\nJane (102)',
-      'true\ntrue\nJane (102)',
     ],
     correctAnswer: 0,
   },
@@ -1082,8 +1082,24 @@ class Person {
   },
   {
     id: 46,
-    question: 'מה נקבל כשנריץ את התוכנית הבאה?',
-    answers: ['ClassBClassA.', 'ClassAClassB.', 'ClassA.', 'Compilation error.'],
+    question: `איזו אפשרות נכונה לגבי גישת בנאים?
+\`\`\`
+class Base {
+  Base(int x){ }
+}
+class Sub extends Base {
+  Sub(){
+    // XXX
+  }
+}
+\`\`\`
+`,
+    answers: [
+      'על Sub לקרוא ל-super עם ארגומנט: super(0);',
+      'אין צורך בקריאת super, תתבצע אוטומטית.',
+      'יש להוסיף בנאי ברירת מחדל ל-Base במקום.',
+      'ניתן לקרוא ל-this() במקום super() וזה מספיק.',
+    ],
     correctAnswer: 0,
   },
   {
@@ -1146,30 +1162,34 @@ public class Program {
     question: `בהינתן הקוד הבא, בחרו את האפשרות המדויקת ביותר. (המספרים מתייחסים למספרי השורות בקוד)
 \`\`\`
 public abstract class A{
-protected int num;
-public A(){ num = 1; }
+  protected int num;
+  public A(){ num = 1; }
 }
+
 public class B extends A{
-public B(){ num = 8; }
+  public B(){ num = 8; }
 }
+
 public abstract class C extends A { }
+
 public class D extends C { }
+
 public class Program {
-public static void main(String[] args){
-A[] a = new A[3];      
-a[1] = new D();         
-a[2] = new C();         
-for (A var : a) {       
-System.out.println(var); 
-}
-}
+  public static void main(String[] args){
+    A[] a = new A[3];      
+    a[1] = new D();         
+    a[2] = new C();         
+    for (A var : a) {       
+      System.out.println(var); 
+    }
+  }
 }
 \`\`\``,
     answers: [
-      'קיימת שגיאת קומפילציה בשורה 21.',
       'קיימת שגיאת קומפילציה בשורה 18.',
-      'קיימת שגיאת קומפילציה בשורה 7.',
-      'קיימת שגיאת זמן ריצה בשורה 24.',
+      'קיימת שגיאת קומפילציה בשורה 12.',
+      'קיימת שגיאת קומפילציה בשורה 10.',
+      'קיימת שגיאת זמן ריצה בשורה 20.',
     ],
     correctAnswer: 0,
   },
@@ -1289,22 +1309,22 @@ public class Program{
     question: `בהינתן הקוד הבא, בחרו את שורת הקוד שלא יוצרת שגיאת קומפילציה. (המספרים מתייחסים לשורות בצד שמאל)
 \`\`\`
 public class A{
-private int num;
-public A(int num){ this.num = num; }
-public int toString(){ return num; } 
+  private int num;
+  public A(int num){ this.num = num; }
+  public int toString(){ return num; } 
 }
 public class B{
-private abstract int func();         
+  private abstract int func();         
 }
 public class Program{
-public static void main(String[] args){
+  public static void main(String[] args){
     A a1 = new A(1,2);                 
     A a2 = new A();                    
     A a3 = new A(3);                   
   }
 }
 \`\`\``,
-    answers: ['שורה 18.', 'שורה 16.', 'שורה 11.', 'שורה 7.'],
+    answers: ['שורה 13.', 'שורה 12.', 'שורה 11.', 'שורה 7.'],
     correctAnswer: 0,
   },
   {
@@ -1526,9 +1546,16 @@ class B extends A { void m(){} void m(int x){} }
     question: `מה יודפס?
 \`\`\`
 class X { X(){ System.out.print("X"); } }
+
 class Y extends X { Y(){ System.out.print("Y"); } }
+
 class Z extends Y { Z(){ System.out.print("Z"); } }
-public class Program{ public static void main(String[] a){ new Z(); } }
+
+public class Program{ 
+  public static void main(String[] a){ 
+    new Z(); 
+  } 
+}
 \`\`\``,
     answers: ['XYZ', 'ZYX', 'Z', 'X'],
     correctAnswer: 0,
@@ -1594,9 +1621,11 @@ public class Program{
     question: `לגבי הקוד הבא:
 \`\`\`
 class A{ public static int c; A(){ c++; } }
+
 public class Program{
   public static void main(String[] a){
-    new A(); new A();
+    new A(); 
+    new A();
     System.out.println(A.c);
   }
 }
@@ -1686,20 +1715,22 @@ public class Program { public static void main(String[] a){ new C(); } }
   },
   {
     id: 82,
-    question: `איזו שורה לא תגרום לשגיאת קומפילציה?
+    question: `מה יודפס?
 \`\`\`
-abstract class Shape { abstract double area(); }
-class Circle extends Shape { double area(){ return 1; } }
+class X {
+  static { System.out.print("S"); }
+  { System.out.print("I"); }
+  X(){ System.out.print("C"); }
+}
 public class Program {
-  public static void main(String[] a){
-    Shape s = new Shape();
-    Circle c = new Shape();
-    Shape s = new Circle();
-    abstract Shape x;
+  public static void main(String[] args) {
+    new X();
+    new X();
   }
 }
-\`\`\``,
-    answers: ['3', '1', '2', '4'],
+\`\`\`
+`,
+    answers: ['SICIC', 'SSII CC', 'SIIC', 'IICS'],
     correctAnswer: 0,
   },
   {
@@ -1787,9 +1818,16 @@ public class Program{
     question: `מה יודפס?
 \`\`\`
 interface I { void run(); }
+
 abstract class Base implements I { }
+
 class Impl extends Base { public void run(){ System.out.print("go"); } }
-public class Program { public static void main(String[] a){ I i = new Impl(); i.run(); } }
+
+public class Program { 
+  public static void main(String[] a){ 
+    I i = new Impl(); i.run(); 
+  } 
+}
 \`\`\``,
     answers: ['go', 'שגיאת קומפילציה', 'שגיאת זמן ריצה', 'אין הדפסה'],
     correctAnswer: 0,
@@ -1892,9 +1930,21 @@ class B extends A { B make(){ return this; } }
     id: 95,
     question: `סדר ההדפסות?
 \`\`\`
-class A{ { System.out.print("I"); } A(){ System.out.print("C"); } }
-class B extends A{ { System.out.print("i"); } B(){ System.out.print("c"); } }
-public class Program{ public static void main(String[] a){ new B(); } }
+class A{ 
+  { System.out.print("I"); } 
+  A(){ System.out.print("C"); } 
+}
+
+class B extends A{ 
+  { System.out.print("i"); } 
+  B(){ System.out.print("c"); } 
+}
+
+public class Program{ 
+  public static void main(String[] a){ 
+    new B(); 
+  } 
+}
 \`\`\``,
     answers: ['ICic', 'CIci', 'IiCc', 'icIC'],
     correctAnswer: 0,
@@ -1924,7 +1974,11 @@ class T{
   void m(long x){ System.out.print("long"); }
   void m(Integer x){ System.out.print("Integer"); }
 }
-public class Program{ public static void main(String[] a){ new T().m(5); } }
+public class Program{ 
+  public static void main(String[] a){ 
+    new T().m(5); 
+  } 
+}
 \`\`\``,
     answers: ['long', 'Integer', 'שגיאת קומפילציה', 'שגיאת זמן ריצה'],
     correctAnswer: 0,
@@ -1937,7 +1991,12 @@ class A{
   A(){ this("X"); System.out.print("1"); }
   A(String s){ System.out.print(s); }
 }
-public class Program{ public static void main(String[] a){ new A(); } }
+
+public class Program{ 
+  public static void main(String[] a){ 
+    new A(); 
+  } 
+}
 \`\`\``,
     answers: ['X1', '1X', 'שגיאת קומפילציה', 'אין הדפסה'],
     correctAnswer: 0,
@@ -1951,7 +2010,13 @@ class Init{
   { System.out.print("I"); }
   Init(){ System.out.print("C"); }
 }
-public class Program{ public static void main(String[] a){ new Init(); new Init(); } }
+
+public class Program{ 
+  public static void main(String[] a){ 
+    new Init(); 
+    new Init(); 
+  } 
+}
 \`\`\``,
     answers: ['SICIC', 'SSICIC', 'I C I C', 'SC'],
     correctAnswer: 0,
@@ -1970,7 +2035,7 @@ public class Program{ public static void main(String[] a){ new Init(); new Init(
   {
     id: 101,
     question: `מה יודפס להרצה הבאה?
-\`\`\`code
+\`\`\`
 class A {
   public A() { System.out.print("A"); }
 }
@@ -1993,7 +2058,7 @@ public class Program {
   {
     id: 102,
     question: `בחרו את שורת הקוד שגורמת לדריסה חוקית (override) של doIt במחלקה B:
-\`\`\`code
+\`\`\`
 class A {
   protected Number doIt(Integer x) { return x + 1; }
 }
@@ -2013,7 +2078,7 @@ class B extends A {
   {
     id: 103,
     question: `מה תוצאת ההרצה?
-\`\`\`code
+\`\`\`
 class Parent {
   static void say() { System.out.print("P"); }
   void talk() { System.out.print("p"); }
@@ -2037,7 +2102,7 @@ public class Program {
   {
     id: 104,
     question: `איזו אפשרות משלימה נכון את ה-XXX כדי למנוע שינוי מצב אובייקט חיצוני (העתקה מגינה)?
-\`\`\`code
+\`\`\`
 class Point {
   private int x,y;
   public Point(int x,int y){this.x=x;this.y=y;}
@@ -2063,7 +2128,7 @@ class Segment {
   {
     id: 105,
     question: `מה תהיה תוצאת ההרצה (כל מחלקה בקובץ נפרד)?
-\`\`\`code
+\`\`\`
 interface I {
   default void f(){ System.out.print("I"); }
 }
@@ -2087,7 +2152,7 @@ public class Program {
   {
     id: 106,
     question: `מה יודפס?
-\`\`\`code
+\`\`\`
 class A {
   int v = get();
   int get(){ System.out.print("a"); return 1; }
@@ -2111,7 +2176,7 @@ public class Program {
   {
     id: 107,
     question: `איזו אפשרות נכונה לגבי הקוד?
-\`\`\`code
+\`\`\`
 class A {
   public final void doWork(){}
 }
@@ -2131,7 +2196,7 @@ class B extends A {
   {
     id: 108,
     question: `מה יקרה בהרצה?
-\`\`\`code
+\`\`\`
 class A { }
 class B extends A { }
 public class Program {
@@ -2155,12 +2220,12 @@ public class Program {
   {
     id: 109,
     question: `בחרו את המימוש הנכון ל-equals בהתאם לחוזה (רפלקסיבי, סימטרי, מעברי) על בסיס מזהה ייחודי id:
-\`\`\`code
+\`\`\`
 class User {
   private final String id;
   private String name;
   public User(String id,String name){ this.id=id; this.name=name; }
-  @Override public boolean equals(Object o){
+  public boolean equals(Object o){
     // XXX
   }
 }
@@ -2177,15 +2242,17 @@ class User {
   {
     id: 110,
     question: `מה יודפס?
-\`\`\`code
+\`\`\`
 class Base {
   Base(){ print(); }
   void print(){ System.out.print("B"); }
 }
+
 class Der extends Base {
   private int x = 42;
   void print(){ System.out.print(x); }
 }
+
 public class Program {
   public static void main(String[] args) {
     new Der();
@@ -2199,7 +2266,7 @@ public class Program {
   {
     id: 111,
     question: `מה יודפס?
-\`\`\`code
+\`\`\`
 class Counter {
   private static int c = 0;
   public Counter(){ c++; }
@@ -2220,7 +2287,7 @@ public class Program {
   {
     id: 112,
     question: `בהמשך לשאלה הקודמת, מה יודפס עכשיו?
-\`\`\`code
+\`\`\`
 class Counter {
   private static int c = 0;
   public Counter(){ c++; }
@@ -2240,7 +2307,7 @@ public class Program {
   {
     id: 113,
     question: `איזו אפשרות משלימה נכון כדי ליצור העתקה עמוקה של מערך אובייקטים מסוג Node?
-\`\`\`code
+\`\`\`
 class Node {
   int v;
   Node(int v){ this.v=v; }
@@ -2267,7 +2334,7 @@ class Bag {
   {
     id: 114,
     question: `מה יקרה?
-\`\`\`code
+\`\`\`
 abstract class Shape {
   abstract double area();
 }
@@ -2295,12 +2362,11 @@ public class Program {
   {
     id: 115,
     question: `מה חוקיות הדריסה?
-\`\`\`code
+\`\`\`
 class A {
   public Number g(){ return 1; }
 }
 class B extends A {
-  @Override
   public Integer g(){ return 2; }
 }
 \`\`\`
@@ -2316,7 +2382,7 @@ class B extends A {
   {
     id: 116,
     question: `מה יודפס?
-\`\`\`code
+\`\`\`
 class A {
   private void ping(){ System.out.print("A"); }
   public void call(){ ping(); }
@@ -2337,7 +2403,7 @@ public class Program {
   {
     id: 117,
     question: `איזו הצהרה נכונה לגבי casting בקוד הבא?
-\`\`\`code
+\`\`\`
 class Animal {}
 class Dog extends Animal {}
 public class Program {
@@ -2359,18 +2425,21 @@ public class Program {
   {
     id: 118,
     question: `בחרו את ההשלמה הנכונה ל-XXX כדי לממש hashCode עקבי עם equals מהשאלה:
-\`\`\`code
+\`\`\`
 class User {
   private final String id;
   private String name;
+  
   public User(String id,String name){ this.id=id; this.name=name; }
-  @Override public boolean equals(Object o){
+  
+  public boolean equals(Object o){
     if(this==o) return true;
     if(!(o instanceof User)) return false;
     User u=(User)o;
     return id!=null && id.equals(u.id);
   }
-  @Override public int hashCode(){
+  
+  public int hashCode(){
     // XXX
   }
 }
@@ -2384,47 +2453,5 @@ class User {
     ],
     correctAnswer: 0,
     linkTo: [119],
-  },
-  {
-    id: 119,
-    question: `מה יודפס?
-\`\`\`code
-class X {
-  static { System.out.print("S"); }
-  { System.out.print("I"); }
-  X(){ System.out.print("C"); }
-}
-public class Program {
-  public static void main(String[] args) {
-    new X();
-    new X();
-  }
-}
-\`\`\`
-`,
-    answers: ['SICIC', 'SSII CC', 'SIIC', 'IICS'],
-    correctAnswer: 0,
-  },
-  {
-    id: 120,
-    question: `איזו אפשרות נכונה לגבי גישת בנאים?
-\`\`\`code
-class Base {
-  Base(int x){ }
-}
-class Sub extends Base {
-  Sub(){
-    // XXX
-  }
-}
-\`\`\`
-`,
-    answers: [
-      'על Sub לקרוא ל-super עם ארגומנט: super(0);',
-      'אין צורך בקריאת super, תתבצע אוטומטית.',
-      'יש להוסיף בנאי ברירת מחדל ל-Base במקום.',
-      'ניתן לקרוא ל-this() במקום super() וזה מספיק.',
-    ],
-    correctAnswer: 0,
   },
 ];
