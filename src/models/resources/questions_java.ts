@@ -909,15 +909,25 @@ public class B {
   },
   {
     id: 36,
-    question: `נתון כי מחלקת Undergraduate יורשת מחלקת Student אשר יורשת מחלקת Person. בהינתן שורות הקוד הבאות:
+    question: `איזו הצהרה נכונה לגבי casting בקוד הבא?
 \`\`\`
-Person p = new Person();
-Student s = new Student();
-Undergraduate ug = new Undergraduate();
+class Animal {}
+class Dog extends Animal {}
+public class Program {
+  public static void main(String[] args) {
+    Animal a = new Animal();
+    Dog d = (Dog) a;
+  }
+}
 \`\`\`
-בחרו אילו מהאפשרויות הבאות עוברות קומפילציה?`,
-    answers: ['1,2', '2,4', '1,4', '2,3,5'],
-    correctAnswer: 2,
+`,
+    answers: [
+      'יזרק ClassCastException בזמן ריצה.',
+      'שגיאת קומפילציה.',
+      'הקוד ירוץ ללא חריגה.',
+      'המרה תעבוד אם Dog הוא abstract.',
+    ],
+    correctAnswer: 0,
   },
   {
     id: 37,
@@ -1201,20 +1211,23 @@ class A{
   private String str;
   A(String str){ this.str = str; }
 }
+
 class B extends A{
   B() { }            
   B(String s){ super(s); }
 }
+
 public class Program{
   public static void main(String[] args){
+    XXX
   }
 }
 \`\`\``,
     answers: [
       'לא, אף תשובה אינה נכונה.',
-      'A a = new B();',
-      'B b = new B(5);',
-      'A a = new A("my String");',
+      'A a = new B(_)',
+      'B b = new B(5)',
+      'A a = new A("my String")',
     ],
     correctAnswer: 0,
   },
@@ -1232,9 +1245,11 @@ public class A{
     return false;
   }
 }
+
 public class B extends A{
   public B(String name){ super(name); }
 }
+
 public class Program{
   public static void main(String[] args){
     System.out.println((new A("Alice")).equals(new B("Alice")));
@@ -1846,7 +1861,7 @@ public class Program{
 }
 \`\`\``,
     answers: [
-      'ArrayStoreException ייזרק בזמן ריצה.',
+      'שגיאת ריצה',
       'שגיאת קומפילציה.',
       'לא קורה דבר – חוקי לגמרי.',
       'NullPointerException ייזרק.',
@@ -1874,9 +1889,19 @@ class Child extends Parent{
     id: 91,
     question: `מה יודפס?
 \`\`\`
-class A { public String toString(){ return "A"; } }
-class B extends A { public String toString(){ return super.toString()+"B"; } }
-public class Program{ public static void main(String[] a){ System.out.print(new B()); } }
+class A { 
+  public String toString(){ return "A"; } 
+}
+
+class B extends A { 
+  public String toString(){ return super.toString()+"B"; } 
+}
+
+public class Program{ 
+  public static void main(String[] a){ 
+    System.out.print(new B()); 
+  } 
+}
 \`\`\``,
     answers: ['AB', 'BA', 'B', 'A'],
     correctAnswer: 0,
@@ -1915,8 +1940,13 @@ public class Program{
     id: 94,
     question: `איזו קביעה נכונה?
 \`\`\`
-class A { A make(){ return this; } }
-class B extends A { B make(){ return this; } }
+class A { 
+  A make(){ return this; } 
+}
+
+class B extends A { 
+  B make(){ return this; } 
+}
 \`\`\``,
     answers: [
       'הקוד חוקי – החזרה קוֹוַרְיָאנְטִית מותרת.',
@@ -1974,6 +2004,7 @@ class T{
   void m(long x){ System.out.print("long"); }
   void m(Integer x){ System.out.print("Integer"); }
 }
+
 public class Program{ 
   public static void main(String[] a){ 
     new T().m(5); 
@@ -2003,22 +2034,33 @@ public class Program{
   },
   {
     id: 99,
-    question: `מה יודפס?
+    question: `בחרו את ההשלמה הנכונה ל-XXX כדי לממש hashCode עקבי עם equals מהשאלה:
 \`\`\`
-class Init{
-  static { System.out.print("S"); }
-  { System.out.print("I"); }
-  Init(){ System.out.print("C"); }
+class User {
+  private final String id;
+  private String name;
+  
+  public User(String id,String name){ this.id=id; this.name=name; }
+  
+  public boolean equals(Object o){
+    if(this==o) return true;
+    if(!(o instanceof User)) return false;
+    User u=(User)o;
+    return id!=null && id.equals(u.id);
+  }
+  
+  public int hashCode(){
+    // XXX
+  }
 }
-
-public class Program{ 
-  public static void main(String[] a){ 
-    new Init(); 
-    new Init(); 
-  } 
-}
-\`\`\``,
-    answers: ['SICIC', 'SSICIC', 'I C I C', 'SC'],
+\`\`\`
+`,
+    answers: [
+      'return id==null ? 0 : id.hashCode();',
+      'return name.hashCode();',
+      'return super.hashCode();',
+      'return 42;',
+    ],
     correctAnswer: 0,
   },
   {
@@ -2039,12 +2081,15 @@ public class Program{
 class A {
   public A() { System.out.print("A"); }
 }
+
 class B extends A {
   public B() { System.out.print("B"); }
 }
+
 class C extends B {
   public C() { System.out.print("C"); }
 }
+
 public class Program {
   public static void main(String[] args) {
     new C();
@@ -2132,12 +2177,13 @@ class Segment {
 interface I {
   default void f(){ System.out.print("I"); }
 }
+
 abstract class A implements I {
   public void f(){ System.out.print("A"); }
 }
-class B extends A {
-  // לא דריסה
-}
+
+class B extends A {}
+
 public class Program {
   public static void main(String[] args) {
     I x = new B();
@@ -2209,12 +2255,7 @@ public class Program {
 }
 \`\`\`
 `,
-    answers: [
-      'יזרק RuntimeException (ArrayStoreException).',
-      'OK',
-      'שגיאת קומפילציה',
-      'יזרק ClassCastException',
-    ],
+    answers: ['שגיאת ריצה', 'OK', 'שגיאת קומפילציה', 'יזרק ClassCastException'],
     correctAnswer: 0,
   },
   {
@@ -2302,7 +2343,6 @@ public class Program {
 `,
     answers: ['0', '1', '2', 'שגיאת קומפילציה'],
     correctAnswer: 0,
-    linkTo: [111],
   },
   {
     id: 113,
@@ -2399,59 +2439,5 @@ public class Program {
 `,
     answers: ['A', 'B', 'AB', 'שגיאת קומפילציה'],
     correctAnswer: 0,
-  },
-  {
-    id: 117,
-    question: `איזו הצהרה נכונה לגבי casting בקוד הבא?
-\`\`\`
-class Animal {}
-class Dog extends Animal {}
-public class Program {
-  public static void main(String[] args) {
-    Animal a = new Animal();
-    Dog d = (Dog) a;
-  }
-}
-\`\`\`
-`,
-    answers: [
-      'יזרק ClassCastException בזמן ריצה.',
-      'שגיאת קומפילציה.',
-      'הקוד ירוץ ללא חריגה.',
-      'המרה תעבוד אם Dog הוא abstract.',
-    ],
-    correctAnswer: 0,
-  },
-  {
-    id: 118,
-    question: `בחרו את ההשלמה הנכונה ל-XXX כדי לממש hashCode עקבי עם equals מהשאלה:
-\`\`\`
-class User {
-  private final String id;
-  private String name;
-  
-  public User(String id,String name){ this.id=id; this.name=name; }
-  
-  public boolean equals(Object o){
-    if(this==o) return true;
-    if(!(o instanceof User)) return false;
-    User u=(User)o;
-    return id!=null && id.equals(u.id);
-  }
-  
-  public int hashCode(){
-    // XXX
-  }
-}
-\`\`\`
-`,
-    answers: [
-      'return id==null ? 0 : id.hashCode();',
-      'return name.hashCode();',
-      'return super.hashCode();',
-      'return 42;',
-    ],
-    correctAnswer: 0,
-    linkTo: [119],
   },
 ];
