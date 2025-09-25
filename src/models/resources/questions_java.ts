@@ -1027,10 +1027,10 @@ class Person {
 }
 \`\`\``,
     answers: [
-      'name.equals(((Person)obj).name);',
-      'name.equals((Person)obj.name);',
-      'name==((Person)obj).name;',
-      'name==(Person)obj.name;',
+      'name.equals(((Person)obj).name)',
+      'name.equals((Person)obj.name)',
+      'name==((Person)obj).name',
+      'name==(Person)obj.name',
     ],
     correctAnswer: 0,
   },
@@ -1131,13 +1131,23 @@ class Sub extends Base {
   },
   {
     id: 49,
-    question: 'מה נקבל כשננסה להריץ את התוכנית הבאה?',
-    answers: [
-      'קיימת שגיאת זמן ריצה.',
-      'קיימת שגיאת קומפילציה.',
-      'התוכנית תדפיס true.',
-      'התוכנית תדפיס false.',
-    ],
+    question: `מה יודפס?
+\`\`\`
+class A {
+  private void ping(){ System.out.print("A"); }
+  public void call(){ ping(); }
+}
+class B extends A {
+  void ping(){ System.out.print("B"); }
+}
+public class Program {
+  public static void main(String[] args) {
+    new B().call();
+  }
+}
+\`\`\`
+`,
+    answers: ['A', 'B', 'AB', 'שגיאת קומפילציה'],
     correctAnswer: 0,
   },
   {
@@ -1489,8 +1499,14 @@ public class Program {
     id: 66,
     question: `מה יודפס?
 \`\`\`
-class A { void f(A a){ System.out.println("A"); } }
-class B extends A { void f(B b){ System.out.println("B"); } }
+class A { 
+  void f(A a){ System.out.println("A"); } 
+}
+
+class B extends A { 
+  void f(B b){ System.out.println("B"); } 
+}
+
 public class Program {
   public static void main(String[] a){
     A x = new B();
@@ -1600,8 +1616,15 @@ public class Program{
     id: 74,
     question: `מה יודפס?
 \`\`\`
-class P { String n="p"; String msg(){ return "P"; } }
-class C extends P { String n="c"; String msg(){ return "C"; } }
+class P { 
+  String n="p"; 
+  String msg(){ return "P"; } 
+}
+class C extends P { 
+  String n="c"; 
+  String msg(){ return "C"; } 
+}
+
 public class Program{
   public static void main(String[] a){
     P x = new C();
@@ -1616,11 +1639,16 @@ public class Program{
     id: 75,
     question: `מה יודפס?
 \`\`\`
-class A{ String name="parent"; String m(){ return "from "+name; } }
+class A{ 
+  String name="parent"; 
+  String m(){ return "from "+name; } 
+}
+
 class B extends A{
   static String name="child";
   String m(){ return "from "+this.name; }
 }
+
 public class Program{
   public static void main(String[] a){
     A ref = new B();
@@ -2019,8 +2047,14 @@ public class Program{
     question: `מה יודפס?
 \`\`\`
 class A{
-  A(){ this("X"); System.out.print("1"); }
-  A(String s){ System.out.print(s); }
+  A(){ 
+    this("X"); 
+    System.out.print("1"); 
+  }
+  
+  A(String s){ 
+    System.out.print(s); 
+  }
 }
 
 public class Program{ 
@@ -2417,27 +2451,6 @@ class B extends A {
       'לא חוקי — Integer אינו Number.',
       'חוקי רק אם g ב-A הוא final.',
     ],
-    correctAnswer: 0,
-  },
-  {
-    id: 116,
-    question: `מה יודפס?
-\`\`\`
-class A {
-  private void ping(){ System.out.print("A"); }
-  public void call(){ ping(); }
-}
-class B extends A {
-  void ping(){ System.out.print("B"); }
-}
-public class Program {
-  public static void main(String[] args) {
-    new B().call();
-  }
-}
-\`\`\`
-`,
-    answers: ['A', 'B', 'AB', 'שגיאת קומפילציה'],
     correctAnswer: 0,
   },
 ];
