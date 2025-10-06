@@ -1559,7 +1559,7 @@ Person p = new Person();
 Student s = new Student();
 Graduate g = new Graduate();
 \`\`\``,
-    answers: ['p = g;  // כן', 'g = s;  // כן', 's = p;  // כן', 'g = new Person(); // כן'],
+    answers: ['p = g;', 'g = s;', 's = p;', 'g = new Person();'],
     correctAnswer: 0,
   },
   {

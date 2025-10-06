@@ -1,7 +1,7 @@
-export type ExamType = "java" | "statistics";
+export type ExamType = "java" | "statistics" | "economy";
 
 export function isValidExamType(value: string | null): value is ExamType {
-  return value === "java" || value === "statistics";
+  return value === "java" || value === "statistics" || value === "economy";
 }
 
 export function getValidExamType(value: string | null, defaultType: ExamType = "java"): ExamType {
@@ -11,7 +11,7 @@ export function getValidExamType(value: string | null, defaultType: ExamType = "
 export interface Question {
   id: number;
   question: string;
-  answers: [string, string, string, string];
+  answers: [string, string, string, string] | [string, string, string, string, string];
   correctAnswer: number; // index of the correct answer
   linkTo?: number[] // ids of group questions 
   hasImage?: string;
