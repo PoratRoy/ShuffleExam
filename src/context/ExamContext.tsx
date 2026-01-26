@@ -50,11 +50,11 @@ export const ExamProvider: React.FC<ExamProviderProps> = ({
   initialExamType = DEFAULT_EXAM_TYPE,
   onExamTypeChange
 }) => {
+  const [isMounted, setIsMounted] = React.useState(false);
   const [examState, setExamState] = useState<ExamState>(() => {
-    const exam = MapExams[initialExamType];
     return {
       currentExamType: initialExamType,
-      questionGroups: selectFirstQuestions(exam.questions, exam.targetCount),
+      questionGroups: [], // Start with empty on server/initial client
       selectedAnswers: {},
       examResults: null,
       score: 0,
@@ -62,9 +62,21 @@ export const ExamProvider: React.FC<ExamProviderProps> = ({
     };
   });
 
+  // Handle hydration and initial shuffling
+  useEffect(() => {
+    setIsMounted(true);
+    const exam = MapExams[initialExamType];
+    const selectedGroups = selectFirstQuestions(exam.questions, exam.targetCount);
+    
+    setExamState(prev => ({
+      ...prev,
+      questionGroups: selectedGroups
+    }));
+  }, []);
+
   // Update exam state when initialExamType changes (from URL parsing)
   useEffect(() => {
-    if (examState.currentExamType !== initialExamType) {
+    if (isMounted && examState.currentExamType !== initialExamType) {
       const exam = MapExams[initialExamType];
       const selectedGroups = selectFirstQuestions(exam.questions, exam.targetCount);
 
@@ -77,7 +89,7 @@ export const ExamProvider: React.FC<ExamProviderProps> = ({
         isExamFinished: false,
       });
     }
-  }, [initialExamType, examState.currentExamType]);
+  }, [initialExamType, examState.currentExamType, isMounted]);
 
   const selectAnswer = (questionId: number, answerIndex: number) => {
     if (examState.isExamFinished) return;
