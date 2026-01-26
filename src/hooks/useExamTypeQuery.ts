@@ -2,12 +2,13 @@
 
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import { useCallback, useEffect, useState } from 'react';
-import { ExamType, getValidExamType } from '@/models/types/exam';
+import { ExamType } from '@/models/types/exam';
+import { DEFAULT_EXAM_TYPE, getValidExamType } from '@/models/resources/exams';
 
 /**
  * Custom hook to manage exam type in URL query parameters
  */
-export function useExamTypeQuery(defaultExamType: ExamType = 'java') {
+export function useExamTypeQuery(defaultExamType: ExamType = DEFAULT_EXAM_TYPE) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();

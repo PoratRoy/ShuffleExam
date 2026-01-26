@@ -1,9 +1,11 @@
-import { Question } from '../types/exam';
+import { QuestionGroups } from '../types/exam';
 
-export const JavaQuestions: Question[] = [
+export const JavaQuestions: QuestionGroups[] = [
   {
-    id: 1,
-    question: `בהינתן התוכנית הבאה, בחרו את האפשרות המדויקת ביותר כאשר ננסה להריץ את התוכנית. ניתן להניח שכל מחלקה כתובה בקובץ נפרד באותה החבילה.
+    questions: [
+      {
+        id: 1,
+        question: `בהינתן התוכנית הבאה, בחרו את האפשרות המדויקת ביותר כאשר ננסה להריץ את התוכנית. ניתן להניח שכל מחלקה כתובה בקובץ נפרד באותה החבילה.
 \`\`\`
 public class Base {
   public static final String STR = " Super Class ";
@@ -25,28 +27,36 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: [
-      'יודפס Super Class 12.',
-      'התוכנית לא תרוץ מכיוון שקיימת שגיאת קומפילציה.',
-      'יודפס Super Class 21.',
-      'יודפס Super Class 2.',
+        answers: [
+          'יודפס Super Class 12.',
+          'התוכנית לא תרוץ מכיוון שקיימת שגיאת קומפילציה.',
+          'יודפס Super Class 21.',
+          'יודפס Super Class 2.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 2,
-    question: 'מי מהטענות הבאות אינה נכונה?',
-    answers: [
-      'מחלקה המוגדרת כ-final לא יכולה לרשת מחלקות אחרות.',
-      'אי אפשר לדרוס מתודה המוגדרת כ-final.',
-      'לא ניתן לרשת מחלקה המוגדרת כ-final.',
-      'ניתן לרשת ממחלקת האב מתודה המוגדרת אצלו כ-final.',
+    questions: [
+      {
+        id: 2,
+        question: 'מי מהטענות הבאות אינה נכונה?',
+        answers: [
+          'מחלקה המוגדרת כ-final לא יכולה לרשת מחלקות אחרות.',
+          'אי אפשר לדרוס מתודה המוגדרת כ-final.',
+          'לא ניתן לרשת מחלקה המוגדרת כ-final.',
+          'ניתן לרשת ממחלקת האב מתודה המוגדרת אצלו כ-final.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 3,
-    question: `בהינתן התוכנית הבאה, בחרו את האפשרות המדויקת ביותר לתיקון הקוד ע״פ העקרונות שלמדנו בשיעור.
+    questions: [
+      {
+        id: 3,
+        question: `בהינתן התוכנית הבאה, בחרו את האפשרות המדויקת ביותר לתיקון הקוד ע״פ העקרונות שלמדנו בשיעור.
 \`\`\`
 class A {
   private int num;
@@ -73,17 +83,21 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: [
-      'הוספת קוד לפני שורה 7 if (obj instanceof A), ואחרת נחזיר false.',
-      'החלפת שורה 22 בקוד System.out.println(b.equals(a));',
-      'החלפת שורה 6 בקוד public boolean equals(B b).',
-      'החלפת שורה 6 בקוד public boolean equals(A a).',
+        answers: [
+          'הוספת קוד לפני שורה 7 if (obj instanceof A), ואחרת נחזיר false.',
+          'החלפת שורה 22 בקוד System.out.println(b.equals(a));',
+          'החלפת שורה 6 בקוד public boolean equals(B b).',
+          'החלפת שורה 6 בקוד public boolean equals(A a).',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 4,
-    question: `בחרו את התשובה המדויקת ביותר.
+    questions: [
+      {
+        id: 4,
+        question: `בחרו את התשובה המדויקת ביותר.
 \`\`\`
 public class A {
   private String name;
@@ -109,28 +123,36 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: [
-      'התוכנית תרוץ ובסיום יודפס false.',
-      'התוכנית תרוץ ובסיום יודפס true.',
-      'התוכנית תתקמפל אבל תהיה שגיאת זמן ריצה.',
-      'התוכנית לא תתקמפל.',
+        answers: [
+          'התוכנית תרוץ ובסיום יודפס false.',
+          'התוכנית תרוץ ובסיום יודפס true.',
+          'התוכנית תתקמפל אבל תהיה שגיאת זמן ריצה.',
+          'התוכנית לא תתקמפל.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 5,
-    question: 'האם מחלקה יורשת יכולה להפעיל מתודה של האב בהוראת גישה private?',
-    answers: [
-      'לא, בלי קשר לחבילות.',
-      'כן, כל עוד שתי המחלקות מוגדרות באותה חבילה ומדובר על מתודה סטטית.',
-      'כן, בלי קשר לחבילות.',
-      'רק אם המחלקה היורשת מוגדרת באותה החבילה כ-final.',
+    questions: [
+      {
+        id: 5,
+        question: 'האם מחלקה יורשת יכולה להפעיל מתודה של האב בהוראת גישה private?',
+        answers: [
+          'לא, בלי קשר לחבילות.',
+          'כן, כל עוד שתי המחלקות מוגדרות באותה חבילה ומדובר על מתודה סטטית.',
+          'כן, בלי קשר לחבילות.',
+          'רק אם המחלקה היורשת מוגדרת באותה החבילה כ-final.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 6,
-    question: `מה נקבל כשננסה להריץ את התוכנית הבאה?
+    questions: [
+      {
+        id: 6,
+        question: `מה נקבל כשננסה להריץ את התוכנית הבאה?
 \`\`\`
 class Mammal {
   void eat(Mammal m) {
@@ -158,39 +180,51 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: [
-      'Cattle eats hay.',
-      'Mammal eats food.',
-      'Horse eats hay.',
-      'התוכנית לא תרוץ, תהיה שגיאת קומפילציה.',
+        answers: [
+          'Cattle eats hay.',
+          'Mammal eats food.',
+          'Horse eats hay.',
+          'התוכנית לא תרוץ, תהיה שגיאת קומפילציה.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 7,
-    question: 'בחרו את הטענה המדויקת ביותר ביחס לבנאים ב-Java.',
-    answers: [
-      'שם הבנאי תמיד צריך להיות כמו שם המחלקה.',
-      'אין צורך להגדיר בנאי בירושת מחלקה כי אנחנו תמיד מקבלים אחד כזה מתנה לכל מחלקה.',
-      'תמיד אם לא נקרא לבנאי של האב במפורש אז תהיה שגיאת קומפילציה.',
-      'בהעמסת בנאים, תמיד מספיק לקרוא לבנאי אחד בלבד במחלקת הבן.',
+    questions: [
+      {
+        id: 7,
+        question: 'בחרו את הטענה המדויקת ביותר ביחס לבנאים ב-Java.',
+        answers: [
+          'שם הבנאי תמיד צריך להיות כמו שם המחלקה.',
+          'אין צורך להגדיר בנאי בירושת מחלקה כי אנחנו תמיד מקבלים אחד כזה מתנה לכל מחלקה.',
+          'תמיד אם לא נקרא לבנאי של האב במפורש אז תהיה שגיאת קומפילציה.',
+          'בהעמסת בנאים, תמיד מספיק לקרוא לבנאי אחד בלבד במחלקת הבן.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 8,
-    question: "בחרו את הטענה המדויקת ביותר העוסקת במילה 'this' ב-Java.",
-    answers: [
-      'המילה משמשת כהפניה לאובייקט המדובר.',
-      'המילה משמשת כדי ליצור העמסה בין בנאים.',
-      'המילה משמשת כדי ליצור מופע חדש של האובייקט.',
-      'כל התשובות נכונות.',
+    questions: [
+      {
+        id: 8,
+        question: "בחרו את הטענה המדויקת ביותר העוסקת במילה 'this' ב-Java.",
+        answers: [
+          'המילה משמשת כהפניה לאובייקט המדובר.',
+          'המילה משמשת כדי ליצור העמסה בין בנאים.',
+          'המילה משמשת כדי ליצור מופע חדש של האובייקט.',
+          'כל התשובות נכונות.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 9,
-    question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
+    questions: [
+      {
+        id: 9,
+        question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
 \`\`\`
 class Base {
   final public void show() {
@@ -211,17 +245,21 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: [
-      'שגיאת קומפילציה.',
-      'שגיאת זמן ריצה.',
-      'יודפס Base::show() called.',
-      'יודפס Derived::show() called.',
+        answers: [
+          'שגיאת קומפילציה.',
+          'שגיאת זמן ריצה.',
+          'יודפס Base::show() called.',
+          'יודפס Derived::show() called.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 10,
-    question: `הניחו כי מחלקת Undergraduate יורשת ממחלקת Student אשר יורשת ממחלקת Person. בהינתן שורות הקוד הבאות:
+    questions: [
+      {
+        id: 10,
+        question: `הניחו כי מחלקת Undergraduate יורשת ממחלקת Student אשר יורשת ממחלקת Person. בהינתן שורות הקוד הבאות:
 \`\`\`
 Person p = new Person();
 Student s = new Student();
@@ -234,12 +272,16 @@ Undergraduate ug = new Undergraduate();
 4. ug = p;
 5. s = new Person();
 \`\`\``,
-    answers: ['1 ו-2.', '3 ו-4.', '1 ו-4.', '2, 3 ו-5.'],
-    correctAnswer: 0,
+        answers: ['1 ו-2.', '3 ו-4.', '1 ו-4.', '2, 3 ו-5.'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 11,
-    question: `מה סוג הקשר בין someMeth במחלקות A ו-B?
+    questions: [
+      {
+        id: 11,
+        question: `מה סוג הקשר בין someMeth במחלקות A ו-B?
 \`\`\`
 class A {
   protected void someMeth() {
@@ -256,12 +298,16 @@ class B extends A {
   }
 }
 \`\`\``,
-    answers: ['גם דריסה וגם העמסה.', 'לא דריסה ולא העמסה.', 'רק העמסה.', 'רק דריסה.'],
-    correctAnswer: 0,
+        answers: ['גם דריסה וגם העמסה.', 'לא דריסה ולא העמסה.', 'רק העמסה.', 'רק דריסה.'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 12,
-    question: `מה יודפס כאשר נריץ את הקוד הבא?
+    questions: [
+      {
+        id: 12,
+        question: `מה יודפס כאשר נריץ את הקוד הבא?
 \`\`\`
 class First {
   public First() { System.out.println("A"); }
@@ -278,12 +324,16 @@ public class MainClass {
   }
 }
 \`\`\``,
-    answers: ['A B C', 'C B A', 'C', 'A'],
-    correctAnswer: 0,
+        answers: ['A B C', 'C B A', 'C', 'A'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 13,
-    question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
+    questions: [
+      {
+        id: 13,
+        question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
 \`\`\`
 class Complex {
   private double re, im;
@@ -303,17 +353,21 @@ public class Main {
   }
 }
 \`\`\``,
-    answers: [
-      'שגיאת קומפילציה.',
-      'יודפס (0.0 + 0.0i).',
-      'שגיאת זמן ריצה.',
-      'כל התשובות לא נכונות.',
+        answers: [
+          'שגיאת קומפילציה.',
+          'יודפס (0.0 + 0.0i).',
+          'שגיאת זמן ריצה.',
+          'כל התשובות לא נכונות.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 14,
-    question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
+    questions: [
+      {
+        id: 14,
+        question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
 \`\`\`
 class Parent {
   String name = "parent";
@@ -336,12 +390,16 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: ['parent from child', 'parent from parent', 'child from child', 'child from parent'],
-    correctAnswer: 0,
+        answers: ['parent from child', 'parent from parent', 'child from child', 'child from parent'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 15,
-    question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
+    questions: [
+      {
+        id: 15,
+        question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
 \`\`\`
 class Parent {
   String name = "parent";
@@ -367,17 +425,21 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: [
-      'שגיאת קומפילציה.',
-      'שגיאת זמן ריצה.',
-      'child from childchild.',
-      'parent from child.',
+        answers: [
+          'שגיאת קומפילציה.',
+          'שגיאת זמן ריצה.',
+          'child from childchild.',
+          'parent from child.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 16,
-    question: `בחרו את הטענה המדויקת ביותר בנוגע לקוד הבא:
+    questions: [
+      {
+        id: 16,
+        question: `בחרו את הטענה המדויקת ביותר בנוגע לקוד הבא:
 \`\`\`
 public class A {
   private int a;
@@ -398,17 +460,21 @@ public class B {
   }
 }
 \`\`\``,
-    answers: [
-      'בנייה ההעתקה במחלקה B מבצע העתקה עמוקה למערך בלבד.',
-      'בנייה ההעתקה במחלקה B מבצע העתקה עמוקה למערך ולאובייקטים השמורים במערך.',
-      'בנייה ההעתקה במחלקה B מבצע העתקה עמוקה לאובייקטים השמורים במערך בלבד.',
-      'בנייה ההעתקה במחלקה B לא מבצע העתקה עמוקה כלל.',
+        answers: [
+          'בנייה ההעתקה במחלקה B מבצע העתקה עמוקה למערך בלבד.',
+          'בנייה ההעתקה במחלקה B מבצע העתקה עמוקה למערך ולאובייקטים השמורים במערך.',
+          'בנייה ההעתקה במחלקה B מבצע העתקה עמוקה לאובייקטים השמורים במערך בלבד.',
+          'בנייה ההעתקה במחלקה B לא מבצע העתקה עמוקה כלל.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 17,
-    question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
+    questions: [
+      {
+        id: 17,
+        question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
 \`\`\`
 public abstract class B {
   public abstract int func();
@@ -439,12 +505,16 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: ['1083', '8103', 'שגיאת קומפילציה.', 'שגיאת זמן ריצה.'],
-    correctAnswer: 0,
+        answers: ['1083', '8103', 'שגיאת קומפילציה.', 'שגיאת זמן ריצה.'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 18,
-    question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
+    questions: [
+      {
+        id: 18,
+        question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
 \`\`\`
 class A {
   private String str;
@@ -466,12 +536,16 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: ['שגיאת זמן ריצה.', 'שגיאת קומפילציה.', 'יודפס Hi.', 'יודפס nullnullHi.'],
-    correctAnswer: 0,
+        answers: ['שגיאת זמן ריצה.', 'שגיאת קומפילציה.', 'יודפס Hi.', 'יודפס nullnullHi.'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 19,
-    question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
+    questions: [
+      {
+        id: 19,
+        question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
 \`\`\`
 public class A {
   private int num;
@@ -492,12 +566,16 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: ['שגיאת קומפילציה.', 'שגיאת זמן ריצה.', '44.', '24.'],
-    correctAnswer: 0,
+        answers: ['שגיאת קומפילציה.', 'שגיאת זמן ריצה.', '44.', '24.'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 20,
-    question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
+    questions: [
+      {
+        id: 20,
+        question: `מה נקבל כאשר ננסה להריץ את הקוד הבא?
 \`\`\`
 public class A {
   public abstract void func();
@@ -526,12 +604,16 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: ['שגיאת קומפילציה.', 'שגיאת זמן ריצה.', 'BCB.', 'AAA.'],
-    correctAnswer: 0,
+        answers: ['שגיאת קומפילציה.', 'שגיאת זמן ריצה.', 'BCB.', 'AAA.'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 21,
-    question: `בהינתן התוכנית הבאה, בחרו את האפשרות המדויקת ביותר.
+    questions: [
+      {
+        id: 21,
+        question: `בהינתן התוכנית הבאה, בחרו את האפשרות המדויקת ביותר.
 \`\`\`
 public class Animal {
   protected static String sound = "Generic sound";
@@ -558,28 +640,36 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: [
-      'ADWoofGeneric sound',
-      'התוכנית לא תרוץ מכיוון שיש שגיאת קומפילציה.',
-      'DWoofGeneric sound',
-      'DAWoofGeneric sound',
+        answers: [
+          'ADWoofGeneric sound',
+          'התוכנית לא תרוץ מכיוון שיש שגיאת קומפילציה.',
+          'DWoofGeneric sound',
+          'DAWoofGeneric sound',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 2,
-    question: 'מה המטרה של המילה השמורה abstract ב-Java?',
-    answers: [
-      'להגדיר מחלקה שלא ניתן ליצור ממנה אובייקטים ישירות.',
-      'לציין שמחלקה לא יכולה להיות יורשת.',
-      'לקבוע שכל המתודות במחלקה חייבות להיות סטטיות.',
-      'לקבוע שמחלקה יכולה להכיל לפחות מתודה אחת abstract.',
+    questions: [
+      {
+        id: 22,
+        question: 'מה המטרה של המילה השמורה abstract ב-Java?',
+        answers: [
+          'להגדיר מחלקה שלא ניתן ליצור ממנה אובייקטים ישירות.',
+          'לציין שמחלקה לא יכולה להיות יורשת.',
+          'לקבוע שכל המתודות במחלקה חייבות להיות סטטיות.',
+          'לקבוע שמחלקה יכולה להכיל לפחות מתודה אחת abstract.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 23,
-    question: `בהינתן הקוד הבא, איזו שורת קוד לא תגרום לשגיאת קומפילציה?
+    questions: [
+      {
+        id: 23,
+        question: `בהינתן הקוד הבא, איזו שורת קוד לא תגרום לשגיאת קומפילציה?
 \`\`\`
 public abstract class Shape {
   protected int sides;
@@ -604,17 +694,21 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: [
-      'Shape[] arr = new Square[5];',
-      'Rectangle rectangl = new Rectangle[1];',
-      'Square square = new Rectangle(4);',
-      'Shape shape = new Shape(3);',
+        answers: [
+          'Shape[] arr = new Square[5];',
+          'Rectangle rectangl = new Rectangle[1];',
+          'Square square = new Rectangle(4);',
+          'Shape shape = new Shape(3);',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 24,
-    question: `מה נקבל כשננסה להריץ את התוכנית הבאה?
+    questions: [
+      {
+        id: 24,
+        question: `מה נקבל כשננסה להריץ את התוכנית הבאה?
 \`\`\`
 public class Parent {
   public void show() {
@@ -641,40 +735,56 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: [
-      'ChildParentChildParentChild',
-      'ParentChildParentChildParent',
-      'ChildChildChildChildChild',
-      'ParentParentParentParentParent',
+        answers: [
+          'ChildParentChildParentChild',
+          'ParentChildParentChildParent',
+          'ChildChildChildChildChild',
+          'ParentParentParentParentParent',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 25,
-    question: 'איזו מהפעולות הבאות אינה חוקית על המשתנה str מטיפוס מחרוזת ב-Java?',
-    answers: ["str[0] = 'A';", 'str.charAt(0);', 'str.length();', 'str.toUpperCase();'],
-    correctAnswer: 0,
-  },
-  {
-    id: 26,
-    question: 'מה המטרה של המילה השמורה super בשפת Java?',
-    answers: [
-      'לגשת לחברים (שדות ומתודות) של מחלקת האב.',
-      'לגשת למתודות ולקבועים סטטיים של המחלקה הנוכחית.',
-      'ליצור אובייקט חדש של מחלקת האב.',
-      'לאפשר דריסה של מתודות בין מחלקת האב למחלקת הבן.',
+    questions: [
+      {
+        id: 25,
+        question: 'איזו מהפעולות הבאות אינה חוקית על המשתנה str מטיפוס מחרוזת ב-Java?',
+        answers: ["str[0] = 'A';", 'str.charAt(0);', 'str.length();', 'str.toUpperCase();'],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 27,
-    question: 'איזו מהפעולות הבאות אינה חוקית על ArrayList בשפת Java?',
-    answers: ['list.add(0, 5);', 'list.set(0, element);', 'list.clear();', 'list.get(0);'],
-    correctAnswer: 0,
+    questions: [
+      {
+        id: 26,
+        question: 'מה המטרה של המילה השמורה super בשפת Java?',
+        answers: [
+          'לגשת לחברים (שדות ומתודות) של מחלקת האב.',
+          'לגשת למתודות ולקבועים סטטיים של המחלקה הנוכחית.',
+          'ליצור אובייקט חדש של מחלקת האב.',
+          'לאפשר דריסה של מתודות בין מחלקת האב למחלקת הבן.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 28,
-    question: `מה נקבל כשננסה להריץ את התוכנית הבאה?
+    questions: [
+      {
+        id: 27,
+        question: 'איזו מהפעולות הבאות אינה חוקית על ArrayList בשפת Java?',
+        answers: ['list.add(0, 5);', 'list.set(0, element);', 'list.clear();', 'list.get(0);'],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    questions: [
+      {
+        id: 28,
+        question: `מה נקבל כשננסה להריץ את התוכנית הבאה?
 \`\`\`
 class A {
   private int value;
@@ -716,12 +826,16 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: ['truetruefalsetrue', 'truetruefalsefalse', 'שגיאת זמן ריצה.', 'שגיאת קומפילציה.'],
-    correctAnswer: 0,
+        answers: ['truetruefalsetrue', 'truetruefalsefalse', 'שגיאת זמן ריצה.', 'שגיאת קומפילציה.'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 29,
-    question: `מה נקבל כשננסה להריץ את התוכנית הבאה?
+    questions: [
+      {
+        id: 29,
+        question: `מה נקבל כשננסה להריץ את התוכנית הבאה?
 \`\`\`
 class Vehicle {
   public void print() {
@@ -747,17 +861,21 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: [
-      'Car\nVehicle\nCar\nRuntime error',
-      'Car\nVehicle\nVehicle\nCar',
-      'Car\nVehicle\nCar\nVehicle',
-      'Compilation error',
+        answers: [
+          'Car\nVehicle\nCar\nRuntime error',
+          'Car\nVehicle\nVehicle\nCar',
+          'Car\nVehicle\nCar\nVehicle',
+          'Compilation error',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 30,
-    question: `מה נקבל כשננסה להריץ את התוכנית הבאה?
+    questions: [
+      {
+        id: 30,
+        question: `מה נקבל כשננסה להריץ את התוכנית הבאה?
 \`\`\`
 class A {
   public int getValue() { return 10; }
@@ -778,12 +896,16 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: ['30', '20', '10', 'Compilation error'],
-    correctAnswer: 0,
+        answers: ['30', '20', '10', 'Compilation error'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 31,
-    question: `מה נקבל כשננסה להריץ את התוכנית הבאה?
+    questions: [
+      {
+        id: 31,
+        question: `מה נקבל כשננסה להריץ את התוכנית הבאה?
 \`\`\`
 class Employee {
   protected String name;
@@ -833,50 +955,66 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: [
-      'false\nfalse\nJane (102)',
-      'false\ntrue\nJane (102)',
-      'true\nfalse\nJohn (101)',
-      'true\nfalse\nJane (102)',
+        answers: [
+          'false\nfalse\nJane (102)',
+          'false\ntrue\nJane (102)',
+          'true\nfalse\nJohn (101)',
+          'true\nfalse\nJane (102)',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 32,
-    question: 'בחרו את המשפט המדויק ביותר העוסק בעיקרון ההכמסה.',
-    answers: [
-      'לא תמיד נגדיר מתודות set ו-get לכל משתני המחלקה.',
-      'נגדיר משתני מחלקה כפרטיים רק במידה ואין צורך לבצע בדיקות תקינות בבנאי.',
-      'תמיד נגדיר משתני מחלקה כ-protected למקרה שמחלקה כלשהי תרצה לרשת את המחלקה.',
-      'לא ניתן לבצע בדיקות תקינות בבנאי למחלקה פרטית ללא מתודת set ציבורית.',
+    questions: [
+      {
+        id: 32,
+        question: 'בחרו את המשפט המדויקת ביותר העוסקת בעיקרון ההכמסה.',
+        answers: [
+          'לא תמיד נגדיר מתודות set ו-get לכל משתני המחלקה.',
+          'נגדיר משתני מחלקה כפרטיים רק במידה ואין צורך לבצע בדיקות תקינות בבנאי.',
+          'תמיד נגדיר משתני מחלקה כ-protected למקרה שמחלקה כלשהי תרצה לרשת את המחלקה.',
+          'לא ניתן לבצע בדיקות תקינות בבנאי למחלקה פרטית ללא מתודת set ציבורית.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 33,
-    question: 'בחרו את הטענה המדויקת ביותר העוסקת במילה this ב-Java.',
-    answers: [
-      'המילה עוזרת כדי לבצע הבחנה בין משתנים מקומיים לבין משתני מחלקה.',
-      'משתמשים במילה כדי לבצע shadowing בין משתני מחלקה.',
-      'משתמשים במילה בשביל בדיקת תקינות.',
-      'אף תשובה אינה נכונה.',
+    questions: [
+      {
+        id: 33,
+        question: 'בחרו את הטענה המדויקת ביותר העוסקת במילה this ב-Java.',
+        answers: [
+          'המילה עוזרת כדי לבצע הבחנה בין משתנים מקומיים לבין משתני מחלקה.',
+          'משתמשים במילה כדי לבצע shadowing בין משתני מחלקה.',
+          'משתמשים במילה בשביל בדיקת תקינות.',
+          'אף תשובה אינה נכונה.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 34,
-    question: 'בחרו את הטענה המדויקת ביותר העוסקת במחלקות מופשטות.',
-    answers: [
-      'מדובר במחלקות המכילות משתנים ומתודות סטטיות ציבוריות בלבד.',
-      'מדובר במחלקות המורישות אך ורק מתודה סטטית אחת.',
-      'מדובר במחלקות abstract המחייבות לבנות מחלקות אחרות.',
-      'מדובר במחלקות המכילות לפחות מתודה abstract אחת.',
+    questions: [
+      {
+        id: 34,
+        question: 'בחרו את הטענה המדויקת ביותר העוסקת במחלקות מופשטות.',
+        answers: [
+          'מדובר במחלקות המכילות משתנים ומתודות סטטיות ציבוריות בלבד.',
+          'מדובר במחלקות המורישות אך ורק מתודה סטטית אחת.',
+          'מדובר במחלקות abstract המחייבות לבנות מחלקות אחרות.',
+          'מדובר במחלקות המכילות לפחות מתודה abstract אחת.',
+        ],
+        correctAnswer: 3,
+      },
     ],
-    correctAnswer: 3,
   },
   {
-    id: 35,
-    question: `בחרו את קטע הקוד שיש לכתוב במקום XXX בקוד הבא כדי שתתבצע העתקה עמוקה בבנאי העתקה של המחלקה B:
+    questions: [
+      {
+        id: 35,
+        question: `בחרו את קטע הקוד שיש לכתוב במקום XXX בקוד הבא כדי שתתבצע העתקה עמוקה בבנאי העתקה של המחלקה B:
 \`\`\`
 public class A {
   protected int x,y;
@@ -899,17 +1037,21 @@ public class B {
   }
 }
 \`\`\``,
-    answers: [
-      'arr[i] = new A(b.arr[i].x, b.arr[i].y);',
-      'לא ניתן לממש העתקה עמוקה בקוד מכיוון שלא קיים בנאי העתקה במחלקה של A.',
-      'אף תשובה אינה נכונה.',
-      'arr[i] = b.arr[i];',
+        answers: [
+          'arr[i] = new A(b.arr[i].x, b.arr[i].y);',
+          'לא ניתן לממש העתקה עמוקה בקוד מכיוון שלא קיים בנאי העתקה במחלקה של A.',
+          'אף תשובה אינה נכונה.',
+          'arr[i] = b.arr[i];',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 36,
-    question: `איזו הצהרה נכונה לגבי casting בקוד הבא?
+    questions: [
+      {
+        id: 36,
+        question: `איזו הצהרה נכונה לגבי casting בקוד הבא?
 \`\`\`
 class Animal {}
 class Dog extends Animal {}
@@ -921,25 +1063,29 @@ public class Program {
 }
 \`\`\`
 `,
-    answers: [
-      'יזרק ClassCastException בזמן ריצה.',
-      'שגיאת קומפילציה.',
-      'הקוד ירוץ ללא חריגה.',
-      'המרה תעבוד אם Dog הוא abstract.',
+        answers: [
+          'יזרק ClassCastException בזמן ריצה.',
+          'שגיאת קומפילציה.',
+          'הקוד ירוץ ללא חריגה.',
+          'המרה תעבוד אם Dog הוא abstract.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 37,
-    question: `מה סוג הקשר בין someMeth במחלקות A ו-B?
+    questions: [
+      {
+        id: 37,
+        question: `מה סוג הקשר בין someMeth במחלקות A ו-B?
 \`\`\`
-Class A {
+class A {
   protected void someMeth() {
     System.out.println("from class A");
   }
 }
 
-Class B extends A {
+class B extends A {
   protected void someMeth() {
     System.out.println("from class B");
   }
@@ -948,12 +1094,16 @@ Class B extends A {
   }
 }
 \`\`\``,
-    answers: ['גם דריסה וגם העמסה.', 'לא דריסה ולא העמסה.', 'רק העמסה.', 'רק דריסה.'],
-    correctAnswer: 0,
+        answers: ['גם דריסה וגם העמסה.', 'לא דריסה ולא העמסה.', 'רק העמסה.', 'רק דריסה.'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 38,
-    question: `כמה טעויות קומפילציה יש בקוד הבא?
+    questions: [
+      {
+        id: 38,
+        question: `כמה טעויות קומפילציה יש בקוד הבא?
 \`\`\`
 public class A {
   public static final int ADULT = 18;
@@ -980,17 +1130,21 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: ['3', '1', '2', '4'],
-    correctAnswer: 0,
+        answers: ['3', '1', '2', '4'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 39,
-    question: `מה נקבל כשננסה להריץ את התוכנית הבאה?
+    questions: [
+      {
+        id: 39,
+        question: `מה נקבל כשננסה להריץ את התוכנית הבאה?
 \`\`\`
 class A {
   int x;
   public A(int x) { this.x = x; }
-  public String toString() { return x+\"\"; }
+  public String toString() { return x+""; }
 }
 
 import java.util.Arrays;
@@ -1005,12 +1159,16 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: ['True', 'False', 'שגיאת זמן ריצה.', 'שגיאת קומפילציה.'],
-    correctAnswer: 0,
+        answers: ['True', 'False', 'שגיאת זמן ריצה.', 'שגיאת קומפילציה.'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 40,
-    question: `בחרו את שורת הקוד המתאימה שיש לכתוב במקום XXX כדי לענות על הדרישה ששני בני אדם שווים אם השם שלהם שווה:
+    questions: [
+      {
+        id: 40,
+        question: `בחרו את שורת הקוד המתאימה שיש לכתוב במקום XXX כדי לענות על הדרישה ששני בני אדם שווים אם השם שלהם שווה:
 \`\`\`
 class Person {
   protected String name;
@@ -1026,73 +1184,97 @@ class Person {
   }
 }
 \`\`\``,
-    answers: [
-      'name.equals(((Person)obj).name)',
-      'name.equals((Person)obj.name)',
-      'name==((Person)obj).name',
-      'name==(Person)obj.name',
+        answers: [
+          'name.equals(((Person)obj).name)',
+          'name.equals((Person)obj.name)',
+          'name==((Person)obj).name',
+          'name==(Person)obj.name',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 41,
-    question: 'מה יודפס כאשר נריץ את התוכנית?',
-    answers: [
-      'התוכנית לא תרוץ מכיוון שקיימת שגיאת קומפילציה.',
-      'התוכנית תדפיס 21 Super Class.',
-      'התוכנית תדפיס Super Class 21.',
-      'התוכנית תדפיס 12 Super Class.',
+    questions: [
+      {
+        id: 41,
+        question: 'מה יודפס כאשר נריץ את התוכנית?',
+        answers: [
+          'התוכנית לא תרוץ מכיוון שקיימת שגיאת קומפילציה.',
+          'התוכנית תדפיס 21 Super Class.',
+          'התוכנית תדפיס Super Class 21.',
+          'התוכנית תדפיס 12 Super Class.',
+        ],
+        correctAnswer: 1,
+      },
     ],
-    correctAnswer: 1,
   },
   {
-    id: 42,
-    question: 'בחרו את האפשרות המדויקת ביותר העוסקת בדריסת ובהעמסת מתודות.',
-    answers: [
-      'כל התשובות נכונות.',
-      'העמסת מתודות יכולה להתרחש גם באותה מחלקה וגם בין מחלקות שונות.',
-      'העמסת מתודה כרוכה ביצירת מתודות רבות עם אותו שם אך עם פרמטרים שונים, בעוד שדריסת מתודה כרוכה בשימוש שונה למתודה שעוברת בירושה.',
-      'בהעמסת מתודות סוג טיפוס ההחזרה יכול להיות שונה, ובדריסת פונקציה לא.',
+    questions: [
+      {
+        id: 42,
+        question: 'בחרו את האפשרות המדויקת ביותר העוסקת בדריסת ובהעמסת מתודות.',
+        answers: [
+          'כל התשובות נכונות.',
+          'העמסת מתודות יכולה להתרחש גם באותה מחלקה וגם בין מחלקות שונות.',
+          'העמסת מתודה כרוכה ביצירת מתודות רבות עם אותו שם אך עם פרמטרים שונים, בעוד שדריסת מתודה כרוכה בשימוש שונה למתודה שעוברת בירושה.',
+          'בהעמסת מתודות סוג טיפוס ההחזרה יכול להיות שונה, ובדריסת פונקציה לא.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 43,
-    question: 'האם subclass יכול שיהיה לו יותר מ-superclass אחד?',
-    answers: [
-      'לא, ל-subclass יכול להיות לכל היותר רק superclass אחד.',
-      'כן, subclass יכול שיהיה לו מספר superclass-ים.',
-      'רק אם ה-superclass-ים בעלי אותו שם.',
-      'רק אם ה-subclass מוגדר כ-final.',
+    questions: [
+      {
+        id: 43,
+        question: 'האם subclass יכול שיהיה לו יותר מ-superclass אחד?',
+        answers: [
+          'לא, ל-subclass יכול להיות לכל היותר רק superclass אחד.',
+          'כן, subclass יכול שיהיה לו מספר superclass-ים.',
+          'רק אם ה-superclass-ים בעלי אותו שם.',
+          'רק אם ה-subclass מוגדר כ-final.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 44,
-    question:
-      'האם מחלקת הבן subclass היורשת ממחלקת האב superclass, יכולה לגשת למתודות ומשתני מחלקה ממחלקת האב במידה והם בהכרזת protected?',
-    answers: [
-      'כן, בלי קשר לחבילה שבה הם נמצאים.',
-      'רק אם ה-subclass מסומן כ-"final".',
-      'לא, הרשאת protected לא מזמן לגישה מה-subclass.',
-      'כן, כל עוד הם באותה החבילה (package).',
+    questions: [
+      {
+        id: 44,
+        question:
+          'האם מחלקת הבן subclass היורשת ממחלקת האב superclass, יכולה לגשת למתודות ומשתני מחלקה ממחלקת האב במידה והם בהכרזת protected?',
+        answers: [
+          'כן, בלי קשר לחבילה שבה הם נמצאים.',
+          'רק אם ה-subclass מסומן כ-"final".',
+          'לא, הרשאת protected לא מזמן לגישה מה-subclass.',
+          'כן, כל עוד הם באותה החבילה (package).',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 45,
-    question: 'מה המטרה של המילה final בהורשה ב-java?',
-    answers: [
-      'לציין שלא ניתן לרשת את המחלקה.',
-      'להסתיר מתודה במחלקת האב (superclass).',
-      'לציין שמתודה יכולה לרשת רק פעם אחת.',
-      'כל התשובות הן נכונות.',
+    questions: [
+      {
+        id: 45,
+        question: 'מה המטרה של המילה final בהורשה ב-java?',
+        answers: [
+          'לציין שלא ניתן לרשת את המחלקה.',
+          'להסתיר מתודה במחלקת האב (superclass).',
+          'לציין שמתודה יכולה לרשת רק פעם אחת.',
+          'כל התשובות הן נכונות.',
+        ],
+        correctAnswer: 3,
+      },
     ],
-    correctAnswer: 3,
   },
   {
-    id: 46,
-    question: `איזו אפשרות נכונה לגבי גישת בנאים?
+    questions: [
+      {
+        id: 46,
+        question: `איזו אפשרות נכונה לגבי גישת בנאים?
 \`\`\`
 class Base {
   Base(int x){ }
@@ -1104,34 +1286,46 @@ class Sub extends Base {
 }
 \`\`\`
 `,
-    answers: [
-      'על Sub לקרוא ל-super עם ארגומנט: super(0);',
-      'אין צורך בקריאת super, תתבצע אוטומטית.',
-      'יש להוסיף בנאי ברירת מחדל ל-Base במקום.',
-      'ניתן לקרוא ל-this() במקום super() וזה מספיק.',
+        answers: [
+          'על Sub לקרוא ל-super עם ארגומנט: super(0);',
+          'אין צורך בקריאת super, תתבצע אוטומטית.',
+          'יש להוסיף בנאי ברירת מחדל ל-Base במקום.',
+          'ניתן לקרוא ל-this() במקום super() וזה מספיק.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 47,
-    question: 'מה נקבל כשננסה להריץ את התוכנית הבאה?',
-    answers: ['BaseExamDerived.', 'ExamDerived.', 'ExamBaseDerived.', 'ExamDerivedBase.'],
-    correctAnswer: 0,
-  },
-  {
-    id: 48,
-    question: 'בחרו את המשפט המדויק ביותר העוסק בעיקרון ההכמסה(Encapsulation).',
-    answers: [
-      'ככלל, נעדיף להגדיר משתני מחלקה כפרטיים ולהוסיף עבורם מתודות get ו-set לפי הצורך.',
-      'נגדיר משתני מחלקה כפרטיים רק במידה ויש צורך לבצע בדיקת תקינות בבנאי.',
-      'תמיד נגדיר משתני מחלקה כפרטיים, גם אם הם קבועים סטטיים ומכילים ערכים ידועים לשאר המחלקות.',
-      'לכל משתנה מחלקה פרטי שנרצה לבצע בדיקת תקינות בבנאי, נמחיש בהכרח מתודת set ציבורית.',
+    questions: [
+      {
+        id: 47,
+        question: 'מה נקבל כשננסה להריץ את התוכנית הבאה?',
+        answers: ['BaseExamDerived.', 'ExamDerived.', 'ExamBaseDerived.', 'ExamDerivedBase.'],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 49,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 48,
+        question: 'בחרו את המשפט המדויק ביותר העוסקת בעיקרון ההכמסה(Encapsulation).',
+        answers: [
+          'ככלל, נעדיף להגדיר משתני מחלקה כפרטיים ולהוסיף עבורם מתודות get ו-set לפי הצורך.',
+          'נגדיר משתני מחלקה כפרטיים רק במידה ויש צורך לבצע בדיקת תקינות בבנאי.',
+          'תמיד נגדיר משתני מחלקה כפרטיים, גם אם הם קבועים סטטיים ומכילים ערכים ידועים לשאר המחלקות.',
+          'לכל משתנה מחלקה פרטי שנרצה לבצע בדיקת תקינות בבנאי, נמחיש בהכרח מתודת set ציבורית.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    questions: [
+      {
+        id: 49,
+        question: `מה יודפס?
 \`\`\`
 class A {
   private void ping(){ System.out.print("A"); }
@@ -1147,18 +1341,26 @@ public class Program {
 }
 \`\`\`
 `,
-    answers: ['A', 'B', 'AB', 'שגיאת קומפילציה'],
-    correctAnswer: 0,
+        answers: ['A', 'B', 'AB', 'שגיאת קומפילציה'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 50,
-    question: 'מהי האפשרות המדויקת ביותר שתודפס בסיום ריצת התוכנית?',
-    answers: ['44.', '22.', '42.', '24.'],
-    correctAnswer: 0,
+    questions: [
+      {
+        id: 50,
+        question: 'מהי האפשרות המדויקת ביותר שתודפס בסיום ריצת התוכנית?',
+        answers: ['44.', '22.', '42.', '24.'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 51,
-    question: `בהינתן היררכיות המחלקות הבאה, איזה קטע קוד מבין האפשרויות הבאות שיוכתב בפונקציה הראשית לא יגרום לשגיאת קומפילציה?
+    questions: [
+      {
+        id: 51,
+        question: `בהינתן היררכיות המחלקות הבאה, איזה קטע קוד מבין האפשרויות הבאות שיוכתב בפונקציה הראשית לא יגרום לשגיאת קומפילציה?
 \`\`\`
 public abstract class A{
   protected int num;
@@ -1174,12 +1376,16 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: ['C c = new D();', 'A a = new A();', 'C c = new B();', 'B b = new D();'],
-    correctAnswer: 0,
+        answers: ['C c = new D();', 'A a = new A();', 'C c = new B();', 'B b = new D();'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 52,
-    question: `בהינתן הקוד הבא, בחרו את האפשרות המדויקת ביותר. (המספרים מתייחסים למספרי השורות בקוד)
+    questions: [
+      {
+        id: 52,
+        question: `בהינתן הקוד הבא, בחרו את האפשרות המדויקת ביותר. (המספרים מתייחסים למספרי השורות בקוד)
 \`\`\`
 public abstract class A{
   protected int num;
@@ -1205,17 +1411,21 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: [
-      'קיימת שגיאת קומפילציה בשורה 18.',
-      'קיימת שגיאת קומפילציה בשורה 12.',
-      'קיימת שגיאת קומפילציה בשורה 10.',
-      'קיימת שגיאת זמן ריצה בשורה 20.',
+        answers: [
+          'קיימת שגיאת קומפילציה בשורה 18.',
+          'קיימת שגיאת קומפילציה בשורה 12.',
+          'קיימת שגיאת קומפילציה בשורה 10.',
+          'קיימת שגיאת זמן ריצה בשורה 20.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 53,
-    question: `האם הוספת אחת משורות הקוד הבאות ב-main במקום שורת ההערה, תעזור לקוד לעבור קומפילציה?
+    questions: [
+      {
+        id: 53,
+        question: `האם הוספת אחת משורות הקוד הבאות ב-main במקום שורת ההערה, תעזור לקוד לעבור קומפילציה?
 \`\`\`
 class A{
   private String str;
@@ -1233,17 +1443,21 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: [
-      'לא, אף תשובה אינה נכונה.',
-      'A a = new B(_)',
-      'B b = new B(5)',
-      'A a = new A("my String")',
+        answers: [
+          'לא, אף תשובה אינה נכונה.',
+          'A a = new B(_)',
+          'B b = new B(5)',
+          'A a = new A("my String")',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 54,
-    question: `בחרו את קטע הקוד שיש לכתוב במקום XXX כך שהתוכנית תדפיס פעמיים true.
+    questions: [
+      {
+        id: 54,
+        question: `בחרו את קטע הקוד שיש לכתוב במקום XXX כך שהתוכנית תדפיס פעמיים true.
 \`\`\`
 public class A{
   private String name;
@@ -1267,17 +1481,21 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: [
-      'obj instanceof A',
-      'obj instanceof B',
-      'getClass() == obj.getClass()',
-      'this == obj',
+        answers: [
+          'obj instanceof A',
+          'obj instanceof B',
+          'getClass() == obj.getClass()',
+          'this == obj',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 55,
-    question: `בחרו את קטע הקוד שיש לכתוב במקום XXX בקוד הבא כדי שתתבצע העתקה עמוקה בבנאי ההעתקה של המחלקה B.
+    questions: [
+      {
+        id: 55,
+        question: `בחרו את קטע הקוד שיש לכתוב במקום XXX בקוד הבא כדי שתתבצע העתקה עמוקה בבנאי ההעתקה של המחלקה B.
 \`\`\`
 public class A{
   private int x, y;
@@ -1295,17 +1513,21 @@ public class B{
   }
 }
 \`\`\``,
-    answers: [
-      'לא ניתן לממש העתקה עמוקה בקוד מכיוון שלא ניתן לגשת לערכי משתני המחלקה של A.',
-      'אין הבדל בין העתקה עמוקה להעתקה רדודה בקוד מכיוון שמשתני המחלקה ב-A הינם פרימיטיביים.',
-      'arr[i] = new A(b.arr[i].x, b.arr[i].y);',
-      'arr[i] = b.arr[i];',
+        answers: [
+          'לא ניתן לממש העתקה עמוקה בקוד מכיוון שלא ניתן לגשת לערכי משתני המחלקה של A.',
+          'אין הבדל בין העתקה עמוקה להעתקה רדודה בקוד מכיוון שמשתני המחלקה ב-A הינם פרימיטיביים.',
+          'arr[i] = new A(b.arr[i].x, b.arr[i].y);',
+          'arr[i] = b.arr[i];',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 56,
-    question: `בהינתן הקוד הבא, בחרו את האפשרות המדויקת ביותר:
+    questions: [
+      {
+        id: 56,
+        question: `בהינתן הקוד הבא, בחרו את האפשרות המדויקת ביותר:
 \`\`\`
 public class A{
   public static int myVar;
@@ -1321,17 +1543,21 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: [
-      'התוכנית תדפיס 3.',
-      'התוכנית תדפיס 1.',
-      'קיימת טעות קומפילציה.',
-      'קיימים 3 משתני מחלקה בשם myVar בזיכרון.',
+        answers: [
+          'התוכנית תדפיס 3.',
+          'התוכנית תדפיס 1.',
+          'קיימת טעות קומפילציה.',
+          'קיימים 3 משתני מחלקה בשם myVar בזיכרון.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 57,
-    question: `בהינתן הקוד הבא, בחרו את שורת הקוד שלא יוצרת שגיאת קומפילציה. (המספרים מתייחסים לשורות בצד שמאל)
+    questions: [
+      {
+        id: 57,
+        question: `בהינתן הקוד הבא, בחרו את שורת הקוד שלא יוצרת שגיאת קומפילציה. (המספרים מתייחסים לשורות בצד שמאל)
 \`\`\`
 public class A{
   private int num;
@@ -1349,12 +1575,16 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: ['שורה 13.', 'שורה 12.', 'שורה 11.', 'שורה 7.'],
-    correctAnswer: 0,
+        answers: ['שורה 13.', 'שורה 12.', 'שורה 11.', 'שורה 7.'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 58,
-    question: `בהינתן הקוד הבא, בחרו את האפשרות המדויקת ביותר של תוצאת ההדפסה לאחר ריצת התוכנית:
+    questions: [
+      {
+        id: 58,
+        question: `בהינתן הקוד הבא, בחרו את האפשרות המדויקת ביותר של תוצאת ההדפסה לאחר ריצת התוכנית:
 \`\`\`
 public class Parent{
   String name = "parent";
@@ -1371,23 +1601,31 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: ['parent from child', 'parent from parent', 'child from child', 'child from parent'],
-    correctAnswer: 0,
-  },
-  {
-    id: 59,
-    question: 'בחרו את הטענה הנכונה ביותר בהתאמה לעקרונות שלמדנו בשיעור.',
-    answers: [
-      'כאשר נדרוס פונקציה, אנו נקרא למתודה המקורית אצל האב במידת האפשר כדי למנוע מצב של שכפול קוד.',
-      'מתודה סטטית יכולה לגשת למשתני מחלקה שאינם סטטיים.',
-      'ניתן לבצע העמסת פונקציות באמצעות שינוי טיפוס הערך המוחזר בלבד.',
-      'כל משתנה מחלקה final נגדיר תמיד גם כ static וגם כ public.',
+        answers: ['parent from child', 'parent from parent', 'child from child', 'child from parent'],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 60,
-    question: `כמה טעויות קומפילציה יש בקוד הבא?
+    questions: [
+      {
+        id: 59,
+        question: 'בחרו את הטענה הנכונה ביותר בהתאמה לעקרונות שלמדנו בשיעור.',
+        answers: [
+          'כאשר נדרוס פונקציה, אנו נקרא למתודה המקורית אצל האב במידת האפשר כדי למנוע מצב של שכפול קוד.',
+          'מתודה סטטית יכולה לגשת למשתני מחלקה שאינם סטטיים.',
+          'ניתן לבצע העמסת פונקציות באמצעות שינוי טיפוס הערך המוחזר בלבד.',
+          'כל משתנה מחלקה final נגדיר תמיד גם כ static וגם כ public.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    questions: [
+      {
+        id: 60,
+        question: `כמה טעויות קומפילציה יש בקוד הבא?
 \`\`\`
 public class A{
   public static final int ADULT = 18;
@@ -1407,15 +1645,16 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: ['3', '1', '2', '4'],
-    correctAnswer: 0,
+        answers: ['3', '1', '2', '4'],
+        correctAnswer: 0,
+      },
+    ],
   },
-
-  // new questions
-
   {
-    id: 61,
-    question: `בהינתן התוכנית הבאה, מה יודפס? (כל מחלקה בקובץ נפרד)
+    questions: [
+      {
+        id: 61,
+        question: `בהינתן התוכנית הבאה, מה יודפס? (כל מחלקה בקובץ נפרד)
 \`\`\`
 public class Super {
   public static final String MSG = "Hello";
@@ -1431,23 +1670,31 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: ['SUHello!', 'USHello!', 'התוכנית לא תתקמפל.', 'Hello!SU'],
-    correctAnswer: 0,
-  },
-  {
-    id: 62,
-    question: 'מי מה טענות הבאות אינה נכונה לגבי final?',
-    answers: [
-      'ניתן להכריז על מתודה כ-final כדי למנוע דריסה.',
-      'מחלקה מסומנת final לא יכולה להיות יורשת של מחלקה אחרת.',
-      'שדה final חייב לקבל ערך בדיוק פעם אחת.',
-      'מחלקה final אינה יכולה להיות בסיס לירושה.',
+        answers: ['SUHello!', 'USHello!', 'התוכנית לא תתקמפל.', 'Hello!SU'],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 1,
   },
   {
-    id: 63,
-    question: `מה התיקון הנכון למימוש equals הבא?
+    questions: [
+      {
+        id: 62,
+        question: 'מי מה טענות הבאות אינה נכונה לגבי final?',
+        answers: [
+          'ניתן להכריז על מתודה כ-final כדי למנוע דריסה.',
+          'מחלקה מסומנת final לא יכולה להיות יורשת של מחלקה אחרת.',
+          'שדה final חייב לקבל ערך בדיוק פעם אחת.',
+          'מחלקה final אינה יכולה להיות בסיס לירושה.',
+        ],
+        correctAnswer: 1,
+      },
+    ],
+  },
+  {
+    questions: [
+      {
+        id: 63,
+        question: `מה התיקון הנכון למימוש equals הבא?
 \`\`\`
 class P {
   private int id = 3;
@@ -1457,17 +1704,21 @@ class P {
   }
 }
 \`\`\``,
-    answers: [
-      'להוסיף בדיקות: if (this==o) return true; if (!(o instanceof P)) return false;',
-      'להחליף החתימה ל-boolean equals(P o).',
-      'להפוך את id ל-public.',
-      'להחזיר תמיד false אם o==null, בלי בדיקות נוספות.',
+        answers: [
+          'להוסיף בדיקות: if (this==o) return true; if (!(o instanceof P)) return false;',
+          'להחליף החתימה ל-boolean equals(P o).',
+          'להפוך את id ל-public.',
+          'להחזיר תמיד false אם o==null, בלי בדיקות נוספות.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 64,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 64,
+        question: `מה יודפס?
 \`\`\`
 class A {
   private String s;
@@ -1481,23 +1732,31 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: ['true', 'false', 'שגיאת זמן ריצה', 'שגיאת קומפילציה'],
-    correctAnswer: 0,
-  },
-  {
-    id: 65,
-    question: 'האם ניתן מהמחלקה היורשת לגשת למתודת אב שהיא private?',
-    answers: [
-      'לא, לעולם אי אפשר לגשת ל-private מחוץ למחלקה המגדירה.',
-      'כן, אם המתודה סטטית.',
-      'כן, אם היורשת באותה חבילה.',
-      'כן, אם נשתמש ב-super.',
+        answers: ['true', 'false', 'שגיאת זמן ריצה', 'שגיאת קומפילציה'],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 66,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 65,
+        question: 'האם ניתן מהמחלקה היורשת לגשת למתודת אב שהיא private?',
+        answers: [
+          'לא, לעולם אי אפשר לגשת ל-private מחוץ למחלקה המגדירה.',
+          'כן, אם המתודה סטטית.',
+          'כן, אם היורשת באותה חבילה.',
+          'כן, אם נשתמש ב-super.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    questions: [
+      {
+        id: 66,
+        question: `מה יודפס?
 \`\`\`
 class A { 
   void f(A a){ System.out.println("A"); } 
@@ -1515,66 +1774,90 @@ public class Program {
   }
 }
 \`\`\``,
-    answers: ['A', 'B', 'שגיאת קומפילציה', 'שגיאת זמן ריצה'],
-    correctAnswer: 0,
-  },
-  {
-    id: 67,
-    question: 'איזו טענה נכונה לגבי בנאים?',
-    answers: [
-      'אם לא הוגדר בנאי – קומפיילר ייצר בנאי ברירת מחדל ללא פרמטרים.',
-      'שם הבנאי אינו חייב להיות כשם המחלקה.',
-      'בנאי יכול להחזיר ערך int.',
-      'בנאי יכול להיקרא ישירות כמו מתודה רגילה.',
+        answers: ['A', 'B', 'שגיאת קומפילציה', 'שגיאת זמן ריצה'],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 68,
-    question: 'למה משמשת המילה this?',
-    answers: [
-      'להפניה לאובייקט הנוכחי ולהבחנה בין שדות לפרמטרים.',
-      'לקריאה למתודת אב.',
-      'ליצירת מופע חדש.',
-      'להגדרת משתנה סטטי.',
+    questions: [
+      {
+        id: 67,
+        question: 'איזו טענה נכונה לגבי בנאים?',
+        answers: [
+          'אם לא הוגדר בנאי – קומפיילר ייצר בנאי ברירת מחדל ללא פרמטרים.',
+          'שם הבנאי אינו חייב להיות כשם המחלקה.',
+          'בנאי יכול להחזיר ערך int.',
+          'בנאי יכול להיקרא ישירות כמו מתודה רגילה.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 69,
-    question: `מה התוצאה?
+    questions: [
+      {
+        id: 68,
+        question: 'למה משמשת המילה this?',
+        answers: [
+          'להפניה לאובייקט הנוכחי ולהבחנה בין שדות לפרמטרים.',
+          'לקריאה למתודת אב.',
+          'ליצירת מופע חדש.',
+          'להגדרת משתנה סטטי.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    questions: [
+      {
+        id: 69,
+        question: `מה התוצאה?
 \`\`\`
 class Base { public final void show(){ System.out.println("Base"); } }
 class Der extends Base { public void show(int x){ System.out.println("Der"); } }
 public class Program { public static void main(String[] a){ new Der().show(); } }
 \`\`\``,
-    answers: ['Base', 'Der', 'שגיאת קומפילציה', 'שגיאת זמן ריצה'],
-    correctAnswer: 0,
+        answers: ['Base', 'Der', 'שגיאת קומפילציה', 'שגיאת זמן ריצה'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 70,
-    question: `בהינתן: Graduate יורש Student, ו-Student יורש Person. מה עובר קומפילציה?
+    questions: [
+      {
+        id: 70,
+        question: `בהינתן: Graduate יורש Student, ו-Student יורש Person. מה עובר קומפילציה?
 \`\`\`
 Person p = new Person();
 Student s = new Student();
 Graduate g = new Graduate();
 \`\`\``,
-    answers: ['p = g;', 'g = s;', 's = p;', 'g = new Person();'],
-    correctAnswer: 0,
+        answers: ['p = g;', 'g = s;', 's = p;', 'g = new Person();'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 71,
-    question: `איזה קשר מתקיים?
+    questions: [
+      {
+        id: 71,
+        question: `איזה קשר מתקיים?
 \`\`\`
 class A { void m(){} }
 class B extends A { void m(){} void m(int x){} }
 \`\`\``,
-    answers: ['גם דריסה וגם העמסה', 'אין קשר', 'רק העמסה', 'רק דריסה'],
-    correctAnswer: 0,
+        answers: ['גם דריסה וגם העמסה', 'אין קשר', 'רק העמסה', 'רק דריסה'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 72,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 72,
+        question: `מה יודפס כאשר נריץ את הקוד הבא?
 \`\`\`
 class X { X(){ System.out.print("X"); } }
 
@@ -1588,12 +1871,16 @@ public class Program{
   } 
 }
 \`\`\``,
-    answers: ['XYZ', 'ZYX', 'Z', 'X'],
-    correctAnswer: 0,
+        answers: ['XYZ', 'ZYX', 'Z', 'X'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 73,
-    question: `מה יקרה?
+    questions: [
+      {
+        id: 73,
+        question: `מה יקרה?
 \`\`\`
 class C {
   private int r,i;
@@ -1609,12 +1896,16 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: ['1+2i', '0+0i', 'שגיאת קומפילציה', 'שגיאת זמן ריצה'],
-    correctAnswer: 0,
+        answers: ['1+2i', '0+0i', 'שגיאת קומפילציה', 'שגיאת זמן ריצה'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 74,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 74,
+        question: `מה יודפס?
 \`\`\`
 class P { 
   String n="p"; 
@@ -1632,12 +1923,16 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: ['p C', 'c C', 'p P', 'c P'],
-    correctAnswer: 0,
+        answers: ['p C', 'c C', 'p P', 'c P'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 75,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 75,
+        question: `מה יודפס?
 \`\`\`
 class A{ 
   String name="parent"; 
@@ -1656,12 +1951,16 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: ['parent from child', 'child from child', 'parent from parent', 'child from parent'],
-    correctAnswer: 0,
+        answers: ['parent from child', 'child from child', 'parent from parent', 'child from parent'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 76,
-    question: `לגבי הקוד הבא:
+    questions: [
+      {
+        id: 76,
+        question: `לגבי הקוד הבא:
 \`\`\`
 class A{ public static int c; A(){ c++; } }
 
@@ -1673,12 +1972,16 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: ['2', '1', 'שגיאת קומפילציה', '3'],
-    correctAnswer: 0,
+        answers: ['2', '1', 'שגיאת קומפילציה', '3'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 77,
-    question: `בחרו את השורה התקינה היחידה:
+    questions: [
+      {
+        id: 77,
+        question: `בחרו את השורה התקינה היחידה:
 \`\`\`
 class A{ private int n; A(int n){this.n=n;} }
 class B{ private abstract int f(); }
@@ -1691,38 +1994,50 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: ['2', '1', '3', '4'],
-    correctAnswer: 0,
+        answers: ['2', '1', '3', '4'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 78,
-    question: `איזו טענה נכונה?
+    questions: [
+      {
+        id: 78,
+        question: `איזו טענה נכונה?
 \`\`\`
 class A{ String n="a"; String m(){return "A";} }
 class B extends A{ String n="b"; String m(){return "B";} }
 \`\`\``,
-    answers: [
-      'גישה לשדה דרך רפרנס מסוג A משתמשת ב-n של A, בעוד קריאה למתודה דינמית תשתמש במימוש של B.',
-      'גם שדה וגם מתודה נבחרים דינמית בזמן ריצה.',
-      'גם שדה וגם מתודה נבחרים סטטית בזמן קומפילציה.',
-      'קריאה למתודה במצב זה תיקח את A תמיד.',
+        answers: [
+          'גישה לשדה דרך רפרנס מסוג A משתמשת ב-n של A, בעוד קריאה למתודה דינמית תשתמש במימוש של B.',
+          'גם שדה וגם מתודה נבחרים דינמית בזמן ריצה.',
+          'גם שדה וגם מתודה נבחרים סטטית בזמן קומפילציה.',
+          'קריאה למתודה במצב זה תיקח את A תמיד.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 79,
-    question: 'בחרו את הטענה הנכונה ביותר:',
-    answers: [
-      'בעת דריסה מומלץ לקרוא ל-super כדי להימנע משכפול קוד במידת הצורך.',
-      'מתודה סטטית יכולה לגשת לשדות מופע ישירות.',
-      'העמסה חוקית גם כאשר רק טיפוס ההחזרה שונה.',
-      'שדה final חייב להיות גם static וגם public.',
+    questions: [
+      {
+        id: 79,
+        question: 'בחרו את הטענה הנכונה ביותר:',
+        answers: [
+          'בעת דריסה מומלץ לקרוא ל-super כדי להימנע משכפול קוד במידת הצורך.',
+          'מתודה סטטית יכולה לגשת לשדות מופע ישירות.',
+          'העמסה חוקית גם כאשר רק טיפוס ההחזרה שונה.',
+          'שדה final חייב להיות גם static וגם public.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 80,
-    question: `כמה שגיאות קומפילציה?
+    questions: [
+      {
+        id: 80,
+        question: `כמה שגיאות קומפילציה יש בקוד הבא?
 \`\`\`
 class A{
   public static final int K = 5;
@@ -1741,24 +2056,32 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: ['3', '2', '1', '0'],
-    correctAnswer: 0,
+        answers: ['3', '2', '1', '0'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 81,
-    question: `מה יודפס? (כל מחלקה בקובץ נפרד)
+    questions: [
+      {
+        id: 81,
+        question: `מה יודפס? (כל מחלקה בקובץ נפרד)
 \`\`\`
 class A { A(){ System.out.print("A"); } }
 class B extends A { B(){ System.out.print("B"); } }
 class C extends B { C(){ System.out.print("C"); } }
 public class Program { public static void main(String[] a){ new C(); } }
 \`\`\``,
-    answers: ['ABC', 'CBA', 'ACB', 'BAC'],
-    correctAnswer: 0,
+        answers: ['ABC', 'CBA', 'ACB', 'BAC'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 82,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 82,
+        question: `מה יודפס?
 \`\`\`
 class X {
   static { System.out.print("S"); }
@@ -1773,12 +2096,16 @@ public class Program {
 }
 \`\`\`
 `,
-    answers: ['SICIC', 'SSII CC', 'SIIC', 'IICS'],
-    correctAnswer: 0,
+        answers: ['SICIC', 'SSII CC', 'SIIC', 'IICS'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 83,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 83,
+        question: `מה יודפס?
 \`\`\`
 class Printer{
   void print(Object o){ System.out.print("obj"); }
@@ -1791,23 +2118,31 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: ['obj', 'str', 'שגיאת קומפילציה', 'שגיאת זמן ריצה'],
-    correctAnswer: 0,
+        answers: ['obj', 'str', 'שגיאת קומפילציה', 'שגיאת זמן ריצה'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 84,
-    question: `בהינתן שמימוש equals במחלקה A משתמש ב-getClass(), ו-B יורשת מ-A ולא דורסת:
+    questions: [
+      {
+        id: 84,
+        question: `בהינתן שמימוש equals במחלקה A משתמש ב-getClass(), ו-B יורשת מ-A ולא דורסת:
 מה יודפס?
 \`\`\`
 System.out.print(new A("t").equals(new B("t")));
 System.out.print(new B("t").equals(new A("t")));
 \`\`\``,
-    answers: ['falsefalse', 'truetrue', 'truefalse', 'falsetrue'],
-    correctAnswer: 0,
+        answers: ['falsefalse', 'truetrue', 'truefalse', 'falsetrue'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 85,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 85,
+        question: `מה יודפס?
 \`\`\`
 class A { static void f(){ System.out.print("A"); } }
 class B extends A { static void f(){ System.out.print("B"); } }
@@ -1818,12 +2153,16 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: ['A', 'B', 'AB', 'שגיאת קומפילציה'],
-    correctAnswer: 0,
+        answers: ['A', 'B', 'AB', 'שגיאת קומפילציה'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 86,
-    question: `איזו טענה נכונה לגבי שדה final?
+    questions: [
+      {
+        id: 86,
+        question: `איזו טענה נכונה לגבי שדה final?
 \`\`\`
 class Id {
   private final int value;
@@ -1831,17 +2170,21 @@ class Id {
   void set(int v){ /* ... */ }
 }
 \`\`\``,
-    answers: [
-      'ניתן לאתחל את value פעם אחת בלבד – בדרך כלל בבנאי.',
-      'ניתן לשנות את value בכל מתודה מאותה מחלקה.',
-      'final אומר שהאובייקט כולו לא ניתן לשינוי (immutable) תמיד.',
-      'אסור לאתחל שדה final בתוך בנאי.',
+        answers: [
+          'ניתן לאתחל את value פעם אחת בלבד – בדרך כלל בבנאי.',
+          'ניתן לשנות את value בכל מתודה מאותה מחלקה.',
+          'final אומר שהאובייקט כולו לא ניתן לשינוי (immutable) תמיד.',
+          'אסור לאתחל שדה final בתוך בנאי.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 87,
-    question: `מה תוצאת הריצה?
+    questions: [
+      {
+        id: 87,
+        question: `מה תוצאת הריצה?
 \`\`\`
 class Animal { }
 class Dog extends Animal { }
@@ -1853,12 +2196,16 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: ['שגיאת זמן ריצה.', 'הודפס OK.', 'שגיאת קומפילציה.', 'לא יודפס דבר אך אין חריגה.'],
-    correctAnswer: 0,
+        answers: ['שגיאת זמן ריצה.', 'הודפס OK.', 'שגיאת קומפילציה.', 'לא יודפס דבר אך אין חריגה.'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 88,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 88,
+        question: `מה יודפס?
 \`\`\`
 interface I { void run(); }
 
@@ -1872,12 +2219,16 @@ public class Program {
   } 
 }
 \`\`\``,
-    answers: ['go', 'שגיאת קומפילציה', 'שגיאת זמן ריצה', 'אין הדפסה'],
-    correctAnswer: 0,
+        answers: ['go', 'שגיאת קומפילציה', 'שגיאת זמן ריצה', 'אין הדפסה'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 89,
-    question: `מה יקרה בזמן ריצה?
+    questions: [
+      {
+        id: 89,
+        question: `מה יקרה בזמן ריצה?
 \`\`\`
 class A { }
 class B extends A { }
@@ -1888,34 +2239,42 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: [
-      'שגיאת ריצה',
-      'שגיאת קומפילציה.',
-      'לא קורה דבר – חוקי לגמרי.',
-      'NullPointerException ייזרק.',
+        answers: [
+          'שגיאת ריצה',
+          'שגיאת קומפילציה.',
+          'לא קורה דבר – חוקי לגמרי.',
+          'NullPointerException ייזרק.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 90,
-    question: `איזו קביעה נכונה?
+    questions: [
+      {
+        id: 90,
+        question: `איזו קביעה נכונה?
 \`\`\`
 class Parent{ Parent(int x){} }
 class Child extends Parent{
   Child(){ /* ... */ }
 }
 \`\`\``,
-    answers: [
-      'שגיאת קומפילציה כי חייבים לקרוא ל-super(int).',
-      'הקוד יתקמפל – תמיד נקרא אוטומטית super().',
-      'השורה Child() תיצור בנאי ברירת מחדל להורה.',
-      'הקוד ירוץ אבל ידפיס אזהרה.',
+        answers: [
+          'שגיאת קומפילציה כי חייבים לקרוא ל-super(int).',
+          'הקוד יתקמפל – תמיד נקרא אוטומטית super().',
+          'השורה Child() תיצור בנאי ברירת מחדל להורה.',
+          'הקוד ירוץ אבל ידפיס אזהרה.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 91,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 91,
+        question: `מה יודפס?
 \`\`\`
 class A { 
   public String toString(){ return "A"; } 
@@ -1931,23 +2290,31 @@ public class Program{
   } 
 }
 \`\`\``,
-    answers: ['AB', 'BA', 'B', 'A'],
-    correctAnswer: 0,
-  },
-  {
-    id: 92,
-    question: 'איזו טענה נכונה לגבי protected?',
-    answers: [
-      'מחלקת בן מחוץ לחבילה עדיין יכולה לגשת לשדות/מתודות protected של אביה.',
-      'רק מחלקות באותה חבילה יכולות לגשת לשדות protected.',
-      'protected שקול ל-private.',
-      'אין הבדל בין protected ל-public.',
+        answers: ['AB', 'BA', 'B', 'A'],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 93,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 92,
+        question: 'איזו טענה נכונה לגבי protected?',
+        answers: [
+          'מחלקת בן מחוץ לחבילה עדיין יכולה לגשת לשדות/מתודות protected של אביה.',
+          'רק מחלקות באותה חבילה יכולות לגשת לשדות protected.',
+          'protected שקול ל-private.',
+          'אין הבדל בין protected ל-public.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    questions: [
+      {
+        id: 93,
+        question: `מה יודפס?
 \`\`\`
 class Node{ int v; Node(int v){this.v=v;} }
 
@@ -1961,12 +2328,16 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: ['true', 'false', 'שגיאת זמן ריצה', 'שגיאת קומפילציה'],
-    correctAnswer: 0,
+        answers: ['true', 'false', 'שגיאת זמן ריצה', 'שגיאת קומפילציה'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 94,
-    question: `איזו קביעה נכונה?
+    questions: [
+      {
+        id: 94,
+        question: `איזו קביעה נכונה?
 \`\`\`
 class A { 
   A make(){ return this; } 
@@ -1976,17 +2347,21 @@ class B extends A {
   B make(){ return this; } 
 }
 \`\`\``,
-    answers: [
-      'הקוד חוקי – החזרה קוֹוַרְיָאנְטִית מותרת.',
-      'שגיאת קומפילציה – חייבים להחזיר בדיוק A.',
-      'שגיאת זמן ריצה – פולימורפיזם אסור בהחזרות.',
-      'רק אם B מסומן final זה חוקי.',
+        answers: [
+          'הקוד חוקי – החזרה קוֹוַרְיָאנְטִית מותרת.',
+          'שגיאת קומפילציה – חייבים להחזיר בדיוק A.',
+          'שגיאת זמן ריצה – פולימורפיזם אסור בהחזרות.',
+          'רק אם B מסומן final זה חוקי.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 95,
-    question: `סדר ההדפסות?
+    questions: [
+      {
+        id: 95,
+        question: `סדר ההדפסות?
 \`\`\`
 class A{ 
   { System.out.print("I"); } 
@@ -2004,12 +2379,16 @@ public class Program{
   } 
 }
 \`\`\``,
-    answers: ['ICic', 'CIci', 'IiCc', 'icIC'],
-    correctAnswer: 0,
+        answers: ['ICic', 'CIci', 'IiCc', 'icIC'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 96,
-    question: `איזו שורה לא חוקית?
+    questions: [
+      {
+        id: 96,
+        question: `איזו שורה לא חוקית?
 \`\`\`
 import java.util.*;
 public class Program{
@@ -2021,12 +2400,16 @@ public class Program{
   }
 }
 \`\`\``,
-    answers: ['C לא חוקית.', 'A לא חוקית.', 'B לא חוקית.', 'D תקינה לחלוטין ללא אזהרות.'],
-    correctAnswer: 0,
+        answers: ['C לא חוקית.', 'A לא חוקית.', 'B לא חוקית.', 'D תקינה לחלוטין ללא אזהרות.'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 97,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 97,
+        question: `מה יודפס?
 \`\`\`
 class T{
   void m(long x){ System.out.print("long"); }
@@ -2039,12 +2422,16 @@ public class Program{
   } 
 }
 \`\`\``,
-    answers: ['long', 'Integer', 'שגיאת קומפילציה', 'שגיאת זמן ריצה'],
-    correctAnswer: 0,
+        answers: ['long', 'Integer', 'שגיאת קומפילציה', 'שגיאת זמן ריצה'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 98,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 98,
+        question: `מה יודפס?
 \`\`\`
 class A{
   A(){ 
@@ -2063,12 +2450,16 @@ public class Program{
   } 
 }
 \`\`\``,
-    answers: ['X1', '1X', 'שגיאת קומפילציה', 'אין הדפסה'],
-    correctAnswer: 0,
+        answers: ['X1', '1X', 'שגיאת קומפילציה', 'אין הדפסה'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 99,
-    question: `בחרו את ההשלמה הנכונה ל-XXX כדי לממש hashCode עקבי עם equals מהשאלה:
+    questions: [
+      {
+        id: 99,
+        question: `בחרו את ההשלמה הנכונה ל-XXX כדי לממש hashCode עקבי עם equals מהשאלה:
 \`\`\`
 class User {
   private final String id;
@@ -2089,28 +2480,36 @@ class User {
 }
 \`\`\`
 `,
-    answers: [
-      'return id==null ? 0 : id.hashCode();',
-      'return name.hashCode();',
-      'return super.hashCode();',
-      'return 42;',
+        answers: [
+          'return id==null ? 0 : id.hashCode();',
+          'return name.hashCode();',
+          'return super.hashCode();',
+          'return 42;',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 100,
-    question: 'איזה ממחלקות עליונות (top-level) ניתן להגדיר ב-Java?',
-    answers: [
-      'public או ללא מודיפייר (package-private) בלבד.',
-      'private, protected או public.',
-      'רק final.',
-      'abstract אסור ל-top-level.',
+    questions: [
+      {
+        id: 100,
+        question: 'איזה ממחלקות עליונות (top-level) ניתן להגדיר ב-Java?',
+        answers: [
+          'public או ללא מודיפייר (package-private) בלבד.',
+          'private, protected או public.',
+          'רק final.',
+          'abstract אסור ל-top-level.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 101,
-    question: `מה יודפס להרצה הבאה?
+    questions: [
+      {
+        id: 101,
+        question: `מה יודפס להרצה הבאה?
 \`\`\`
 class A {
   public A() { System.out.print("A"); }
@@ -2131,12 +2530,16 @@ public class Program {
 }
 \`\`\`
 `,
-    answers: ['ABC', 'CBA', 'BAC', 'התוכנית לא תתקמפל'],
-    correctAnswer: 0,
+        answers: ['ABC', 'CBA', 'BAC', 'התוכנית לא תתקמפל'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 102,
-    question: `בחרו את שורת הקוד שגורמת לדריסה חוקית (override) של doIt במחלקה B:
+    questions: [
+      {
+        id: 102,
+        question: `בחרו את שורת הקוד שגורמת לדריסה חוקית (override) של doIt במחלקה B:
 \`\`\`
 class A {
   protected Number doIt(Integer x) { return x + 1; }
@@ -2146,17 +2549,21 @@ class B extends A {
 }
 \`\`\`
 `,
-    answers: [
-      'public Integer doIt(Integer x) { return x + 2; }',
-      'protected Object doIt(Integer x) { return x + 2; }',
-      'private Number doIt(Integer x) { return x + 2; }',
-      'protected Number doIt(Number x) { return x.intValue() + 2; }',
+        answers: [
+          'public Integer doIt(Integer x) { return x + 2; }',
+          'protected Object doIt(Integer x) { return x + 2; }',
+          'private Number doIt(Integer x) { return x + 2; }',
+          'protected Number doIt(Number x) { return x.intValue() + 2; }',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 103,
-    question: `מה תוצאת ההרצה?
+    questions: [
+      {
+        id: 103,
+        question: `מה תוצאת ההרצה?
 \`\`\`
 class Parent {
   static void say() { System.out.print("P"); }
@@ -2173,14 +2580,17 @@ public class Program {
     ref.talk();
   }
 }
-\`\`\`
-`,
-    answers: ['Pc', 'Cc', 'Cp', 'CcP'],
-    correctAnswer: 0,
+\`\`\``,
+        answers: ['Pc', 'Cc', 'Cp', 'CcP'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 104,
-    question: `איזו אפשרות משלימה נכון את ה-XXX כדי למנוע שינוי מצב אובייקט חיצוני (העתקה מגינה)?
+    questions: [
+      {
+        id: 104,
+        question: `איזו אפשרות משלימה נכון את ה-XXX כדי למנוע שינוי מצב אובייקט חיצוני (העתקה מגינה)?
 \`\`\`
 class Point {
   private int x,y;
@@ -2196,17 +2606,21 @@ class Segment {
 }
 \`\`\`
 `,
-    answers: [
-      'this.start = new Point(start.getX(), start.getY());',
-      'this.start = start;',
-      'this.start = (Point) ((Object)start);',
-      'this.start = null; start = null;',
+        answers: [
+          'this.start = new Point(start.getX(), start.getY());',
+          'this.start = start;',
+          'this.start = (Point) ((Object)start);',
+          'this.start = null; start = null;',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 105,
-    question: `מה תהיה תוצאת ההרצה (כל מחלקה בקובץ נפרד)?
+    questions: [
+      {
+        id: 105,
+        question: `מה תהיה תוצאת ההרצה (כל מחלקה בקובץ נפרד)?
 \`\`\`
 interface I {
   default void f(){ System.out.print("I"); }
@@ -2224,14 +2638,17 @@ public class Program {
     x.f();
   }
 }
-\`\`\`
-`,
-    answers: ['A', 'I', 'שגיאת קומפילציה', 'אין הדפסה כלל'],
-    correctAnswer: 0,
+\`\`\``,
+        answers: ['A', 'I', 'שגיאת קומפילציה', 'אין הדפסה כלל'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 106,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 106,
+        question: `מה יודפס?
 \`\`\`
 class A {
   int v = get();
@@ -2248,14 +2665,17 @@ public class Program {
     new B();
   }
 }
-\`\`\`
-`,
-    answers: ['babAB', 'abAB', 'aabAB', 'baAB'],
-    correctAnswer: 0,
+\`\`\``,
+        answers: ['babAB', 'abAB', 'aabAB', 'baAB'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 107,
-    question: `איזו אפשרות נכונה לגבי הקוד?
+    questions: [
+      {
+        id: 107,
+        question: `איזו אפשרות נכונה לגבי הקוד?
 \`\`\`
 class A {
   public final void doWork(){}
@@ -2265,17 +2685,21 @@ class B extends A {
 }
 \`\`\`
 `,
-    answers: [
-      'לא ניתן לדרוס את doWork ב-B.',
-      'ניתן לדרוס את doWork רק עם אותו חתימה.',
-      'ניתן לדרוס אם משנים את הגישה ל-private.',
-      'ניתן לדרוס אם הופכים את B ל-final.',
+        answers: [
+          'לא ניתן לדרוס את doWork ב-B.',
+          'ניתן לדרוס את doWork רק עם אותו חתימה.',
+          'ניתן לדרוס אם משנים את הגישה ל-private.',
+          'ניתן לדרוס אם הופכים את B ל-final.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 108,
-    question: `מה יקרה בהרצה?
+    questions: [
+      {
+        id: 108,
+        question: `מה יקרה בהרצה?
 \`\`\`
 class A { }
 class B extends A { }
@@ -2287,14 +2711,17 @@ public class Program {
     System.out.print("OK");
   }
 }
-\`\`\`
-`,
-    answers: ['שגיאת ריצה', 'OK', 'שגיאת קומפילציה', 'יזרק ClassCastException'],
-    correctAnswer: 0,
+\`\`\``,
+        answers: ['שגיאת ריצה', 'OK', 'שגיאת קומפילציה', 'יזרק ClassCastException'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 109,
-    question: `בחרו את המימוש הנכון ל-equals בהתאם לחוזה (רפלקסיבי, סימטרי, מעברי) על בסיס מזהה ייחודי id:
+    questions: [
+      {
+        id: 109,
+        question: `בחרו את המימוש הנכון ל-equals בהתאם לחוזה (רפלקסיבי, סימטרי, מעברי) על בסיס מזהה ייחודי id:
 \`\`\`
 class User {
   private final String id;
@@ -2306,17 +2733,21 @@ class User {
 }
 \`\`\`
 `,
-    answers: [
-      'if(this==o) return true; if(!(o instanceof User)) return false; User u=(User)o; return id!=null && id.equals(u.id);',
-      'return this.name.equals(((User)o).name);',
-      'return o!=null && o.getClass()==getClass() && ((User)o).name.equals(name);',
-      'return true;',
+        answers: [
+          'if(this==o) return true; if(!(o instanceof User)) return false; User u=(User)o; return id!=null && id.equals(u.id);',
+          'return this.name.equals(((User)o).name);',
+          'return o!=null && o.getClass()==getClass() && ((User)o).name.equals(name);',
+          'return true;',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 110,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 110,
+        question: `מה יודפס?
 \`\`\`
 class Base {
   Base(){ print(); }
@@ -2333,14 +2764,17 @@ public class Program {
     new Der();
   }
 }
-\`\`\`
-`,
-    answers: ['0', '42', 'B', 'שגיאת קומפילציה'],
-    correctAnswer: 0,
+\`\`\``,
+        answers: ['0', '42', 'B', 'שגיאת קומפילציה'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 111,
-    question: `מה יודפס?
+    questions: [
+      {
+        id: 111,
+        question: `מה יודפס?
 \`\`\`
 class Counter {
   private static int c = 0;
@@ -2354,14 +2788,17 @@ public class Program {
     System.out.println(a.get());
   }
 }
-\`\`\`
-`,
-    answers: ['2', '1', '0', 'שגיאת קומפילציה'],
-    correctAnswer: 0,
+\`\`\``,
+        answers: ['2', '1', '0', 'שגיאת קומפילציה'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 112,
-    question: `בהמשך לשאלה הקודמת, מה יודפס עכשיו?
+    questions: [
+      {
+        id: 112,
+        question: `בהמשך לשאלה הקודמת, מה יודפס עכשיו?
 \`\`\`
 class Counter {
   private static int c = 0;
@@ -2373,14 +2810,17 @@ public class Program {
     System.out.println(Counter.get());
   }
 }
-\`\`\`
-`,
-    answers: ['0', '1', '2', 'שגיאת קומפילציה'],
-    correctAnswer: 0,
+\`\`\``,
+        answers: ['0', '1', '2', 'שגיאת קומפילציה'],
+        correctAnswer: 0,
+      },
+    ],
   },
   {
-    id: 113,
-    question: `איזו אפשרות משלימה נכון כדי ליצור העתקה עמוקה של מערך אובייקטים מסוג Node?
+    questions: [
+      {
+        id: 113,
+        question: `איזו אפשרות משלימה נכון כדי ליצור העתקה עמוקה של מערך אובייקטים מסוג Node?
 \`\`\`
 class Node {
   int v;
@@ -2395,19 +2835,22 @@ class Bag {
     }
   }
 }
-\`\`\`
-`,
-    answers: [
-      'nodes[i] = new Node(other.nodes[i].v);',
-      'nodes[i] = other.nodes[i];',
-      'nodes = other.nodes.clone();',
-      'nodes[i].v = other.nodes[i].v;',
+\`\`\``,
+        answers: [
+          'nodes[i] = new Node(other.nodes[i].v);',
+          'nodes[i] = other.nodes[i];',
+          'nodes = other.nodes.clone();',
+          'nodes[i].v = other.nodes[i].v;',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 114,
-    question: `מה יקרה?
+    questions: [
+      {
+        id: 114,
+        question: `מה יקרה?
 \`\`\`
 abstract class Shape {
   abstract double area();
@@ -2423,19 +2866,22 @@ public class Program {
     System.out.print(s.area());
   }
 }
-\`\`\`
-`,
-    answers: [
-      'שגיאת קומפילציה (לא ניתן ליצור מופע ממחלקה אבסטרקטית).',
-      'התוכנית תרוץ ותדפיס 0.',
-      'יזרק RuntimeException',
-      'התוכנית תרוץ ותדפיס את שטח העיגול',
+\`\`\``,
+        answers: [
+          'שגיאת קומפילציה (לא ניתן ליצור מופע ממחלקה אבסטרקטית).',
+          'התוכנית תרוץ ותדפיס 0.',
+          'יזרק RuntimeException',
+          'התוכנית תרוץ ותדפיס את שטח העיגול',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
   {
-    id: 115,
-    question: `מה חוקיות הדריסה?
+    questions: [
+      {
+        id: 115,
+        question: `מה חוקיות הדריסה?
 \`\`\`
 class A {
   public Number g(){ return 1; }
@@ -2443,14 +2889,15 @@ class A {
 class B extends A {
   public Integer g(){ return 2; }
 }
-\`\`\`
-`,
-    answers: [
-      'חוקי — טיפוס חזרה covariant.',
-      'לא חוקי — לא ניתן לשנות טיפוס חזרה בדריסה.',
-      'לא חוקי — Integer אינו Number.',
-      'חוקי רק אם g ב-A הוא final.',
+\`\`\``,
+        answers: [
+          'חוקי — טיפוס חזרה covariant.',
+          'לא חוקי — לא ניתן לשנות טיפוס חזרה בדריסה.',
+          'לא חוקי — Integer אינו Number.',
+          'חוקי רק אם g ב-A הוא final.',
+        ],
+        correctAnswer: 0,
+      },
     ],
-    correctAnswer: 0,
   },
 ];

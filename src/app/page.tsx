@@ -7,9 +7,10 @@ import ExamControls from '@/components/ExamControls/ExamControls';
 import Navbar from '@/components/Navbar/Navbar';
 import { ExamProvider } from '@/context/ExamContext';
 import { useExamTypeQuery } from '@/hooks/useExamTypeQuery';
+import { DEFAULT_EXAM_TYPE } from '@/models/resources/exams';
 
 function HomeContent() {
-  const { examType, setExamType, isReady } = useExamTypeQuery('java');
+  const { examType, setExamType, isReady } = useExamTypeQuery(DEFAULT_EXAM_TYPE);
 
   if (!isReady) {
     return <div>Loading...</div>;

@@ -18,9 +18,11 @@ const ExamControls: React.FC = () => {
   };
 
   const handleShuffleExam = () => {
-    const currentExamQuestions = MapExams[examState.currentExamType].questions;
-    shuffleExam(currentExamQuestions);
+    const currentExamGroups = MapExams[examState.currentExamType].questions;
+    shuffleExam(currentExamGroups);
   };
+
+  const totalQuestions = examState.questionGroups.reduce((acc, group) => acc + group.questions.length, 0);
 
   return (
     <div className={styles.controlsContainer}>
@@ -51,10 +53,10 @@ const ExamControls: React.FC = () => {
         {examState.isExamFinished && (
           <div className={styles.scoreDisplay}>
             <span className={styles.scoreText}>
-              ציון: {examState.score} / {examState.questions.length * 5}
+              ציון: {examState.score} / 100
             </span>
             <span className={styles.percentageText}>
-              {examState.questions.length - examState.score / 5} תוצאות לא נכונות
+              {totalQuestions - (examState.examResults?.filter(r => r.isCorrect).length || 0)} תשובות שגויות מתוך {totalQuestions} שאלות
             </span>
           </div>
         )}

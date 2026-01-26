@@ -1,8 +1,8 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { Question, ExamType } from '@/models/types/exam';
-import { MapExams } from '@/models/resources/exams';
+import { Question, ExamType, QuestionGroups } from '@/models/types/exam';
+import { DEFAULT_EXAM_TYPE, MapExams } from '@/models/resources/exams';
 import { shuffleQuestions, selectFirstQuestions } from '@/utils/shuffleQuestions';
 
 export interface ExamResult {
@@ -13,7 +13,7 @@ export interface ExamResult {
 
 export interface ExamState {
   currentExamType: ExamType;
-  questions: Question[];
+  questionGroups: QuestionGroups[];
   selectedAnswers: Record<number, number>;
   examResults: ExamResult[] | null;
   score: number;
@@ -25,7 +25,7 @@ interface ExamContextType {
   selectAnswer: (questionId: number, answerIndex: number) => void;
   finishExam: () => void;
   clearResults: () => void;
-  shuffleExam: (allQuestions: Question[]) => void;
+  shuffleExam: (allGroups: QuestionGroups[]) => void;
   switchExamType: (examType: ExamType) => void;
 }
 
@@ -47,27 +47,30 @@ interface ExamProviderProps {
 
 export const ExamProvider: React.FC<ExamProviderProps> = ({ 
   children, 
-  initialExamType = 'java',
+  initialExamType = DEFAULT_EXAM_TYPE,
   onExamTypeChange
 }) => {
-  const [examState, setExamState] = useState<ExamState>(() => ({
-    currentExamType: initialExamType,
-    questions: selectFirstQuestions(MapExams[initialExamType].questions, 20), // Start with first 20 questions, handling linked questions
-    selectedAnswers: {},
-    examResults: null,
-    score: 0,
-    isExamFinished: false,
-  }));
+  const [examState, setExamState] = useState<ExamState>(() => {
+    const exam = MapExams[initialExamType];
+    return {
+      currentExamType: initialExamType,
+      questionGroups: selectFirstQuestions(exam.questions, exam.targetCount),
+      selectedAnswers: {},
+      examResults: null,
+      score: 0,
+      isExamFinished: false,
+    };
+  });
 
   // Update exam state when initialExamType changes (from URL parsing)
   useEffect(() => {
     if (examState.currentExamType !== initialExamType) {
-      const examQuestions = MapExams[initialExamType].questions;
-      const selectedQuestions = selectFirstQuestions(examQuestions, 20);
+      const exam = MapExams[initialExamType];
+      const selectedGroups = selectFirstQuestions(exam.questions, exam.targetCount);
 
       setExamState({
         currentExamType: initialExamType,
-        questions: selectedQuestions,
+        questionGroups: selectedGroups,
         selectedAnswers: {},
         examResults: null,
         score: 0,
@@ -89,7 +92,9 @@ export const ExamProvider: React.FC<ExamProviderProps> = ({
   };
 
   const finishExam = () => {
-    const results: ExamResult[] = examState.questions.map(question => {
+    const allQuestions = examState.questionGroups.flatMap(group => group.questions);
+    
+    const results: ExamResult[] = allQuestions.map(question => {
       const selectedAnswer = examState.selectedAnswers[question.id];
       const isCorrect = selectedAnswer === question.correctAnswer;
       
@@ -100,12 +105,12 @@ export const ExamProvider: React.FC<ExamProviderProps> = ({
       };
     });
 
-    const score = results.filter(result => result.isCorrect).length * 5;
+    const score = results.length > 0 ? (results.filter(result => result.isCorrect).length / results.length) * 100 : 0;
 
     setExamState(prev => ({
       ...prev,
       examResults: results,
-      score,
+      score: Math.round(score),
       isExamFinished: true,
     }));
   };
@@ -120,13 +125,13 @@ export const ExamProvider: React.FC<ExamProviderProps> = ({
     }));
   };
 
-  const shuffleExam = (allQuestions: Question[]) => {
-    // Use utility function to shuffle questions and handle linked questions
-    const selectedQuestions = shuffleQuestions(allQuestions, 20);
+  const shuffleExam = (allGroups: QuestionGroups[]) => {
+    const exam = MapExams[examState.currentExamType];
+    const selectedGroups = shuffleQuestions(allGroups, exam.targetCount);
 
     setExamState(prev => ({
       ...prev,
-      questions: selectedQuestions,
+      questionGroups: selectedGroups,
       selectedAnswers: {},
       examResults: null,
       score: 0,
@@ -135,12 +140,12 @@ export const ExamProvider: React.FC<ExamProviderProps> = ({
   };
 
   const switchExamType = (examType: ExamType) => {
-    const examQuestions = MapExams[examType].questions;
-    const selectedQuestions = selectFirstQuestions(examQuestions, 20);
+    const exam = MapExams[examType];
+    const selectedGroups = selectFirstQuestions(exam.questions, exam.targetCount);
 
     setExamState({
       currentExamType: examType,
-      questions: selectedQuestions,
+      questionGroups: selectedGroups,
       selectedAnswers: {},
       examResults: null,
       score: 0,

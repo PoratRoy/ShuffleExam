@@ -1,26 +1,24 @@
-export type ExamType = "java" | "statistics" | "economy";
-
-export function isValidExamType(value: string | null): value is ExamType {
-  return value === "java" || value === "statistics" || value === "economy";
-}
-
-export function getValidExamType(value: string | null, defaultType: ExamType = "java"): ExamType {
-  return isValidExamType(value) ? value : defaultType;
-}
+export type ExamType = "java" | "statistics" | "economy" | "research";
 
 export interface Question {
   id: number;
   question: string;
   answers: [string, string, string, string] | [string, string, string, string, string];
   correctAnswer: number; // index of the correct answer
-  linkTo?: number[] // ids of group questions 
   hasImage?: string;
+}
+
+export interface QuestionGroups {
+  story?: string;
+  hasImage?: string;
+  questions: Question[];
 }
 
 export interface Exam {
   id: ExamType;
   name: string;
-  questions: Question[];
+  questions: QuestionGroups[];
+  targetCount: number;
 }
 
 export type RawExam = {

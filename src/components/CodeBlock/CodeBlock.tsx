@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './CodeBlock.module.css';
 import { Editor } from '@monaco-editor/react';
+import { DEFAULT_EXAM_TYPE } from '@/models/resources/exams';
 
 type CodeBlockProps = {
   code: string;
   language?: string;
 };
 
-const CodeBlock: React.FC<CodeBlockProps> = ({ code, language = 'java' }) => {
+const CodeBlock: React.FC<CodeBlockProps> = ({ code, language = DEFAULT_EXAM_TYPE }) => {
   return (
     <div className={styles.codeEditorBox}>
       <Editor
