@@ -1,9 +1,9 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { Question, ExamType, QuestionGroups } from '@/models/types/exam';
+import { ExamType, QuestionGroups } from '@/models/types/exam';
 import { DEFAULT_EXAM_TYPE, MapExams } from '@/models/resources/exams';
-import { shuffleQuestions, selectFirstQuestions } from '@/utils/shuffleQuestions';
+import { shuffleQuestions } from '@/utils/shuffleQuestions';
 
 export interface ExamResult {
   questionId: number;
@@ -66,7 +66,7 @@ export const ExamProvider: React.FC<ExamProviderProps> = ({
   useEffect(() => {
     setIsMounted(true);
     const exam = MapExams[initialExamType];
-    const selectedGroups = selectFirstQuestions(exam.questions, exam.targetCount);
+    const selectedGroups = shuffleQuestions(exam.questions, exam.targetCount);
     
     setExamState(prev => ({
       ...prev,
@@ -78,7 +78,7 @@ export const ExamProvider: React.FC<ExamProviderProps> = ({
   useEffect(() => {
     if (isMounted && examState.currentExamType !== initialExamType) {
       const exam = MapExams[initialExamType];
-      const selectedGroups = selectFirstQuestions(exam.questions, exam.targetCount);
+      const selectedGroups = shuffleQuestions(exam.questions, exam.targetCount);
 
       setExamState({
         currentExamType: initialExamType,
@@ -153,7 +153,7 @@ export const ExamProvider: React.FC<ExamProviderProps> = ({
 
   const switchExamType = (examType: ExamType) => {
     const exam = MapExams[examType];
-    const selectedGroups = selectFirstQuestions(exam.questions, exam.targetCount);
+    const selectedGroups = shuffleQuestions(exam.questions, exam.targetCount);
 
     setExamState({
       currentExamType: examType,

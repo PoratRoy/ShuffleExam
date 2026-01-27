@@ -1,6 +1,18 @@
 import { Question, QuestionGroups } from '@/models/types/exam';
 
 /**
+ * Fisher-Yates shuffle algorithm for any array
+ */
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+/**
  * Shuffles the answers of a question and updates the correctAnswer index.
  */
 function shuffleQuestionAnswers(question: Question): Question {
@@ -9,17 +21,10 @@ function shuffleQuestionAnswers(question: Question): Question {
     isCorrect: index === question.correctAnswer,
   }));
 
-  // Fisher-Yates shuffle
-  for (let i = answersWithOriginalIndex.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [answersWithOriginalIndex[i], answersWithOriginalIndex[j]] = [
-      answersWithOriginalIndex[j],
-      answersWithOriginalIndex[i],
-    ];
-  }
+  const shuffledAnswersWithIndex = shuffleArray(answersWithOriginalIndex);
 
-  const shuffledAnswers = answersWithOriginalIndex.map((a) => a.text);
-  const newCorrectAnswerIndex = answersWithOriginalIndex.findIndex((a) => a.isCorrect);
+  const shuffledAnswers = shuffledAnswersWithIndex.map((a) => a.text);
+  const newCorrectAnswerIndex = shuffledAnswersWithIndex.findIndex((a) => a.isCorrect);
 
   return {
     ...question,
@@ -38,8 +43,8 @@ function shuffleQuestionAnswers(question: Question): Question {
  * @returns Array of selected question groups
  */
 export function shuffleQuestions(allGroups: QuestionGroups[], targetCount: number = 20): QuestionGroups[] {
-  // Shuffle the groups
-  const shuffledGroups = [...allGroups].sort(() => Math.random() - 0.5);
+  // Shuffle the groups using Fisher-Yates
+  const shuffledGroups = shuffleArray(allGroups);
   
   const selectedGroups: QuestionGroups[] = [];
   let currentQuestionCount = 0;
@@ -67,38 +72,4 @@ export function shuffleQuestions(allGroups: QuestionGroups[], targetCount: numbe
   return selectedGroups;
 }
 
-/**
- * Selects the first N questions by taking groups from the start, 
- * until the total number of questions reaches targetCount.
- * Also shuffles the answers within each question.
- * 
- * @param allGroups - Array of all available question groups
- * @param targetCount - Target number of individual questions (default: 20)
- * @returns Array of selected question groups
- */
-export function selectFirstQuestions(allGroups: QuestionGroups[], targetCount: number = 20): QuestionGroups[] {
-  const selectedGroups: QuestionGroups[] = [];
-  let currentQuestionCount = 0;
-  
-  for (const group of allGroups) {
-    const groupSize = group.questions.length;
-    
-    if (currentQuestionCount + groupSize <= targetCount) {
-      // Create a new group object with shuffled answers for its questions
-      const shuffledGroup: QuestionGroups = {
-        ...group,
-        questions: group.questions.map(shuffleQuestionAnswers),
-      };
-      selectedGroups.push(shuffledGroup);
-      currentQuestionCount += groupSize;
-    } else {
-      break;
-    }
-    
-    if (currentQuestionCount >= targetCount) {
-      break;
-    }
-  }
-  
-  return selectedGroups;
-}
+// selectFirstQuestions removed as it is no longer needed for random-only behavior
