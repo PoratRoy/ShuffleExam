@@ -36,7 +36,7 @@ export const MapExams: Record<ExamType, Exam> = {
     id: 'python',
     name: 'Python',
     questions: PythonQuestions,
-    targetCount: 1,
+    targetCount: 20,
   }
 };
 
