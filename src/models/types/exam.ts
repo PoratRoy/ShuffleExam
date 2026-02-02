@@ -1,4 +1,4 @@
-export type ExamType = "java" | "statistics" | "economy" | "research";
+export type ExamType = "java" | "statistics" | "economy" | "research" | "python";
 
 export interface Question {
   id: number;

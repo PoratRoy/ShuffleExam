@@ -1,5 +1,6 @@
 import { StatisticsQuestions } from './questions_statistics';
 import { JavaQuestions } from './questions_java';
+import { PythonQuestions } from './questions_python';
 import { Exam, ExamType } from '../types/exam';
 import { EconomyQuestions } from './questions_economy';
 import { ResearchQuestions } from './questions_research';
@@ -30,6 +31,12 @@ export const MapExams: Record<ExamType, Exam> = {
     name: 'שיטות מחקר',
     questions: ResearchQuestions,
     targetCount: 25,
+  },
+  python: {
+    id: 'python',
+    name: 'Python',
+    questions: PythonQuestions,
+    targetCount: 1,
   }
 };
 
