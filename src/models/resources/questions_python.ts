@@ -1036,7 +1036,7 @@ export const PythonQuestions: QuestionGroups[] = [
     {
         questions: [
             {
-                id: 1,
+                id: 61,
                 question: `What will be the final orientation (heading) of the turtle after this code?
         \`\`\`python
         import turtle
@@ -1046,19 +1046,19 @@ export const PythonQuestions: QuestionGroups[] = [
             t.left(45)
         \`\`\``,
                 answers: [
-                  '180 degrees (West)',
-                  '90 degrees (North)',
-                  '0 degrees (East)  ',
-                  '270 degrees (South)'
+                    '180 degrees (West)',
+                    '90 degrees (North)',
+                    '0 degrees (East)  ',
+                    '270 degrees (South)'
                 ],
                 correctAnswer: 0,
-              },
+            },
         ]
     },
     {
         questions: [
             {
-                id: 2,
+                id: 62,
                 question: `Which shape will be drawn by the following code?
         \`\`\`python
         import turtle
@@ -1068,236 +1068,211 @@ export const PythonQuestions: QuestionGroups[] = [
             t.left(120)
         \`\`\``,
                 answers: [
-                  'An equilateral triangle',
-                  'A right-angled triangle',
-                  'A square with side 100',
-                  'A hexagon with side 100'
+                    'An equilateral triangle',
+                    'A right-angled triangle',
+                    'A square with side 100',
+                    'A hexagon with side 100'
                 ],
                 correctAnswer: 0,
                 hasImage: "{IMG_P_3}"
-              },
+            },
         ]
     },
     {
         questions: [
             {
-                id: 3,
+                id: 63,
                 question: `What does the command 't.circle(50, 180)' produce?`,
                 answers: [
-                  'A semicircle with a radius of 50',
-                  'A full circle with a radius of 50',
-                  'A semicircle with a radius of 90',
-                  'A full circle with a radius of 180'
+                    'A semicircle with a radius of 50',
+                    'A full circle with a radius of 50',
+                    'A semicircle with a radius of 90',
+                    'A full circle with a radius of 180'
                 ],
                 correctAnswer: 0,
-              },
+            },
         ]
     },
     {
         questions: [
             {
-                id: 4,
+                id: 64,
                 question: `Look at the image provided. Which code snippet created this specific star shape?`,
                 answers: [
-                  'for i in range(5): t.fd(100); t.rt(144)',
-                  'for i in range(5): t.fd(100); t.rt(72) ',
-                  'for i in range(6): t.fd(100); t.rt(60) ',
-                  'for i in range(4): t.fd(100); t.rt(90) '
+                    'for i in range(5): t.fd(100); t.rt(144)',
+                    'for i in range(5): t.fd(100); t.rt(72) ',
+                    'for i in range(6): t.fd(100); t.rt(60) ',
+                    'for i in range(4): t.fd(100); t.rt(90) '
                 ],
                 correctAnswer: 0,
                 hasImage: "{IMG_P_2}"
-              },
+            },
         ]
     },
     {
         questions: [
             {
-                id: 5,
+                id: 65,
                 question: `If the turtle is at (0,0) and we run 't.setheading(90); t.up(); t.fd(100)', what is its new position?`,
                 answers: [
-                  '(0, 100)',
-                  '(100, 0)',
-                  '(0, -100)',
-                  '(-100, 0)'
+                    '(0, 100)',
+                    '(100, 0)',
+                    '(0, -100)',
+                    '(-100, 0)'
                 ],
                 correctAnswer: 0,
-              },
+            },
         ]
     },
     {
         questions: [
             {
-                id: 6,
+                id: 66,
                 question: `How can you draw a polygon with 8 sides (an octagon) using a loop?`,
                 answers: [
-                  'for i in range(8): t.fd(50); t.lt(45)',
-                  'for i in range(8): t.fd(50); t.lt(60)',
-                  'for i in range(8): t.fd(50); t.lt(90)',
-                  'for i in range(8): t.fd(50); t.lt(30)'
+                    'for i in range(8): t.fd(50); t.lt(45)',
+                    'for i in range(8): t.fd(50); t.lt(60)',
+                    'for i in range(8): t.fd(50); t.lt(90)',
+                    'for i in range(8): t.fd(50); t.lt(30)'
                 ],
                 correctAnswer: 0,
                 hasImage: "{IMG_P_1}"
-              },
+            },
         ]
     },
     {
         questions: [
             {
-                id: 7,
+                id: 67,
                 question: `What is the difference between 't.clear()' and 't.reset()'?`,
                 answers: [
-                  'reset() moves turtle to home; clear() does not',
-                  'clear() moves turtle to home; reset() does not',
-                  'reset() changes color; clear() keeps the color',
-                  'clear() deletes the object; reset() restarts it'
+                    'reset() moves turtle to home; clear() does not',
+                    'clear() moves turtle to home; reset() does not',
+                    'reset() changes color; clear() keeps the color',
+                    'clear() deletes the object; reset() restarts it'
                 ],
                 correctAnswer: 0,
-              },
+            },
         ]
     },
     {
         questions: [
             {
-                id: 8,
+                id: 68,
                 question: `What happens if you provide a third argument to circle: 't.circle(50, steps=6)'?`,
                 answers: [
-                  'It draws a hexagon with radius 50',
-                  'It draws 6 small circles in a row',
-                  'It draws a circle with line width 6',
-                  'It draws 6 concentric circles at 50'
+                    'It draws a hexagon with radius 50',
+                    'It draws 6 small circles in a row',
+                    'It draws a circle with line width 6',
+                    'It draws 6 concentric circles at 50'
                 ],
                 correctAnswer: 0,
-              },
+            },
         ]
     },
     {
         questions: [
             {
-                id: 9,
+                id: 69,
                 question: `Which command is used to stop the window from closing immediately after the turtle finishes drawing?`,
                 answers: [
-                  'turtle.done()   ',
-                  'turtle.stop()   ',
-                  'turtle.finish() ',
-                  'turtle.end()    '
+                    'turtle.done()   ',
+                    'turtle.stop()   ',
+                    'turtle.finish() ',
+                    'turtle.end()    '
                 ],
                 correctAnswer: 0,
-              },
+            },
         ]
     },
     {
         questions: [
             {
-                id: 10,
+                id: 70,
                 question: `What is the effect of 't.speed(0)'?`,
                 answers: [
-                  'The animation is turned off (fastest)',
-                  'The turtle stops moving completely  ',
-                  'The turtle moves at the slowest pace',
-                  'The turtle moves at a moderate speed '
+                    'The animation is turned off (fastest)',
+                    'The turtle stops moving completely  ',
+                    'The turtle moves at the slowest pace',
+                    'The turtle moves at a moderate speed '
                 ],
                 correctAnswer: 0,
-              }
+            }
         ]
     },
     {
         questions: [
             {
-                id: 1,
+                id: 71,
                 question: `Which command will move the turtle to the center of the screen without changing its orientation?`,
                 answers: [
-                  't.goto(0, 0)',
-                  't.home()',
-                  't.reset()',
-                  't.setheading(0)'
+                    't.goto(0, 0)',
+                    't.home()',
+                    't.reset()',
+                    't.setheading(0)'
                 ],
                 correctAnswer: 0, // home() also goes to 0,0 but resets orientation. goto() is safer for just position.
-              },
+            },
         ]
     },
     {
         questions: [
             {
-                id: 2,
+                id: 72,
                 question: `What is the correct sequence to draw a filled shape?`,
                 answers: [
-                  'begin_fill(), draw shape, end_fill()',
-                  'fillcolor(), begin_fill(), end_fill()',
-                  'start_fill(), draw shape, stop_fill()',
-                  'pendown(), fillcolor(), draw shape'
+                    'begin_fill(), draw shape, end_fill()',
+                    'fillcolor(), begin_fill(), end_fill()',
+                    'start_fill(), draw shape, stop_fill()',
+                    'pendown(), fillcolor(), draw shape'
                 ],
                 correctAnswer: 0,
-              },
+            },
         ]
     },
     {
         questions: [
             {
-                id: 3,
+                id: 73,
                 question: `What happens if you move the turtle while the 'penup()' method is active?`,
                 answers: [
-                  'The turtle moves without drawing a line',
-                  'The turtle stops moving until down()',
-                  'The turtle moves and draws a dashed line',
-                  'An AttributeError is raised immediately'
+                    'The turtle moves without drawing a line',
+                    'The turtle stops moving until down()',
+                    'The turtle moves and draws a dashed line',
+                    'An AttributeError is raised immediately'
                 ],
                 correctAnswer: 0,
-              },
+            },
         ]
     },
     {
         questions: [
             {
-                id: 4,
+                id: 74,
                 question: `In the Turtle coordinate system, which angle represents pointing directly 'North' (Up)?`,
                 answers: [
-                  '90',
-                  '0',
-                  '180',
-                  '270'
+                    '90',
+                    '0',
+                    '180',
+                    '270'
                 ],
                 correctAnswer: 0,
-              },
+            },
         ]
     },
     {
         questions: [
             {
-                id: 5,
+                id: 75,
                 question: `How do you change the thickness of the line being drawn?`,
                 answers: [
-                  't.pensize(5)',
-                  't.width_set(5)',
-                  't.line_thickness(5)',
-                  't.bold(5)'
+                    't.pensize(5)',
+                    't.width_set(5)',
+                    't.line_thickness(5)',
+                    't.bold(5)'
                 ],
                 correctAnswer: 0,
-              }
+            }
         ]
-    },
-    {
-        questions: [
-
-        ]
-    },
-    {
-        questions: [
-
-        ]
-    },
-    {
-        questions: [
-
-        ]
-    },
-    {
-        questions: [
-
-        ]
-    },
-    {
-        questions: [
-
-        ]
-    },
+    }
 ];
