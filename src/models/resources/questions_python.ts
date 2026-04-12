@@ -1274,5 +1274,18 @@ export const PythonQuestions: QuestionGroups[] = [
                 correctAnswer: 0,
             }
         ]
+    },
+    {
+        questions: [{
+            id: 2,
+            question: "בחרו את הטענה המדויקת ביותר העוסקת בקוד הבא:\n\n```python\nsentence = \"I am a cat\"\nsentence = sentence.split(\" \")\nd = {}\nfor word in sentence:\n    d[word] = len(word)\n\nk = list(d.keys())\nk.sort()\nfor w in k:\n    print(w*d[w])\n```",
+            answers: [
+                "I\na\namam\ncatcatcat יודפס למסך",
+                "I\namam\na\ncatcatcat יודפס למסך",
+                "תהיה שגיאת זמן ריצה מכיוון שלא ניתן להכפיל מחרוזת במספר ללא המרה.",
+                "במידה והמשפט יכיל את אותה מילה מספר פעמים אז נקבל שגיאת זמן ריצה מכיוון שמילון לא יכול להכיל מפתחות זהים."
+            ],
+            correctAnswer: 0
+        }]
     }
 ];
