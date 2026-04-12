@@ -533,7 +533,7 @@ main()
     // Q1 - Mutable default argument
     questions: [
       {
-        id: 1,
+        id: 21,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 def add_item(item, lst=[]):
@@ -558,7 +558,7 @@ print(add_item("c", []))
     // Q2 - Global variable scope
     questions: [
       {
-        id: 2,
+        id: 22,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 count = 0
@@ -587,7 +587,7 @@ main()
     // Q3 - List slicing and copying
     questions: [
       {
-        id: 3,
+        id: 23,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 a = [1, 2, 3, 4, 5]
@@ -612,7 +612,7 @@ print(a[0], a[4])
     // Q4 - Exception handling order
     questions: [
       {
-        id: 4,
+        id: 24,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 try:
@@ -639,7 +639,7 @@ except Exception:
     // Q5 - String immutability and methods
     questions: [
       {
-        id: 5,
+        id: 25,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 s = "  Hello World  "
@@ -661,7 +661,7 @@ print(s)
     // Q6 - Dictionary methods
     questions: [
       {
-        id: 6,
+        id: 26,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 d = {"x": 10, "y": 20, "z": 30}
@@ -683,7 +683,7 @@ print(val, len(d))
     // Q7 - File reading modes
     questions: [
       {
-        id: 7,
+        id: 27,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 with open("data.txt", "a") as f:
@@ -706,7 +706,7 @@ with open("data.txt", "a") as f:
     // Q8 - OOP inheritance and __str__
     questions: [
       {
-        id: 8,
+        id: 28,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 class Animal:
@@ -738,7 +738,7 @@ print(d)
     // Q9 - Sets theory
     questions: [
       {
-        id: 9,
+        id: 29,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 s1 = {1, 2, 3, 4}
@@ -761,7 +761,7 @@ print(s1 - s2)
     // Q10 - Lambda and sorted
     questions: [
       {
-        id: 10,
+        id: 30,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 words = ["banana", "fig", "apple", "kiwi"]
@@ -782,7 +782,7 @@ print(result)
     // Q11 - List comprehension
     questions: [
       {
-        id: 11,
+        id: 31,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 nums = [1, 2, 3, 4, 5, 6]
@@ -803,7 +803,7 @@ print(result)
     // Q12 - Recursion base case
     questions: [
       {
-        id: 12,
+        id: 32,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 def mystery(n):
@@ -827,7 +827,7 @@ print(mystery(4))
     // Q13 - Tuple immutability
     questions: [
       {
-        id: 13,
+        id: 33,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 t = (1, 2, [3, 4])
@@ -848,7 +848,7 @@ print(t)
     // Q14 - map and filter
     questions: [
       {
-        id: 14,
+        id: 34,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 nums = [1, 2, 3, 4, 5]
@@ -870,7 +870,7 @@ print(evens)
     // Q15 - Class variable vs instance variable
     questions: [
       {
-        id: 15,
+        id: 35,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 class Counter:
@@ -898,7 +898,7 @@ print(Counter.count, c1.count)
     // Q16 - Nested dictionary
     questions: [
       {
-        id: 16,
+        id: 36,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 students = {
@@ -923,7 +923,7 @@ print(len(students), students["Alice"]["grade"])
     // Q17 - while loop with break
     questions: [
       {
-        id: 17,
+        id: 37,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 i = 0
@@ -951,7 +951,7 @@ print(total)
     // Q18 - Modules theory
     questions: [
       {
-        id: 18,
+        id: 38,
         question: 'בחרו את הטענה המדויקת ביותר העוסקת בייבוא מודולים בפייתון.',
         answers: [
           'ניתן לייבא פונקציה ספציפית ממודול באמצעות from module import func ולהשתמש בה ישירות.',
@@ -967,7 +967,7 @@ print(total)
     // Q19 - OOP encapsulation + getter/setter
     questions: [
       {
-        id: 19,
+        id: 39,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 class Student:
@@ -1000,7 +1000,7 @@ print(s.get_grade())
     // Q20 - Dictionary comprehension
     questions: [
       {
-        id: 20,
+        id: 40,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 scores = {"Alice": 55, "Bob": 82, "Carol": 91, "Dan": 47}
@@ -1021,7 +1021,7 @@ print(len(passed), "Bob" in passed)
     // Q1 - Tricky: continue inside while without increment causes infinite loop
     questions: [
       {
-        id: 1,
+        id: 41,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 def func():
@@ -1050,7 +1050,7 @@ print(func())
     // Q2 - Tricky: except Exception before specific catches them all
     questions: [
       {
-        id: 2,
+        id: 42,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 def calc(a, b):
@@ -1080,7 +1080,7 @@ calc(10, 0)
     // Q3 - for loop with range and enumerate
     questions: [
       {
-        id: 3,
+        id: 43,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 fruits = ["apple", "banana", "cherry"]
@@ -1102,7 +1102,7 @@ for i, fruit in enumerate(fruits, start=1):
     // Q4 - Tricky: two __init__ in same class, second overrides first
     questions: [
       {
-        id: 4,
+        id: 44,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 class Point:
@@ -1132,7 +1132,7 @@ print(p1.x)
     // Q5 - String slicing
     questions: [
       {
-        id: 5,
+        id: 45,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 s = "Hello, World!"
@@ -1154,7 +1154,7 @@ print(s[::2])
     // Q6 - Tricky: global keyword missing, UnboundLocalError
     questions: [
       {
-        id: 6,
+        id: 46,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 total = 100
@@ -1180,7 +1180,7 @@ update()
     // Q7 - List methods: sort vs sorted
     questions: [
       {
-        id: 7,
+        id: 47,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 a = [3, 1, 4, 1, 5]
@@ -1203,7 +1203,7 @@ print(b)
     // Q8 - Tricky: random.seed inside method called in loop → same result every iteration
     questions: [
       {
-        id: 8,
+        id: 48,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 import random
@@ -1229,7 +1229,7 @@ for i in range(3):
     // Q9 - Inheritance: method override
     questions: [
       {
-        id: 9,
+        id: 49,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 class Shape:
@@ -1260,7 +1260,7 @@ for s in shapes:
     // Q10 - Two-dimensional list
     questions: [
       {
-        id: 10,
+        id: 50,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 matrix = [[1, 2, 3],
@@ -1286,7 +1286,7 @@ print(total)
     // Q11 - Tricky: pass by reference with list inside function
     questions: [
       {
-        id: 11,
+        id: 51,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 def double_first(lst):
@@ -1311,7 +1311,7 @@ print(nums)
     // Q12 - set operations theory
     questions: [
       {
-        id: 12,
+        id: 52,
         question: 'בחרו את הטענה הנכונה ביותר העוסקת בפעולות על קבוצות (sets) בפייתון.',
         answers: [
           'ניתן לבצע איחוד קבוצות באמצעות אופרטור | או מתודת union, ושתי הדרכים שקולות.',
@@ -1327,7 +1327,7 @@ print(nums)
     // Q13 - f-string formatting
     questions: [
       {
-        id: 13,
+        id: 53,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 name = "Dana"
@@ -1348,7 +1348,7 @@ print(f"Student: {name:<10} | Score: {score:.2f}")
     // Q14 - reduce function
     questions: [
       {
-        id: 14,
+        id: 54,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 from functools import reduce
@@ -1371,7 +1371,7 @@ print(result)
     // Q15 - Keyword arguments and default params
     questions: [
       {
-        id: 15,
+        id: 55,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 def greet(name, msg="Hello", times=1):
@@ -1394,7 +1394,7 @@ greet("Amit", times=3)
     // Q16 - Returning multiple values from function
     questions: [
       {
-        id: 16,
+        id: 56,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 def stats(lst):
@@ -1418,7 +1418,7 @@ print(hi - lo)
     // Q17 - Tricky: __name__ == "__main__" with module import theory
     questions: [
       {
-        id: 17,
+        id: 57,
         question: 'בחרו את הטענה המדויקת ביותר העוסקת בשימוש ב- if __name__ == "__main__" בפייתון.',
         answers: [
           'הקוד שתחת הבדיקה ירוץ רק כאשר הקובץ מורץ ישירות ולא כאשר הוא מיובא כמודול.',
@@ -1434,7 +1434,7 @@ print(hi - lo)
     // Q18 - set comprehension
     questions: [
       {
-        id: 18,
+        id: 58,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 words = ["hi", "hello", "hey", "hi", "hello"]
@@ -1456,7 +1456,7 @@ print(len(unique_lengths))
     // Q19 - Tricky: list passed to function, reassignment vs mutation
     questions: [
       {
-        id: 19,
+        id: 59,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 def process(data):
@@ -1484,7 +1484,7 @@ print(returned)
     // Q20 - OOP: static method vs instance method
     questions: [
       {
-        id: 20,
+        id: 60,
         question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
 \`\`\`python
 class MathHelper:

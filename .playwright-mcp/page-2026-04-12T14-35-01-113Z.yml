@@ -1,0 +1,1036 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - heading "Shuffle Exam" [level=2] [ref=e5]
+      - generic [ref=e6]:
+        - button "Java" [ref=e7] [cursor=pointer]
+        - button "הסקה סטטיסטית" [ref=e8] [cursor=pointer]
+        - button "כלכלה" [ref=e9] [cursor=pointer]
+        - button "שיטות מחקר" [ref=e10] [cursor=pointer]
+        - button "Python" [ref=e11] [cursor=pointer]
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - button "מחיקת תוצאות" [ref=e2073]
+        - button "סיום מבחן" [disabled]
+        - button "ערבוב מבחן חדש" [ref=e16]
+      - generic [ref=e2075]:
+        - generic [ref=e2076]: "ציון: 0 / 100"
+        - generic [ref=e2077]: 20 תשובות שגויות מתוך 20 שאלות
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]: שאלה 1
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - generic [ref=e23]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e29]:
+              - generic [ref=e30]:
+                - generic [ref=e32]:
+                  - generic [ref=e2078]:
+                    - generic [ref=e2080] [cursor=pointer]: 
+                    - generic [ref=e2081]: "1"
+                  - generic [ref=e2083]: "2"
+                  - generic [ref=e2085]: "3"
+                  - generic [ref=e2087]: "4"
+                  - generic [ref=e2089]: "5"
+                  - generic [ref=e2091]: "6"
+                  - generic [ref=e2092]:
+                    - generic [ref=e2093] [cursor=pointer]: 
+                    - generic [ref=e2094]: "7"
+                  - generic [ref=e2096]: "8"
+                  - generic [ref=e2098]: "9"
+                  - generic [ref=e2100]: "10"
+                - generic [ref=e39]:
+                  - generic [ref=e2118]: "def main():"
+                  - generic [ref=e2120]: text = "Hello"
+                  - generic [ref=e2122]: print(text)
+                  - generic [ref=e2124]: change_me(text)
+                  - generic [ref=e2126]: print(text)
+                  - generic [ref=e2129]: "def change_me(text):"
+                  - generic [ref=e2131]: text = "Goodbye"
+                  - generic [ref=e2134]: main()
+                - textbox "Editor content" [ref=e46]
+          - generic [ref=e2136]:
+            - img [ref=e2137]
+            - generic [ref=e2140]: שגוי
+        - generic [ref=e48]:
+          - generic [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: א.
+            - generic [ref=e51]: תתקבל שגיאת זמן ריצה מכיוון שקיימים שני משתנים בעלי אותו שם.
+          - generic [ref=e52] [cursor=pointer]:
+            - generic [ref=e53]: ב.
+            - generic [ref=e54]: תתקבל שגיאת זמן ריצה מכיוון שפונקציית ה main קוראת לפונקציה שמוגדרת אחריה בקובץ.
+          - generic [ref=e55] [cursor=pointer]:
+            - generic [ref=e56]: ג.
+            - generic [ref=e57]: יודפס Hello\nHello
+            - img [ref=e2141]
+          - generic [ref=e58] [cursor=pointer]:
+            - generic [ref=e59]: ד.
+            - generic [ref=e60]: יודפס Hello\nGoodbye
+      - generic [ref=e61]:
+        - generic [ref=e62]: שאלה 2
+        - generic [ref=e63]:
+          - generic [ref=e64]:
+            - generic [ref=e66]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e72]:
+              - generic [ref=e73]:
+                - generic [ref=e75]:
+                  - generic [ref=e2145]: "1"
+                  - generic [ref=e2147]: "2"
+                  - generic [ref=e2149]: "3"
+                - generic [ref=e82]:
+                  - generic [ref=e2155]: name = "Dana"
+                  - generic [ref=e2157]: score = 87.456
+                  - generic [ref=e2159]: "print(f\"Student: {name:<10} | Score:"
+                - textbox "Editor content" [ref=e89]
+          - generic [ref=e2161]:
+            - img [ref=e2162]
+            - generic [ref=e2165]: שגוי
+        - generic [ref=e91]:
+          - generic [ref=e92] [cursor=pointer]:
+            - generic [ref=e93]: א.
+            - generic [ref=e94]: "יודפס 'Student: Dana | Score: 87.46' כי :<10 מיישר שמאלה ו-.2f מעגל לשתי ספרות."
+            - img [ref=e2166]
+          - generic [ref=e95] [cursor=pointer]:
+            - generic [ref=e96]: ב.
+            - generic [ref=e97]: תתקבל שגיאת זמן ריצה כי לא ניתן לשלב פורמט יישור יחד עם פורמט עיגול ב-f-string.
+          - generic [ref=e98] [cursor=pointer]:
+            - generic [ref=e99]: ג.
+            - generic [ref=e100]: "יודפס 'Student: Dana | Score: 87.456' כי פורמט :<10 אינו נתמך בתוך f-string."
+          - generic [ref=e101] [cursor=pointer]:
+            - generic [ref=e102]: ד.
+            - generic [ref=e103]: "יודפס 'Student: Dana | Score: 87.46' כי :<10 מיישר ימינה ומוסיף רווחים משמאל."
+      - generic [ref=e104]:
+        - generic [ref=e105]: שאלה 3
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - generic [ref=e109]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e115]:
+              - generic [ref=e116]:
+                - generic [ref=e118]:
+                  - generic [ref=e2168]:
+                    - generic [ref=e2170] [cursor=pointer]: 
+                    - generic [ref=e2171]: "1"
+                  - generic [ref=e2172]:
+                    - generic [ref=e2173] [cursor=pointer]: 
+                    - generic [ref=e2174]: "2"
+                  - generic [ref=e2176]: "3"
+                  - generic [ref=e2178]: "4"
+                  - generic [ref=e2180]: "5"
+                - generic [ref=e125]:
+                  - generic [ref=e2191]: "def greet(name, msg=\"Hello\", times=1):"
+                  - generic [ref=e2193]: "for i in range(times):"
+                  - generic [ref=e2195]: "print(f\"{msg}, {name}!\")"
+                  - generic [ref=e2198]: greet("Amit", times=3)
+                - textbox "Editor content" [ref=e132]
+          - generic [ref=e2200]:
+            - img [ref=e2201]
+            - generic [ref=e2204]: שגוי
+        - generic [ref=e134]:
+          - generic [ref=e135] [cursor=pointer]:
+            - generic [ref=e136]: א.
+            - generic [ref=e137]: תתקבל שגיאת זמן ריצה כי לא ניתן לדלג על הפרמטר msg ולהעביר times ישירות.
+          - generic [ref=e138] [cursor=pointer]:
+            - generic [ref=e139]: ב.
+            - generic [ref=e140]: יודפס 'Hello, Amit!' פעם אחת כי Python מתעלם מ-keyword arguments שאינם ראשוניים.
+          - generic [ref=e141] [cursor=pointer]:
+            - generic [ref=e142]: ג.
+            - generic [ref=e143]: יודפס 'Hello, Amit!' שלוש פעמים כי msg לא הועבר ולכן נשתמש בברירת המחדל Hello.
+            - img [ref=e2205]
+          - generic [ref=e144] [cursor=pointer]:
+            - generic [ref=e145]: ד.
+            - generic [ref=e146]: יודפס 'Amit, Hello!' שלוש פעמים כי סדר הפרמטרים מתהפך בעת שימוש ב-keyword.
+      - generic [ref=e147]:
+        - generic [ref=e148]: שאלה 4
+        - generic [ref=e149]:
+          - generic [ref=e150]:
+            - generic [ref=e152]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e158]:
+              - generic [ref=e159]:
+                - generic [ref=e161]:
+                  - generic [ref=e2209]: "1"
+                  - generic [ref=e2211]: "2"
+                - generic [ref=e168]:
+                  - generic [ref=e2218]: nums = [1, 2, 3, 4, 5, 6]
+                  - generic [ref=e2220]: result = [x**2 for x in nums if x % 2 ==
+                  - generic [ref=e2222]: 0]
+                - textbox "Editor content" [ref=e172]
+          - generic [ref=e2224]:
+            - img [ref=e2225]
+            - generic [ref=e2228]: שגוי
+        - generic [ref=e174]:
+          - generic [ref=e175] [cursor=pointer]:
+            - generic [ref=e176]: א.
+            - generic [ref=e177]: יודפס [2, 4, 6] כי הביטוי x**2 עם תנאי if מחזיר את המספרים הזוגיים כפולים.
+          - generic [ref=e178] [cursor=pointer]:
+            - generic [ref=e179]: ב.
+            - generic [ref=e180]: יודפס [4, 16, 36] כי הרשימה כוללת את ריבועי המספרים הזוגיים בלבד מהרשימה.
+            - img [ref=e2229]
+          - generic [ref=e181] [cursor=pointer]:
+            - generic [ref=e182]: ג.
+            - generic [ref=e183]: יודפס [1, 4, 9, 16, 25, 36] כי הביטוי if לא חוסם אף מספר מהרשימה המקורית.
+          - generic [ref=e184] [cursor=pointer]:
+            - generic [ref=e185]: ד.
+            - generic [ref=e186]: תתקבל שגיאת תחביר כי לא ניתן לשלב תנאי if בתוך list comprehension בפייתון.
+      - generic [ref=e187]:
+        - generic [ref=e188]: שאלה 5
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - generic [ref=e192]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e198]:
+              - generic [ref=e199]:
+                - generic [ref=e201]:
+                  - generic [ref=e2233]: "1"
+                  - generic [ref=e2237]: "2"
+                  - generic [ref=e2239]: "3"
+                - generic [ref=e208]:
+                  - generic [ref=e2247]: words = ["hi", "hello", "hey", "hi",
+                  - generic [ref=e2249]: "\"hello\"]"
+                  - generic [ref=e2251]: "unique_lengths = {len(w) for w in words}"
+                  - generic [ref=e2253]: print(unique_lengths)
+                - textbox "Editor content" [ref=e212]
+          - generic [ref=e2255]:
+            - img [ref=e2256]
+            - generic [ref=e2259]: שגוי
+        - generic [ref=e214]:
+          - generic [ref=e215] [cursor=pointer]:
+            - generic [ref=e216]: א.
+            - generic [ref=e217]: "שורה 3 תדפיס {2, 5} ושורה 4 תדפיס 2 כי set comprehension שומר ערכים ייחודיים בלבד."
+            - img [ref=e2260]
+          - generic [ref=e218] [cursor=pointer]:
+            - generic [ref=e219]: ב.
+            - generic [ref=e220]: "שורה 3 תדפיס [2, 5, 3, 2, 5] ושורה 4 תדפיס 5 כי {} עם comprehension מחזיר רשימה."
+          - generic [ref=e221] [cursor=pointer]:
+            - generic [ref=e222]: ג.
+            - generic [ref=e223]: תתקבל שגיאת זמן ריצה כי set comprehension אינו נתמך בגרסאות Python מתחת ל-3.10.
+          - generic [ref=e224] [cursor=pointer]:
+            - generic [ref=e225]: ד.
+            - generic [ref=e226]: "שורה 3 תדפיס {2, 5, 2, 5} ושורה 4 תדפיס 4 כי comprehension שומר כפילויות כברירת מחדל."
+      - generic [ref=e227]:
+        - generic [ref=e228]: שאלה 6
+        - generic [ref=e229]:
+          - generic [ref=e230]:
+            - generic [ref=e232]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e238]:
+              - generic [ref=e239]:
+                - generic [ref=e241]:
+                  - generic [ref=e2264]: "1"
+                  - generic [ref=e2266]: "2"
+                  - generic [ref=e2267]:
+                    - generic [ref=e2268] [cursor=pointer]: 
+                    - generic [ref=e2269]: "3"
+                  - generic [ref=e2271]: "4"
+                  - generic [ref=e2273]: "5"
+                  - generic [ref=e2275]: "6"
+                  - generic [ref=e2277]: "7"
+                  - generic [ref=e2279]: "8"
+                - generic [ref=e248]:
+                  - generic [ref=e2293]: total = 100
+                  - generic [ref=e2296]: "def update():"
+                  - generic [ref=e2298]: print(total)
+                  - generic [ref=e2300]: total = total + 50
+                  - generic [ref=e2302]: print(total)
+                  - generic [ref=e2305]: update()
+                - textbox "Editor content" [ref=e252]
+          - generic [ref=e2307]:
+            - img [ref=e2308]
+            - generic [ref=e2311]: שגוי
+        - generic [ref=e254]:
+          - generic [ref=e255] [cursor=pointer]:
+            - generic [ref=e256]: א.
+            - generic [ref=e257]: יודפס 100 ולאחר מכן 150 כי הפונקציה קוראת את הגלובלי ואז מגדירה משתנה מקומי.
+          - generic [ref=e258] [cursor=pointer]:
+            - generic [ref=e259]: ב.
+            - generic [ref=e260]: הקוד יקרוס בשגיאת זמן ריצה כבר בשורת ה-print הראשונה כי Python מזהה total כמקומי.
+            - img [ref=e2312]
+          - generic [ref=e261] [cursor=pointer]:
+            - generic [ref=e262]: ג.
+            - generic [ref=e263]: הקוד ידפיס 150 פעמיים כי Python מזהה את הכוונה ומגדיר global אוטומטית בפונקציה.
+          - generic [ref=e264] [cursor=pointer]:
+            - generic [ref=e265]: ד.
+            - generic [ref=e266]: יודפס 100 ולאחר מכן 100 כי השמה לתוך הפונקציה יוצרת עותק ולא משנה את הגלובלי.
+      - generic [ref=e267]:
+        - generic [ref=e268]: שאלה 7
+        - generic [ref=e269]:
+          - generic [ref=e270]:
+            - generic [ref=e272]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e278]:
+              - generic [ref=e279]:
+                - generic [ref=e281]:
+                  - generic [ref=e2316]: "1"
+                  - generic [ref=e2318]: "2"
+                  - generic [ref=e2320]: "3"
+                  - generic [ref=e2322]: "4"
+                  - generic [ref=e2324]: "5"
+                - generic [ref=e288]:
+                  - generic [ref=e2332]: "s1 = {1, 2, 3, 4}"
+                  - generic [ref=e2334]: "s2 = {3, 4, 5, 6}"
+                  - generic [ref=e2336]: print(s1 & s2)
+                  - generic [ref=e2338]: print(s1 | s2)
+                  - generic [ref=e2340]: print(s1 - s2)
+                - textbox "Editor content" [ref=e292]
+          - generic [ref=e2342]:
+            - img [ref=e2343]
+            - generic [ref=e2346]: שגוי
+        - generic [ref=e294]:
+          - generic [ref=e295] [cursor=pointer]:
+            - generic [ref=e296]: א.
+            - generic [ref=e297]: "שורה 3 תדפיס {3, 4}, שורה 4 תדפיס {3, 4}, שורה 5 תדפיס {1, 2, 5, 6}."
+          - generic [ref=e298] [cursor=pointer]:
+            - generic [ref=e299]: ב.
+            - generic [ref=e300]: "שורה 3 תדפיס {3, 4}, שורה 4 תדפיס {1,2,3,4,5,6}, שורה 5 תדפיס {1, 2}."
+            - img [ref=e2347]
+          - generic [ref=e301] [cursor=pointer]:
+            - generic [ref=e302]: ג.
+            - generic [ref=e303]: "שורה 3 תדפיס {1,2,5,6}, שורה 4 תדפיס {3,4}, שורה 5 תדפיס {1,2,3,4,5,6}."
+          - generic [ref=e304] [cursor=pointer]:
+            - generic [ref=e305]: ד.
+            - generic [ref=e306]: "שורה 3 תדפיס {1, 2}, שורה 4 תדפיס {1,2,3,4,5,6}, שורה 5 תדפיס {3, 4}."
+      - generic [ref=e307]:
+        - generic [ref=e308]: שאלה 8
+        - generic [ref=e309]:
+          - generic [ref=e310]:
+            - generic [ref=e312]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e318]:
+              - generic [ref=e319]:
+                - generic [ref=e321]:
+                  - generic [ref=e2349]:
+                    - generic [ref=e2351] [cursor=pointer]: 
+                    - generic [ref=e2352]: "1"
+                  - generic [ref=e2354]: "2"
+                  - generic [ref=e2357]: "3"
+                  - generic [ref=e2360]: "4"
+                  - generic [ref=e2362]: "5"
+                - generic [ref=e328]:
+                  - generic [ref=e2376]: "students = {"
+                  - generic [ref=e2378]: "\"Alice\": {\"grade\": 90, \"city\": \"Tel"
+                  - generic [ref=e2380]: "Aviv\"},"
+                  - generic [ref=e2382]: "\"Bob\": {\"grade\": 75, \"city\":"
+                  - generic [ref=e2384]: "\"Haifa\"}"
+                  - generic [ref=e2386]: "}"
+                  - generic [ref=e2388]: students["Alice"]["grade"] += 10
+                - textbox "Editor content" [ref=e332]
+          - generic [ref=e2390]:
+            - img [ref=e2391]
+            - generic [ref=e2394]: שגוי
+        - generic [ref=e334]:
+          - generic [ref=e335] [cursor=pointer]:
+            - generic [ref=e336]: א.
+            - generic [ref=e337]: יודפס 3 90 כי הפעולה += על ערך בתוך מילון מקונן אינה משנה את הערך המקורי.
+          - generic [ref=e338] [cursor=pointer]:
+            - generic [ref=e339]: ב.
+            - generic [ref=e340]: תתקבל שגיאת זמן ריצה כי לא ניתן להוסיף מפתח חדש למילון לאחר הגדרתו הראשונית.
+          - generic [ref=e341] [cursor=pointer]:
+            - generic [ref=e342]: ג.
+            - generic [ref=e343]: יודפס 2 100 כי הוספת Charlie לא מצליחה כי המילון כבר הוגדר עם שני מפתחות בלבד.
+          - generic [ref=e344] [cursor=pointer]:
+            - generic [ref=e345]: ד.
+            - generic [ref=e346]: יודפס 3 100 כי נוספה רשומה חדשה למילון ושדה הציון של Alice עודכן ב-10 נקודות.
+            - img [ref=e2395]
+      - generic [ref=e347]:
+        - generic [ref=e348]: שאלה 9
+        - generic [ref=e349]:
+          - generic [ref=e350]:
+            - generic [ref=e352]: בחרו את הטענה המדויקת ביותר בקוד הבא
+            - code [ref=e358]:
+              - generic [ref=e359]:
+                - generic [ref=e361]:
+                  - generic [ref=e2399]: "1"
+                  - generic [ref=e2401]: "2"
+                  - generic [ref=e2403]: "3"
+                  - generic [ref=e2404]:
+                    - generic [ref=e2405] [cursor=pointer]: 
+                    - generic [ref=e2406]: "4"
+                  - generic [ref=e2408]: "5"
+                  - generic [ref=e2410]: "6"
+                  - generic [ref=e2412]: "7"
+                  - generic [ref=e2414]: "8"
+                  - generic [ref=e2415]:
+                    - generic [ref=e2416] [cursor=pointer]: 
+                    - generic [ref=e2417]: "9"
+                  - generic [ref=e2419]: "10"
+                - generic [ref=e368]:
+                  - generic [ref=e2434]: sentence = "I am a cat"
+                  - generic [ref=e2436]: sentence = sentence.split(" ")
+                  - generic [ref=e2438]: "d = {}"
+                  - generic [ref=e2440]: "for word in sentence:"
+                  - generic [ref=e2442]: d[word] = len(word)
+                  - generic [ref=e2445]: k = list(d.keys())
+                  - generic [ref=e2447]: k.sort()
+                  - generic [ref=e2449]: "for w in k:"
+                  - generic [ref=e2451]: print(w*d[w])
+                - textbox "Editor content" [ref=e372]
+          - generic [ref=e2453]:
+            - img [ref=e2454]
+            - generic [ref=e2457]: שגוי
+        - generic [ref=e374]:
+          - generic [ref=e375] [cursor=pointer]:
+            - generic [ref=e376]: א.
+            - generic [ref=e377]: I\namam\na\ncatcatcat יודפס למסך
+          - generic [ref=e378] [cursor=pointer]:
+            - generic [ref=e379]: ב.
+            - generic [ref=e380]: תהיה שגיאת זמן ריצה מכיוון שלא ניתן להכפיל מחרוזת במספר ללא המרה.
+          - generic [ref=e381] [cursor=pointer]:
+            - generic [ref=e382]: ג.
+            - generic [ref=e383]: במידה והמשפט יכיל את אותה מילה מספר פעמים אז נקבל שגיאת זמן ריצה מכיוון שמילון לא יכול להכיל מפתחות זהים.
+          - generic [ref=e384] [cursor=pointer]:
+            - generic [ref=e385]: ד.
+            - generic [ref=e386]: I\na\namam\ncatcatcat יודפס למסך
+            - img [ref=e2458]
+      - generic [ref=e387]:
+        - generic [ref=e388]: שאלה 10
+        - generic [ref=e389]:
+          - generic [ref=e392]: בחרו את הטענה הלא נכונה מבין כל הטענות העוסקת בחריגות.
+          - generic [ref=e2461]:
+            - img [ref=e2462]
+            - generic [ref=e2465]: שגוי
+        - generic [ref=e393]:
+          - generic [ref=e394] [cursor=pointer]:
+            - generic [ref=e395]: א.
+            - generic [ref=e396]: לא חייבים תמיד להוסיף בלוק else בסוף.
+          - generic [ref=e397] [cursor=pointer]:
+            - generic [ref=e398]: ב.
+            - generic [ref=e399]: חייבים תמיד להוסיף בלוק finally בסוף.
+            - img [ref=e2466]
+          - generic [ref=e400] [cursor=pointer]:
+            - generic [ref=e401]: ג.
+            - generic [ref=e402]: אין הגבלה לסדר או כמות הבלוקים של except.
+          - generic [ref=e403] [cursor=pointer]:
+            - generic [ref=e404]: ד.
+            - generic [ref=e405]: ניתן לבצע בלוקים של try-except אחד בתוך השני.
+      - generic [ref=e406]:
+        - generic [ref=e407]: שאלה 11
+        - generic [ref=e408]:
+          - generic [ref=e409]:
+            - generic [ref=e411]: הניחו שהמשתנה d הינו מילון חוקי וקבעו אילו מבין שורות הקוד הבאות עלולות לגרום לשגיאת זמן ריצה. יש להתייחס לכל שורה באופן נפרד.
+            - code [ref=e417]:
+              - generic [ref=e418]:
+                - generic [ref=e420]:
+                  - generic [ref=e2470]: "1"
+                  - generic [ref=e2472]: "2"
+                  - generic [ref=e2474]: "3"
+                  - generic [ref=e2476]: "4"
+                - generic [ref=e427]:
+                  - generic [ref=e2483]: 1 s = set(list(d.keys()))
+                  - generic [ref=e2485]: 2 s = set(s)
+                  - generic [ref=e2487]: 3 s = set(input("enter a number"))
+                  - generic [ref=e2489]: 4 s = set(list(d.values()))
+                - textbox "Editor content" [ref=e431]
+          - generic [ref=e2491]:
+            - img [ref=e2492]
+            - generic [ref=e2495]: שגוי
+        - generic [ref=e433]:
+          - generic [ref=e434] [cursor=pointer]:
+            - generic [ref=e435]: א.
+            - generic [ref=e436]: שורה 3.
+          - generic [ref=e437] [cursor=pointer]:
+            - generic [ref=e438]: ב.
+            - generic [ref=e439]: שורה 4.
+            - img [ref=e2496]
+          - generic [ref=e440] [cursor=pointer]:
+            - generic [ref=e441]: ג.
+            - generic [ref=e442]: שורות 2 ו-4.
+          - generic [ref=e443] [cursor=pointer]:
+            - generic [ref=e444]: ד.
+            - generic [ref=e445]: שורות 1 או 3.
+      - generic [ref=e446]:
+        - generic [ref=e447]: שאלה 12
+        - generic [ref=e448]:
+          - generic [ref=e449]:
+            - generic [ref=e451]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e457]:
+              - generic [ref=e458]:
+                - generic [ref=e460]:
+                  - generic [ref=e2498]:
+                    - generic [ref=e2500] [cursor=pointer]: 
+                    - generic [ref=e2501]: "1"
+                  - generic [ref=e2503]: "2"
+                  - generic [ref=e2504]:
+                    - generic [ref=e2505] [cursor=pointer]: 
+                    - generic [ref=e2506]: "3"
+                  - generic [ref=e2507]:
+                    - generic [ref=e2508] [cursor=pointer]: 
+                    - generic [ref=e2509]: "4"
+                  - generic [ref=e2511]: "5"
+                  - generic [ref=e2512]:
+                    - generic [ref=e2513] [cursor=pointer]: 
+                    - generic [ref=e2514]: "6"
+                  - generic [ref=e2516]: "7"
+                  - generic [ref=e2517]:
+                    - generic [ref=e2518] [cursor=pointer]: 
+                    - generic [ref=e2519]: "8"
+                  - generic [ref=e2521]: "9"
+                  - generic [ref=e2523]:
+                    - generic [ref=e2524] [cursor=pointer]: 
+                    - generic [ref=e2525]: "10"
+                  - generic [ref=e2527]: "11"
+                  - generic [ref=e2530]: "12"
+                - generic [ref=e467]:
+                  - generic [ref=e2577]: "def func():"
+                  - generic [ref=e2579]: num = 0
+                  - generic [ref=e2581]: "while num < 20:"
+                  - generic [ref=e2583]: "if num == 7:"
+                  - generic [ref=e2585]: continue
+                  - generic [ref=e2587]: "if num % 2 == 0:"
+                  - generic [ref=e2589]: continue
+                  - generic [ref=e2591]: "if num > 10:"
+                  - generic [ref=e2593]: "print(f\"{num} is odd and"
+                  - generic [ref=e2595]: greater than 10.")
+                  - generic [ref=e2597]: "else:"
+                  - generic [ref=e2599]: "print(f\"{num} is odd and 10"
+                  - generic [ref=e2601]: or less.")
+                  - generic [ref=e2603]: num += 1
+                - textbox "Editor content" [ref=e471]
+          - generic [ref=e2605]:
+            - img [ref=e2606]
+            - generic [ref=e2609]: שגוי
+        - generic [ref=e473]:
+          - generic [ref=e474] [cursor=pointer]:
+            - generic [ref=e475]: א.
+            - generic [ref=e476]: הקוד ידפיס את כל המספרים הקטנים מ 20 שהם אי-זוגיים ואינם 7.
+          - generic [ref=e477] [cursor=pointer]:
+            - generic [ref=e478]: ב.
+            - generic [ref=e479]: הקוד נכנס ללולאה אינסופית.
+            - img [ref=e2610]
+          - generic [ref=e480] [cursor=pointer]:
+            - generic [ref=e481]: ג.
+            - generic [ref=e482]: הקוד יקרוס בשל שגיאת זמן ריצה.
+          - generic [ref=e483] [cursor=pointer]:
+            - generic [ref=e484]: ד.
+            - generic [ref=e485]: אף תשובה אינה נכונה.
+      - generic [ref=e486]:
+        - generic [ref=e487]: שאלה 13
+        - generic [ref=e488]:
+          - generic [ref=e489]:
+            - generic [ref=e491]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e497]:
+              - generic [ref=e498]:
+                - generic [ref=e500]:
+                  - generic [ref=e2612]:
+                    - generic [ref=e2614] [cursor=pointer]: 
+                    - generic [ref=e2615]: "1"
+                  - generic [ref=e2616]:
+                    - generic [ref=e2617] [cursor=pointer]: 
+                    - generic [ref=e2618]: "2"
+                  - generic [ref=e2620]: "3"
+                  - generic [ref=e2622]: "4"
+                  - generic [ref=e2624]: "5"
+                  - generic [ref=e2626]: "6"
+                  - generic [ref=e2627]:
+                    - generic [ref=e2628] [cursor=pointer]: 
+                    - generic [ref=e2629]: "7"
+                  - generic [ref=e2632]: "8"
+                  - generic [ref=e2634]: "9"
+                  - generic [ref=e2636]: "10"
+                  - generic [ref=e2638]: "11"
+                  - generic [ref=e2639]:
+                    - generic [ref=e2640] [cursor=pointer]: 
+                    - generic [ref=e2641]: "12"
+                  - generic [ref=e2643]: "13"
+                  - generic [ref=e2645]: "14"
+                  - generic [ref=e2646]:
+                    - generic [ref=e2647] [cursor=pointer]: 
+                    - generic [ref=e2648]: "15"
+                  - generic [ref=e2650]: "16"
+                  - generic [ref=e2652]: "17"
+                  - generic [ref=e2653]:
+                    - generic [ref=e2654] [cursor=pointer]: 
+                    - generic [ref=e2655]: "18"
+                  - generic [ref=e2657]: "19"
+                  - generic [ref=e2659]: "20"
+                  - generic [ref=e2660]:
+                    - generic [ref=e2661] [cursor=pointer]: 
+                    - generic [ref=e2662]: "21"
+                  - generic [ref=e2664]: "22"
+                  - generic [ref=e2666]: "23"
+                  - generic [ref=e2667]:
+                    - generic [ref=e2668] [cursor=pointer]: 
+                    - generic [ref=e2669]: "24"
+                  - generic [ref=e2671]: "25"
+                - generic [ref=e507]:
+                  - generic [ref=e2733]: "class Book:"
+                  - generic [ref=e2735]: "def __init__(self):"
+                  - generic [ref=e2737]: self.__title = "Harry Potter"
+                  - generic [ref=e2739]: self.__author = "J.K. Rowling"
+                  - generic [ref=e2741]: self.__price = 81.99
+                  - generic [ref=e2744]: def __init__(self, title, author,
+                  - generic [ref=e2746]: "price):"
+                  - generic [ref=e2748]: self.__title = title
+                  - generic [ref=e2750]: self.__author = author
+                  - generic [ref=e2752]: self.__price = price
+                  - generic [ref=e2755]: "def set_price(self, price):"
+                  - generic [ref=e2757]: self.__price = price
+                  - generic [ref=e2760]: "def get_title(self):"
+                  - generic [ref=e2762]: return self.__title
+                  - generic [ref=e2765]: "def get_author(self):"
+                  - generic [ref=e2767]: return self.__author
+                  - generic [ref=e2770]: "def get_price(self):"
+                  - generic [ref=e2772]: return self.__price
+                  - generic [ref=e2775]: "if __name__ == \"__main__\":"
+                  - generic [ref=e2777]: my_book = Book("Python 101", "John
+                - textbox "Editor content" [ref=e511]
+          - generic [ref=e2779]:
+            - img [ref=e2780]
+            - generic [ref=e2783]: שגוי
+        - generic [ref=e513]:
+          - generic [ref=e514] [cursor=pointer]:
+            - generic [ref=e515]: א.
+            - generic [ref=e516]: צריך להגדיר את המחלקה בקובץ נפרד.
+          - generic [ref=e517] [cursor=pointer]:
+            - generic [ref=e518]: ב.
+            - generic [ref=e519]: הקוד תקין אך לא יודפס כלום בסיום הריצה.
+          - generic [ref=e520] [cursor=pointer]:
+            - generic [ref=e521]: ג.
+            - generic [ref=e522]: התוכנית תקרוס מכיוון שלא ניתן להשתמש בו זמנית גם בבנאי מלא וגם בברירת מחדל.
+            - img [ref=e2784]
+          - generic [ref=e523] [cursor=pointer]:
+            - generic [ref=e524]: ד.
+            - generic [ref=e525]: חסרים setter-ים כדי שהקוד ירוץ באופן תקין.
+      - generic [ref=e526]:
+        - generic [ref=e527]: שאלה 14
+        - generic [ref=e528]:
+          - generic [ref=e529]:
+            - generic [ref=e531]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e537]:
+              - generic [ref=e538]:
+                - generic [ref=e540]:
+                  - generic [ref=e2786]:
+                    - generic [ref=e2788] [cursor=pointer]: 
+                    - generic [ref=e2789]: "1"
+                  - generic [ref=e2790]:
+                    - generic [ref=e2791] [cursor=pointer]: 
+                    - generic [ref=e2792]: "2"
+                  - generic [ref=e2794]: "3"
+                  - generic [ref=e2796]: "4"
+                  - generic [ref=e2797]:
+                    - generic [ref=e2798] [cursor=pointer]: 
+                    - generic [ref=e2799]: "5"
+                  - generic [ref=e2800]:
+                    - generic [ref=e2801] [cursor=pointer]: 
+                    - generic [ref=e2802]: "6"
+                  - generic [ref=e2804]: "7"
+                  - generic [ref=e2805]:
+                    - generic [ref=e2806] [cursor=pointer]: 
+                    - generic [ref=e2807]: "8"
+                  - generic [ref=e2809]: "9"
+                  - generic [ref=e2811]: "10"
+                  - generic [ref=e2813]: "11"
+                  - generic [ref=e2814]:
+                    - generic [ref=e2815] [cursor=pointer]: 
+                    - generic [ref=e2816]: "12"
+                  - generic [ref=e2818]: "13"
+                - generic [ref=e547]:
+                  - generic [ref=e2844]: "class Shape:"
+                  - generic [ref=e2846]: "def area(self):"
+                  - generic [ref=e2848]: return 0
+                  - generic [ref=e2851]: "class Circle(Shape):"
+                  - generic [ref=e2853]: "def __init__(self, r):"
+                  - generic [ref=e2855]: self.r = r
+                  - generic [ref=e2857]: "def area(self):"
+                  - generic [ref=e2859]: return 3.14 * self.r * self.r
+                  - generic [ref=e2862]: shapes = [Shape(), Circle(5), Shape()]
+                  - generic [ref=e2864]: "for s in shapes:"
+                  - generic [ref=e2866]: print(s.area())
+                - textbox "Editor content" [ref=e551]
+          - generic [ref=e2868]:
+            - img [ref=e2869]
+            - generic [ref=e2872]: שגוי
+        - generic [ref=e553]:
+          - generic [ref=e554] [cursor=pointer]:
+            - generic [ref=e555]: א.
+            - generic [ref=e556]: יודפס 0, 78.5, 78.5 כי ברגע ש-Circle נוצר הוא עוקף את area גם עבור אובייקטי Shape.
+          - generic [ref=e557] [cursor=pointer]:
+            - generic [ref=e558]: ב.
+            - generic [ref=e559]: יודפס 0, 0, 0 כי הלולאה עוברת על רשימה מסוג Shape ותמיד קוראת ל-area של Shape.
+          - generic [ref=e560] [cursor=pointer]:
+            - generic [ref=e561]: ג.
+            - generic [ref=e562]: יודפס 0, 78.5, 0 כי כל אובייקט קורא למתודת area שלו עצמו לפי הטיפוס האמיתי.
+            - img [ref=e2873]
+          - generic [ref=e563] [cursor=pointer]:
+            - generic [ref=e564]: ד.
+            - generic [ref=e565]: תתקבל שגיאת זמן ריצה כי לא ניתן לאחסן אובייקטים מסוגים שונים ברשימה אחת.
+      - generic [ref=e566]:
+        - generic [ref=e567]: שאלה 15
+        - generic [ref=e568]:
+          - generic [ref=e569]:
+            - generic [ref=e571]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e577]:
+              - generic [ref=e578]:
+                - generic [ref=e580]:
+                  - generic [ref=e2875]:
+                    - generic [ref=e2877] [cursor=pointer]: 
+                    - generic [ref=e2878]: "1"
+                  - generic [ref=e2880]: "2"
+                  - generic [ref=e2882]: "3"
+                  - generic [ref=e2884]: "4"
+                  - generic [ref=e2887]: "5"
+                  - generic [ref=e2890]: "6"
+                  - generic [ref=e2893]: "7"
+                  - generic [ref=e2896]: "8"
+                  - generic [ref=e2898]: "9"
+                  - generic [ref=e2900]: "10"
+                  - generic [ref=e2902]: "11"
+                  - generic [ref=e2903]:
+                    - generic [ref=e2904] [cursor=pointer]: 
+                    - generic [ref=e2905]: "12"
+                  - generic [ref=e2906]:
+                    - generic [ref=e2907] [cursor=pointer]: 
+                    - generic [ref=e2908]: "13"
+                  - generic [ref=e2910]: "14"
+                  - generic [ref=e2912]: "15"
+                  - generic [ref=e2914]: "16"
+                  - generic [ref=e2915]:
+                    - generic [ref=e2916] [cursor=pointer]: 
+                    - generic [ref=e2917]: "17"
+                  - generic [ref=e2919]: "18"
+                  - generic [ref=e2921]: "19"
+                  - generic [ref=e2922]:
+                    - generic [ref=e2923] [cursor=pointer]: 
+                    - generic [ref=e2924]: "20"
+                  - generic [ref=e2925]:
+                    - generic [ref=e2926] [cursor=pointer]: 
+                    - generic [ref=e2927]: "21"
+                  - generic [ref=e2930]: "22"
+                  - generic [ref=e2932]: "23"
+                  - generic [ref=e2934]: "24"
+                  - generic [ref=e2935]:
+                    - generic [ref=e2936] [cursor=pointer]: 
+                    - generic [ref=e2937]: "25"
+                  - generic [ref=e2939]: "26"
+                  - generic [ref=e2943]: "27"
+                  - generic [ref=e2944]:
+                    - generic [ref=e2945] [cursor=pointer]: 
+                    - generic [ref=e2946]: "28"
+                  - generic [ref=e2948]: "29"
+                - generic [ref=e587]:
+                  - generic [ref=e3024]: "def main():"
+                  - generic [ref=e3026]: persons = []
+                  - generic [ref=e3028]: persons.append(Person("Alice", 25))
+                  - generic [ref=e3030]: persons.append(Pupil("Bob", 15,
+                  - generic [ref=e3032]: "\"Ankori\"))"
+                  - generic [ref=e3034]: persons.append(Employee("Osher", 35,
+                  - generic [ref=e3036]: "\"Apple\"))"
+                  - generic [ref=e3038]: persons.insert(1, Employee("Tali",
+                  - generic [ref=e3040]: 40, "Meta"))
+                  - generic [ref=e3042]: persons.insert(0, Employee("Shani",
+                  - generic [ref=e3044]: 28, "Google"))
+                  - generic [ref=e3046]: print(persons[1])
+                  - generic [ref=e3048]: print(persons[3])
+                  - generic [ref=e3050]: print(persons[-1])
+                  - generic [ref=e3053]: "class Person:"
+                  - generic [ref=e3055]: "def __init__(self, name, age):"
+                  - generic [ref=e3057]: self.__name = name
+                  - generic [ref=e3059]: self.__age = age
+                  - generic [ref=e3062]: "def __str__(self):"
+                  - generic [ref=e3064]: return self.__name
+                  - generic [ref=e3067]: "class Pupil(Person):"
+                  - generic [ref=e3069]: def __init__(self, name, age,
+                  - generic [ref=e3071]: "school):"
+                  - generic [ref=e3073]: super().__init__(name, age)
+                  - generic [ref=e3075]: self.school = school
+                  - generic [ref=e3078]: "def __str__(self):"
+                  - generic [ref=e3080]: return super().__str__()+"
+                  - generic [ref=e3082]: currently studying at "+
+                  - generic [ref=e3084]: self.school
+                  - generic [ref=e3087]: "class Employee(Person):"
+                  - generic [ref=e3089]: def __init__(self, name, age,
+                - textbox "Editor content" [ref=e591]
+          - generic [ref=e3091]:
+            - img [ref=e3092]
+            - generic [ref=e3095]: שגוי
+        - generic [ref=e593]:
+          - generic [ref=e594] [cursor=pointer]:
+            - generic [ref=e595]: א.
+            - generic [ref=e596]: שורה 10 מדפיסה Bob currently studying at Ankori
+          - generic [ref=e597] [cursor=pointer]:
+            - generic [ref=e598]: ב.
+            - generic [ref=e599]: שורה 9 גורמת לשגיאת זמן ריצה מכיוון שהאינדקס לא קיים.
+          - generic [ref=e600] [cursor=pointer]:
+            - generic [ref=e601]: ג.
+            - generic [ref=e602]: שורה 8 מדפיסה Alice
+            - img [ref=e3096]
+          - generic [ref=e603] [cursor=pointer]:
+            - generic [ref=e604]: ד.
+            - generic [ref=e605]: שורה 9 מדפיסה Osher currently working at Apple
+      - generic [ref=e606]:
+        - generic [ref=e607]: שאלה 16
+        - generic [ref=e608]:
+          - generic [ref=e609]:
+            - generic [ref=e611]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e617]:
+              - generic [ref=e618]:
+                - generic [ref=e620]:
+                  - generic [ref=e3100]: "1"
+                  - generic [ref=e3102]: "2"
+                  - generic [ref=e3104]: "3"
+                  - generic [ref=e3106]: "4"
+                  - generic [ref=e3108]: "5"
+                - generic [ref=e627]:
+                  - generic [ref=e3116]: a = [3, 1, 4, 1, 5]
+                  - generic [ref=e3118]: b = sorted(a)
+                  - generic [ref=e3120]: a.sort(reverse=True)
+                  - generic [ref=e3122]: print(a)
+                  - generic [ref=e3124]: print(b)
+                - textbox "Editor content" [ref=e631]
+          - generic [ref=e3126]:
+            - img [ref=e3127]
+            - generic [ref=e3130]: שגוי
+        - generic [ref=e633]:
+          - generic [ref=e634] [cursor=pointer]:
+            - generic [ref=e635]: א.
+            - generic [ref=e636]: יודפס [1,1,3,4,5] ולאחר מכן [1,1,3,4,5] כי sorted מחזיר תמיד מיון עולה לשניהם.
+          - generic [ref=e637] [cursor=pointer]:
+            - generic [ref=e638]: ב.
+            - generic [ref=e639]: יודפס [5,4,3,1,1] ולאחר מכן [1,1,3,4,5] כי sort משנה את a ו-sorted יצר עותק חדש.
+            - img [ref=e3131]
+          - generic [ref=e640] [cursor=pointer]:
+            - generic [ref=e641]: ג.
+            - generic [ref=e642]: יודפס [5,4,3,1,1] ולאחר מכן [5,4,3,1,1] כי b ו-a מצביעים לאותה רשימה בזיכרון.
+          - generic [ref=e643] [cursor=pointer]:
+            - generic [ref=e644]: ד.
+            - generic [ref=e645]: תתקבל שגיאת זמן ריצה כי לא ניתן לקרוא sort ו-sorted על אותה רשימה באותו קוד.
+      - generic [ref=e646]:
+        - generic [ref=e647]: שאלה 17
+        - generic [ref=e648]:
+          - generic [ref=e649]:
+            - generic [ref=e651]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e657]:
+              - generic [ref=e658]:
+                - generic [ref=e660]:
+                  - generic [ref=e3133]:
+                    - generic [ref=e3135] [cursor=pointer]: 
+                    - generic [ref=e3136]: "1"
+                  - generic [ref=e3137]:
+                    - generic [ref=e3138] [cursor=pointer]: 
+                    - generic [ref=e3139]: "2"
+                  - generic [ref=e3141]: "3"
+                  - generic [ref=e3142]:
+                    - generic [ref=e3143] [cursor=pointer]: 
+                    - generic [ref=e3144]: "4"
+                  - generic [ref=e3146]: "5"
+                  - generic [ref=e3149]: "6"
+                  - generic [ref=e3150]:
+                    - generic [ref=e3151] [cursor=pointer]: 
+                    - generic [ref=e3152]: "7"
+                  - generic [ref=e3154]: "8"
+                  - generic [ref=e3155]:
+                    - generic [ref=e3156] [cursor=pointer]: 
+                    - generic [ref=e3157]: "9"
+                  - generic [ref=e3159]: "10"
+                  - generic [ref=e3160]:
+                    - generic [ref=e3161] [cursor=pointer]: 
+                    - generic [ref=e3162]: "11"
+                  - generic [ref=e3164]: "12"
+                  - generic [ref=e3165]:
+                    - generic [ref=e3166] [cursor=pointer]: 
+                    - generic [ref=e3167]: "13"
+                  - generic [ref=e3169]: "14"
+                  - generic [ref=e3171]: "15"
+                  - generic [ref=e3172]:
+                    - generic [ref=e3173] [cursor=pointer]: 
+                    - generic [ref=e3174]: "16"
+                  - generic [ref=e3176]: "17"
+                  - generic [ref=e3178]:
+                    - generic [ref=e3179] [cursor=pointer]: 
+                    - generic [ref=e3180]: "18"
+                  - generic [ref=e3182]: "19"
+                - generic [ref=e667]:
+                  - generic [ref=e3236]: "def func1(val):"
+                  - generic [ref=e3238]: "try:"
+                  - generic [ref=e3240]: num = int(val)
+                  - generic [ref=e3242]: "if num < 0:"
+                  - generic [ref=e3244]: raise KeyError("Negative
+                  - generic [ref=e3246]: numbers are not allowed.")
+                  - generic [ref=e3248]: result = 100 / num
+                  - generic [ref=e3250]: "except Exception:"
+                  - generic [ref=e3252]: print("error")
+                  - generic [ref=e3254]: "except ValueError:"
+                  - generic [ref=e3256]: print("ValueError")
+                  - generic [ref=e3258]: "except KeyError:"
+                  - generic [ref=e3260]: print("KeyError")
+                  - generic [ref=e3262]: "except ZeroDivisionError:"
+                  - generic [ref=e3264]: print("ZeroDivisionError")
+                  - generic [ref=e3267]: "def func2():"
+                  - generic [ref=e3269]: values = ["42", "abc", "-5", "0",
+                  - generic [ref=e3271]: "\"10\"]"
+                  - generic [ref=e3273]: "for v in values:"
+                  - generic [ref=e3275]: func1(v)
+                - textbox "Editor content" [ref=e671]
+          - generic [ref=e3277]:
+            - img [ref=e3278]
+            - generic [ref=e3281]: שגוי
+        - generic [ref=e673]:
+          - generic [ref=e674] [cursor=pointer]:
+            - generic [ref=e675]: א.
+            - generic [ref=e676]: בסיום הריצה יודפס error\nKeyError\nZeroDivisionError\n
+          - generic [ref=e677] [cursor=pointer]:
+            - generic [ref=e678]: ב.
+            - generic [ref=e679]: בסיום הריצה יודפס ValueError\nKeyError\nZeroDivisionError\n
+          - generic [ref=e680] [cursor=pointer]:
+            - generic [ref=e681]: ג.
+            - generic [ref=e682]: בסיום הריצה יודפס error\nerror\nerror\n
+            - img [ref=e3282]
+          - generic [ref=e683] [cursor=pointer]:
+            - generic [ref=e684]: ד.
+            - generic [ref=e685]: במהלך הריצה תיזרק חריגה שלא נתפוס והתוכנית תקרוס.
+      - generic [ref=e686]:
+        - generic [ref=e687]: שאלה 18
+        - generic [ref=e688]:
+          - generic [ref=e689]:
+            - generic [ref=e691]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e697]:
+              - generic [ref=e698]:
+                - generic [ref=e700]:
+                  - generic [ref=e3284]:
+                    - generic [ref=e3286] [cursor=pointer]: 
+                    - generic [ref=e3287]: "1"
+                  - generic [ref=e3289]: "2"
+                  - generic [ref=e3291]: "3"
+                  - generic [ref=e3293]: "4"
+                  - generic [ref=e3295]: "5"
+                  - generic [ref=e3296]:
+                    - generic [ref=e3297] [cursor=pointer]: 
+                    - generic [ref=e3298]: "6"
+                  - generic [ref=e3300]: "7"
+                  - generic [ref=e3302]: "8"
+                - generic [ref=e707]:
+                  - generic [ref=e3320]: matrix = [[1, 2, 3],
+                  - generic [ref=e3322]: "[4, 5, 6],"
+                  - generic [ref=e3324]: "[7, 8, 9]]"
+                  - generic [ref=e3327]: total = 0
+                  - generic [ref=e3329]: "for row in matrix:"
+                  - generic [ref=e3331]: total += row[-1]
+                  - generic [ref=e3333]: print(total)
+                - textbox "Editor content" [ref=e711]
+          - generic [ref=e3335]:
+            - img [ref=e3336]
+            - generic [ref=e3339]: שגוי
+        - generic [ref=e713]:
+          - generic [ref=e714] [cursor=pointer]:
+            - generic [ref=e715]: א.
+            - generic [ref=e716]: יודפס 24 כי row[-1] מחזיר את השורה האחרונה ולא את האיבר האחרון בשורה.
+          - generic [ref=e717] [cursor=pointer]:
+            - generic [ref=e718]: ב.
+            - generic [ref=e719]: תתקבל שגיאת זמן ריצה כי לא ניתן להשתמש באינדקס שלילי על רשימה דו-ממדית.
+          - generic [ref=e720] [cursor=pointer]:
+            - generic [ref=e721]: ג.
+            - generic [ref=e722]: יודפס 45 כי הלולאה מסכמת את כל האיברים בכל שורות המטריצה ביחד.
+          - generic [ref=e723] [cursor=pointer]:
+            - generic [ref=e724]: ד.
+            - generic [ref=e725]: "יודפס 18 כי הלולאה מסכמת את האיבר האחרון בכל שורה: 3 + 6 + 9."
+            - img [ref=e3340]
+      - generic [ref=e726]:
+        - generic [ref=e727]: שאלה 19
+        - generic [ref=e728]:
+          - generic [ref=e729]:
+            - generic [ref=e731]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e737]:
+              - generic [ref=e738]:
+                - generic [ref=e740]:
+                  - generic [ref=e3342]:
+                    - generic [ref=e3344] [cursor=pointer]: 
+                    - generic [ref=e3345]: "1"
+                  - generic [ref=e3347]: "2"
+                  - generic [ref=e3349]: "3"
+                  - generic [ref=e3350]:
+                    - generic [ref=e3351] [cursor=pointer]: 
+                    - generic [ref=e3352]: "4"
+                  - generic [ref=e3354]: "5"
+                  - generic [ref=e3356]: "6"
+                  - generic [ref=e3358]: "7"
+                  - generic [ref=e3360]: "8"
+                  - generic [ref=e3362]: "9"
+                  - generic [ref=e3364]: "10"
+                - generic [ref=e747]:
+                  - generic [ref=e3382]: "class Counter:"
+                  - generic [ref=e3384]: count = 0
+                  - generic [ref=e3387]: "def __init__(self):"
+                  - generic [ref=e3389]: Counter.count += 1
+                  - generic [ref=e3392]: c1 = Counter()
+                  - generic [ref=e3394]: c2 = Counter()
+                  - generic [ref=e3396]: c3 = Counter()
+                  - generic [ref=e3398]: print(Counter.count, c1.count)
+                - textbox "Editor content" [ref=e751]
+          - generic [ref=e3400]:
+            - img [ref=e3401]
+            - generic [ref=e3404]: שגוי
+        - generic [ref=e753]:
+          - generic [ref=e754] [cursor=pointer]:
+            - generic [ref=e755]: א.
+            - generic [ref=e756]: תתקבל שגיאת זמן ריצה כי לא ניתן לגשת למשתנה מחלקה דרך שם האובייקט c1.
+          - generic [ref=e757] [cursor=pointer]:
+            - generic [ref=e758]: ב.
+            - generic [ref=e759]: יודפס 1 1 כי כל אובייקט יוצר עותק פרטי של count ומאתחל אותו מחדש לאפס.
+          - generic [ref=e760] [cursor=pointer]:
+            - generic [ref=e761]: ג.
+            - generic [ref=e762]: יודפס 3 3 כי count הוא משתנה מחלקה משותף לכל האובייקטים ומתעדכן בכל יצירת מופע.
+            - img [ref=e3405]
+          - generic [ref=e763] [cursor=pointer]:
+            - generic [ref=e764]: ד.
+            - generic [ref=e765]: יודפס 3 0 כי Counter.count ו-c1.count מצביעים לאזורי זיכרון שונים לחלוטין.
+      - generic [ref=e766]:
+        - generic [ref=e767]: שאלה 20
+        - generic [ref=e768]:
+          - generic [ref=e769]:
+            - generic [ref=e771]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+            - code [ref=e777]:
+              - generic [ref=e778]:
+                - generic [ref=e780]:
+                  - generic [ref=e3407]:
+                    - generic [ref=e3409] [cursor=pointer]: 
+                    - generic [ref=e3410]: "1"
+                  - generic [ref=e3411]:
+                    - generic [ref=e3412] [cursor=pointer]: 
+                    - generic [ref=e3413]: "2"
+                  - generic [ref=e3415]: "3"
+                  - generic [ref=e3417]: "4"
+                  - generic [ref=e3418]:
+                    - generic [ref=e3419] [cursor=pointer]: 
+                    - generic [ref=e3420]: "5"
+                  - generic [ref=e3422]: "6"
+                  - generic [ref=e3424]: "7"
+                  - generic [ref=e3425]:
+                    - generic [ref=e3426] [cursor=pointer]: 
+                    - generic [ref=e3427]: "8"
+                  - generic [ref=e3428]:
+                    - generic [ref=e3429] [cursor=pointer]: 
+                    - generic [ref=e3430]: "9"
+                  - generic [ref=e3432]: "10"
+                  - generic [ref=e3434]: "11"
+                  - generic [ref=e3436]: "12"
+                  - generic [ref=e3438]: "13"
+                  - generic [ref=e3440]: "14"
+                - generic [ref=e787]:
+                  - generic [ref=e3469]: "class Animal:"
+                  - generic [ref=e3471]: "def __init__(self, name):"
+                  - generic [ref=e3473]: self.__name = name
+                  - generic [ref=e3476]: "def __str__(self):"
+                  - generic [ref=e3478]: return self.__name
+                  - generic [ref=e3481]: "class Dog(Animal):"
+                  - generic [ref=e3483]: "def __init__(self, name, breed):"
+                  - generic [ref=e3485]: super().__init__(name)
+                  - generic [ref=e3487]: self.breed = breed
+                  - generic [ref=e3490]: d = Dog("Rex", "Labrador")
+                  - generic [ref=e3492]: print(d)
+                - textbox "Editor content" [ref=e791]
+          - generic [ref=e3494]:
+            - img [ref=e3495]
+            - generic [ref=e3498]: שגוי
+        - generic [ref=e793]:
+          - generic [ref=e794] [cursor=pointer]:
+            - generic [ref=e795]: א.
+            - generic [ref=e796]: יודפס None כי __name מוגדר כפרטי ולכן __str__ מחזירה None בירושה.
+          - generic [ref=e797] [cursor=pointer]:
+            - generic [ref=e798]: ב.
+            - generic [ref=e799]: יודפס Rex Labrador כי __str__ ב-Dog עוקף אוטומטית את זו של Animal.
+          - generic [ref=e800] [cursor=pointer]:
+            - generic [ref=e801]: ג.
+            - generic [ref=e802]: יודפס Rex כי Dog יורש את __str__ מ-Animal שמחזיר את השם הפרטי.
+            - img [ref=e3499]
+          - generic [ref=e803] [cursor=pointer]:
+            - generic [ref=e804]: ד.
+            - generic [ref=e805]: תתקבל שגיאת זמן ריצה כי __name הוא פרטי ו-Dog אינו יכול לגשת אליו.
+  - alert [ref=e806]
+  - generic [ref=e807]:
+    - alert
+    - alert

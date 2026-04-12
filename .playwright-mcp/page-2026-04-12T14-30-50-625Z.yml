@@ -1,0 +1,373 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - heading "Shuffle Exam" [level=2] [ref=e5]
+      - generic [ref=e6]:
+        - button "Java" [ref=e7] [cursor=pointer]
+        - button "הסקה סטטיסטית" [ref=e8] [cursor=pointer]
+        - button "כלכלה" [ref=e9] [cursor=pointer]
+        - button "שיטות מחקר" [ref=e10] [cursor=pointer]
+        - button "Python" [ref=e11] [cursor=pointer]
+  - main [ref=e12]:
+    - generic [ref=e14]:
+      - button "מחיקת תוצאות" [disabled]
+      - button "סיום מבחן" [ref=e15]
+      - button "ערבוב מבחן חדש" [ref=e16]
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]: שאלה 1
+        - generic [ref=e23]: בחרו את הטענה הנכונה ביותר העוסקת בפעולות על קבוצות (sets) בפייתון.
+        - generic [ref=e24]:
+          - generic [ref=e25] [cursor=pointer]:
+            - generic [ref=e26]: א.
+            - generic [ref=e27]: symmetric difference מחזירה את האיברים המשותפים לשתי הקבוצות בלבד ללא כפילויות.
+          - generic [ref=e28] [cursor=pointer]:
+            - generic [ref=e29]: ב.
+            - generic [ref=e30]: ניתן לבצע איחוד קבוצות באמצעות אופרטור | או מתודת union, ושתי הדרכים שקולות.
+          - generic [ref=e31] [cursor=pointer]:
+            - generic [ref=e32]: ג.
+            - generic [ref=e33]: פעולת ה-intersection מחזירה את כל האיברים שנמצאים באחת הקבוצות אך לא בשתיהן.
+          - generic [ref=e34] [cursor=pointer]:
+            - generic [ref=e35]: ד.
+            - generic [ref=e36]: פעולת החיסור A - B מחזירה את האיברים שנמצאים בB אך לא ב-A בלבד לפי הסדר.
+      - generic [ref=e37]:
+        - generic [ref=e38]: שאלה 2
+        - generic [ref=e40]:
+          - generic [ref=e42]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e47]: Loading...
+        - generic [ref=e48]:
+          - generic [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: א.
+            - generic [ref=e51]: יודפס [2, 4, 6, 8, 10] כי filter אינו מסנן כלום מכיוון שכל כפולות 2 הן זוגיות.
+          - generic [ref=e52] [cursor=pointer]:
+            - generic [ref=e53]: ב.
+            - generic [ref=e54]: תתקבל שגיאת זמן ריצה כי לא ניתן להפעיל filter על תוצאת map מבלי להמיר לרשימה.
+          - generic [ref=e55] [cursor=pointer]:
+            - generic [ref=e56]: ג.
+            - generic [ref=e57]: יודפס [2, 4] כי filter פועל על הרשימה המקורית nums ולא על התוצאה של map.
+          - generic [ref=e58] [cursor=pointer]:
+            - generic [ref=e59]: ד.
+            - generic [ref=e60]: יודפס [4, 8] כי map מכפיל כל איבר ב-2 ו-filter שומר רק את הזוגיים מהתוצאה.
+      - generic [ref=e61]:
+        - generic [ref=e62]: שאלה 3
+        - generic [ref=e64]:
+          - generic [ref=e66]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e71]: Loading...
+        - generic [ref=e72]:
+          - generic [ref=e73] [cursor=pointer]:
+            - generic [ref=e74]: א.
+            - generic [ref=e75]: יודפס 3 100 כי נוספה רשומה חדשה למילון ושדה הציון של Alice עודכן ב-10 נקודות.
+          - generic [ref=e76] [cursor=pointer]:
+            - generic [ref=e77]: ב.
+            - generic [ref=e78]: יודפס 2 100 כי הוספת Charlie לא מצליחה כי המילון כבר הוגדר עם שני מפתחות בלבד.
+          - generic [ref=e79] [cursor=pointer]:
+            - generic [ref=e80]: ג.
+            - generic [ref=e81]: יודפס 3 90 כי הפעולה += על ערך בתוך מילון מקונן אינה משנה את הערך המקורי.
+          - generic [ref=e82] [cursor=pointer]:
+            - generic [ref=e83]: ד.
+            - generic [ref=e84]: תתקבל שגיאת זמן ריצה כי לא ניתן להוסיף מפתח חדש למילון לאחר הגדרתו הראשונית.
+      - generic [ref=e85]:
+        - generic [ref=e86]: שאלה 4
+        - generic [ref=e88]:
+          - generic [ref=e90]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e95]: Loading...
+        - generic [ref=e96]:
+          - generic [ref=e97] [cursor=pointer]:
+            - generic [ref=e98]: א.
+            - generic [ref=e99]: יודפס 85 כי s.__grade = 100 יוצר תכונה חדשה בשם __grade ולא משנה את __grade הפרטי.
+          - generic [ref=e100] [cursor=pointer]:
+            - generic [ref=e101]: ב.
+            - generic [ref=e102]: תתקבל שגיאת זמן ריצה כי גישה ישירה לתכונה פרטית מחוץ למחלקה אסורה לחלוטין.
+          - generic [ref=e103] [cursor=pointer]:
+            - generic [ref=e104]: ג.
+            - generic [ref=e105]: יודפס 0 כי set_grade מאפס את הציון בכל פעם שנעשה ניסיון גישה ישירה מחוץ למחלקה.
+          - generic [ref=e106] [cursor=pointer]:
+            - generic [ref=e107]: ד.
+            - generic [ref=e108]: יודפס 100 כי גישה ישירה לתכונה הפרטית מחוץ למחלקה מאפשרת שינוי ישיר של הערך.
+      - generic [ref=e109]:
+        - generic [ref=e110]: שאלה 5
+        - generic [ref=e112]:
+          - generic [ref=e114]: בחרו את הטענה המדויקת ביותר. אילו מבין שורות הקוד הבאות לא תגרום לעולם לשגיאת זמן ריצה? יש להתייחס לכל שורת קוד בנפרד.
+          - generic [ref=e119]: Loading...
+        - generic [ref=e120]:
+          - generic [ref=e121] [cursor=pointer]:
+            - generic [ref=e122]: א.
+            - generic [ref=e123]: שורות 2 ו-4.
+          - generic [ref=e124] [cursor=pointer]:
+            - generic [ref=e125]: ב.
+            - generic [ref=e126]: שורות 1 ו-2.
+          - generic [ref=e127] [cursor=pointer]:
+            - generic [ref=e128]: ג.
+            - generic [ref=e129]: שורות 2 ו-3.
+          - generic [ref=e130] [cursor=pointer]:
+            - generic [ref=e131]: ד.
+            - generic [ref=e132]: שורה 2 בלבד.
+      - generic [ref=e133]:
+        - generic [ref=e134]: שאלה 6
+        - generic [ref=e136]:
+          - generic [ref=e138]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e143]: Loading...
+        - generic [ref=e144]:
+          - generic [ref=e145] [cursor=pointer]:
+            - generic [ref=e146]: א.
+            - generic [ref=e147]: שורה 9 תגרום לשגיאת זמן ריצה כי לא ניתן לקרוא ל-staticmethod דרך שם המחלקה.
+          - generic [ref=e148] [cursor=pointer]:
+            - generic [ref=e149]: ב.
+            - generic [ref=e150]: שורה 9 תדפיס 7 ושורה 10 תגרום לשגיאת זמן ריצה כי multiply דורש אובייקט ולא מחלקה.
+          - generic [ref=e151] [cursor=pointer]:
+            - generic [ref=e152]: ג.
+            - generic [ref=e153]: שורה 9 תדפיס 7 ושורה 10 תדפיס 12 כי Python מעביר אוטומטית None כ-self לכל מתודה.
+          - generic [ref=e154] [cursor=pointer]:
+            - generic [ref=e155]: ד.
+            - generic [ref=e156]: שתי השורות יתנו שגיאת זמן ריצה כי כל מתודה במחלקה דורשת יצירת אובייקט תחילה.
+      - generic [ref=e157]:
+        - generic [ref=e158]: שאלה 7
+        - generic [ref=e160]:
+          - generic [ref=e162]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e167]: Loading...
+        - generic [ref=e168]:
+          - generic [ref=e169] [cursor=pointer]:
+            - generic [ref=e170]: א.
+            - generic [ref=e171]: יודפס 2.
+          - generic [ref=e172] [cursor=pointer]:
+            - generic [ref=e173]: ב.
+            - generic [ref=e174]: יודפס 0.
+          - generic [ref=e175] [cursor=pointer]:
+            - generic [ref=e176]: ג.
+            - generic [ref=e177]: שורה מספר 4 מיותרת.
+          - generic [ref=e178] [cursor=pointer]:
+            - generic [ref=e179]: ד.
+            - generic [ref=e180]: שורה מספר 9 מיותרת.
+      - generic [ref=e181]:
+        - generic [ref=e182]: שאלה 8
+        - generic [ref=e184]:
+          - generic [ref=e186]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e191]: Loading...
+        - generic [ref=e192]:
+          - generic [ref=e193] [cursor=pointer]:
+            - generic [ref=e194]: א.
+            - generic [ref=e195]: יודפס 24 כי הפונקציה מחשבת עצרת של n באמצעות רקורסיה עם תנאי עצירה n==0.
+          - generic [ref=e196] [cursor=pointer]:
+            - generic [ref=e197]: ב.
+            - generic [ref=e198]: יודפס 16 כי הפונקציה מחשבת n בחזקת 2 ומחזירה n*n בכל קריאה רקורסיבית.
+          - generic [ref=e199] [cursor=pointer]:
+            - generic [ref=e200]: ג.
+            - generic [ref=e201]: יודפס 4 כי הפונקציה מחזירה את n כאשר היא מגיעה לתנאי הבסיס ומפסיקה.
+          - generic [ref=e202] [cursor=pointer]:
+            - generic [ref=e203]: ד.
+            - generic [ref=e204]: הקוד ייכנס ללולאה אינסופית כי תנאי הבסיס n==0 לעולם לא יתקיים עבור n חיובי.
+      - generic [ref=e205]:
+        - generic [ref=e206]: שאלה 9
+        - generic [ref=e208]:
+          - generic [ref=e210]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e215]: Loading...
+        - generic [ref=e216]:
+          - generic [ref=e217] [cursor=pointer]:
+            - generic [ref=e218]: א.
+            - generic [ref=e219]: "קטע קוד (print(func(\"ab, cd, ef, gh\", {\",\":1})) מדפיס את כמות הפסיקים ב-word."
+          - generic [ref=e220] [cursor=pointer]:
+            - generic [ref=e221]: ב.
+            - generic [ref=e222]: הפונקציה חייבת 2 פרמטרי קלט, אחרת תתקבל שגיאת זמן ריצה.
+          - generic [ref=e223] [cursor=pointer]:
+            - generic [ref=e224]: ג.
+            - generic [ref=e225]: שורות 4 ו-6 מיותרות.
+          - generic [ref=e226] [cursor=pointer]:
+            - generic [ref=e227]: ד.
+            - generic [ref=e228]: קטע הקוד (print(func("Abc")) מדפיס את המספר 8.
+      - generic [ref=e229]:
+        - generic [ref=e230]: שאלה 10
+        - generic [ref=e232]:
+          - generic [ref=e234]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e239]: Loading...
+        - generic [ref=e240]:
+          - generic [ref=e241] [cursor=pointer]:
+            - generic [ref=e242]: א.
+            - generic [ref=e243]: תתקבל שגיאת זמן ריצה כי לא ניתן להשתמש באינדקס שלילי על רשימה דו-ממדית.
+          - generic [ref=e244] [cursor=pointer]:
+            - generic [ref=e245]: ב.
+            - generic [ref=e246]: יודפס 45 כי הלולאה מסכמת את כל האיברים בכל שורות המטריצה ביחד.
+          - generic [ref=e247] [cursor=pointer]:
+            - generic [ref=e248]: ג.
+            - generic [ref=e249]: יודפס 24 כי row[-1] מחזיר את השורה האחרונה ולא את האיבר האחרון בשורה.
+          - generic [ref=e250] [cursor=pointer]:
+            - generic [ref=e251]: ד.
+            - generic [ref=e252]: "יודפס 18 כי הלולאה מסכמת את האיבר האחרון בכל שורה: 3 + 6 + 9."
+      - generic [ref=e253]:
+        - generic [ref=e254]: שאלה 11
+        - generic [ref=e256]:
+          - generic [ref=e258]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e263]: Loading...
+        - generic [ref=e264]:
+          - generic [ref=e265] [cursor=pointer]:
+            - generic [ref=e266]: א.
+            - generic [ref=e267]: הקוד נכנס ללולאה אינסופית כי כאשר i==3 מתבצע continue לפני העדכון של i.
+          - generic [ref=e268] [cursor=pointer]:
+            - generic [ref=e269]: ב.
+            - generic [ref=e270]: יודפס [0, 1, 2, 3, 4] כי continue בלולאת while אינו משפיע על הרשימה הנוצרת.
+          - generic [ref=e271] [cursor=pointer]:
+            - generic [ref=e272]: ג.
+            - generic [ref=e273]: יודפס [0, 1, 2, 4] כי continue מדלג על הוספת 3 לרשימה ועובר לאיטרציה הבאה.
+          - generic [ref=e274] [cursor=pointer]:
+            - generic [ref=e275]: ד.
+            - generic [ref=e276]: יודפס [0, 1, 2] כי break נסתר בתוך continue עוצר את הלולאה כאשר i מגיע ל-3.
+      - generic [ref=e277]:
+        - generic [ref=e278]: שאלה 12
+        - generic [ref=e280]:
+          - generic [ref=e282]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e287]: Loading...
+        - generic [ref=e288]:
+          - generic [ref=e289] [cursor=pointer]:
+            - generic [ref=e290]: א.
+            - generic [ref=e291]: הקוד ידפיס מחרוזת ריקה כי write מחיק את תוכן הקובץ לפני כל כתיבה חדשה.
+          - generic [ref=e292] [cursor=pointer]:
+            - generic [ref=e293]: ב.
+            - generic [ref=e294]: הקוד ידפיס רק את השורות החדשות כי בmodeשל append הקריאה מתחילה מסוף הקובץ.
+          - generic [ref=e295] [cursor=pointer]:
+            - generic [ref=e296]: ג.
+            - generic [ref=e297]: הקוד ידפיס את כל תוכן הקובץ כולל השורות שנכתבו כי append מאפשר גם קריאה.
+          - generic [ref=e298] [cursor=pointer]:
+            - generic [ref=e299]: ד.
+            - generic [ref=e300]: הקוד יקרוס בשגיאת זמן ריצה כי לא ניתן לקרוא קובץ שנפתח במצב append.
+      - generic [ref=e301]:
+        - generic [ref=e302]: שאלה 13
+        - generic [ref=e304]:
+          - generic [ref=e306]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e311]: Loading...
+        - generic [ref=e312]:
+          - generic [ref=e313] [cursor=pointer]:
+            - generic [ref=e314]: א.
+            - generic [ref=e315]: שורה 9 גורמת לשגיאת זמן ריצה מכיוון שהאינדקס לא קיים.
+          - generic [ref=e316] [cursor=pointer]:
+            - generic [ref=e317]: ב.
+            - generic [ref=e318]: שורה 9 מדפיסה Osher currently working at Apple
+          - generic [ref=e319] [cursor=pointer]:
+            - generic [ref=e320]: ג.
+            - generic [ref=e321]: שורה 10 מדפיסה Bob currently studying at Ankori
+          - generic [ref=e322] [cursor=pointer]:
+            - generic [ref=e323]: ד.
+            - generic [ref=e324]: שורה 8 מדפיסה Alice
+      - generic [ref=e325]:
+        - generic [ref=e326]: שאלה 14
+        - generic [ref=e328]:
+          - generic [ref=e330]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e335]: Loading...
+        - generic [ref=e336]:
+          - generic [ref=e337] [cursor=pointer]:
+            - generic [ref=e338]: א.
+            - generic [ref=e339]: יודפס [5, 10, 15] כי פונקציות ב-Python מקבלות תמיד עותק של הרשימה ולא הפניה.
+          - generic [ref=e340] [cursor=pointer]:
+            - generic [ref=e341]: ב.
+            - generic [ref=e342]: תתקבל שגיאת זמן ריצה כי לא ניתן לשנות איבר ברשימה ולאחר מכן להשים אותה מחדש.
+          - generic [ref=e343] [cursor=pointer]:
+            - generic [ref=e344]: ג.
+            - generic [ref=e345]: יודפס [10, 10, 15] כי שינוי איבר דרך הפניה משפיע על הרשימה המקורית אך השמה מחדש לא.
+          - generic [ref=e346] [cursor=pointer]:
+            - generic [ref=e347]: ד.
+            - generic [ref=e348]: יודפס [0, 0, 0] כי השמת lst = [0,0,0] מחליפה את הרשימה המקורית שהועברה לפונקציה.
+      - generic [ref=e349]:
+        - generic [ref=e350]: שאלה 15
+        - generic [ref=e352]:
+          - generic [ref=e354]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e359]: Loading...
+        - generic [ref=e360]:
+          - generic [ref=e361] [cursor=pointer]:
+            - generic [ref=e362]: א.
+            - generic [ref=e363]: יודפס 'Hello Python' כי כל מתודת מחרוזת משנה את האובייקט המקורי בזיכרון.
+          - generic [ref=e364] [cursor=pointer]:
+            - generic [ref=e365]: ב.
+            - generic [ref=e366]: יודפס ' Hello Python ' כי strip() לא שינה את s כיוון שמחרוזות הן immutable.
+          - generic [ref=e367] [cursor=pointer]:
+            - generic [ref=e368]: ג.
+            - generic [ref=e369]: יודפס ' Hello World ' כי replace() אינו פועל על מחרוזת שלא עברה strip תחילה.
+          - generic [ref=e370] [cursor=pointer]:
+            - generic [ref=e371]: ד.
+            - generic [ref=e372]: יודפס 'Hello Python' כי strip() מחזיר מחרוזת חדשה ומשנה את s באופן ישיר.
+      - generic [ref=e373]:
+        - generic [ref=e374]: שאלה 16
+        - generic [ref=e376]:
+          - generic [ref=e378]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e383]: Loading...
+        - generic [ref=e384]:
+          - generic [ref=e385] [cursor=pointer]:
+            - generic [ref=e386]: א.
+            - generic [ref=e387]: תתקבל שגיאת זמן ריצה כי לא ניתן לחבר רשימה בתוך פונקציה לאחר שכבר בוצע append.
+          - generic [ref=e388] [cursor=pointer]:
+            - generic [ref=e389]: ב.
+            - generic [ref=e390]: original יודפס [1,2,3] ו-returned יודפס [1,2,3,99,100,101] כי append יוצר עותק.
+          - generic [ref=e391] [cursor=pointer]:
+            - generic [ref=e392]: ג.
+            - generic [ref=e393]: original יודפס [1,2,3,99,100,101] ו-returned יודפס [1,2,3,99,100,101] שניהם זהים.
+          - generic [ref=e394] [cursor=pointer]:
+            - generic [ref=e395]: ד.
+            - generic [ref=e396]: original יודפס [1,2,3,99] ו-returned יודפס [1,2,3,99,100,101] כי השמה מחדש ניתקת.
+      - generic [ref=e397]:
+        - generic [ref=e398]: שאלה 17
+        - generic [ref=e400]:
+          - generic [ref=e402]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e407]: Loading...
+        - generic [ref=e408]:
+          - generic [ref=e409] [cursor=pointer]:
+            - generic [ref=e410]: א.
+            - generic [ref=e411]: יודפס 1 88 כי פעולת חיתוך עם [:] יוצרת הפניה לאותו אובייקט בדיוק.
+          - generic [ref=e412] [cursor=pointer]:
+            - generic [ref=e413]: ב.
+            - generic [ref=e414]: יודפס 99 88 כי גם b וגם c מצביעים לאותה רשימה כמו a בזיכרון.
+          - generic [ref=e415] [cursor=pointer]:
+            - generic [ref=e416]: ג.
+            - generic [ref=e417]: יודפס 1 5 כי השמה לרשימה בתוך פונקציה לא משנה את הרשימה המקורית.
+          - generic [ref=e418] [cursor=pointer]:
+            - generic [ref=e419]: ד.
+            - generic [ref=e420]: יודפס 99 5 כי b מצביע לאותה רשימה כמו a, אך c הוא עותק עצמאי.
+      - generic [ref=e421]:
+        - generic [ref=e422]: שאלה 18
+        - generic [ref=e424]:
+          - generic [ref=e426]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e431]: Loading...
+        - generic [ref=e432]:
+          - generic [ref=e433] [cursor=pointer]:
+            - generic [ref=e434]: א.
+            - generic [ref=e435]: יודפס [5,4,3,1,1] ולאחר מכן [5,4,3,1,1] כי b ו-a מצביעים לאותה רשימה בזיכרון.
+          - generic [ref=e436] [cursor=pointer]:
+            - generic [ref=e437]: ב.
+            - generic [ref=e438]: תתקבל שגיאת זמן ריצה כי לא ניתן לקרוא sort ו-sorted על אותה רשימה באותו קוד.
+          - generic [ref=e439] [cursor=pointer]:
+            - generic [ref=e440]: ג.
+            - generic [ref=e441]: יודפס [5,4,3,1,1] ולאחר מכן [1,1,3,4,5] כי sort משנה את a ו-sorted יצר עותק חדש.
+          - generic [ref=e442] [cursor=pointer]:
+            - generic [ref=e443]: ד.
+            - generic [ref=e444]: יודפס [1,1,3,4,5] ולאחר מכן [1,1,3,4,5] כי sorted מחזיר תמיד מיון עולה לשניהם.
+      - generic [ref=e445]:
+        - generic [ref=e446]: שאלה 19
+        - generic [ref=e450]: בחרו את הטענה המדויקת ביותר העוסקת בייבוא מודולים בפייתון.
+        - generic [ref=e451]:
+          - generic [ref=e452] [cursor=pointer]:
+            - generic [ref=e453]: א.
+            - generic [ref=e454]: אם מייבאים מודול עם כינוי, לא ניתן לגשת לאף פונקציה בו בקוד שמגיע אחרי.
+          - generic [ref=e455] [cursor=pointer]:
+            - generic [ref=e456]: ב.
+            - generic [ref=e457]: ניתן לייבא פונקציה ספציפית ממודול באמצעות from module import func ולהשתמש בה ישירות.
+          - generic [ref=e458] [cursor=pointer]:
+            - generic [ref=e459]: ג.
+            - generic [ref=e460]: הפקודה import * מייבאת רק את הפונקציות הציבוריות שמוגדרות בתחילת קובץ המודול.
+          - generic [ref=e461] [cursor=pointer]:
+            - generic [ref=e462]: ד.
+            - generic [ref=e463]: כדי להשתמש בפונקציה ממודול יש תמיד לכתוב את שם המודול לפניה גם לאחר ייבוא מלא.
+      - generic [ref=e464]:
+        - generic [ref=e465]: שאלה 20
+        - generic [ref=e467]:
+          - generic [ref=e469]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - generic [ref=e474]: Loading...
+        - generic [ref=e475]:
+          - generic [ref=e476] [cursor=pointer]:
+            - generic [ref=e477]: א.
+            - generic [ref=e478]: תיזרק חריגה שלא נתפוס ולכן התוכנית תקרוס.
+          - generic [ref=e479] [cursor=pointer]:
+            - generic [ref=e480]: ב.
+            - generic [ref=e481]: אף תשובה אינה נכונה.
+          - generic [ref=e482] [cursor=pointer]:
+            - generic [ref=e483]: ג.
+            - generic [ref=e484]: הקוד ידפיס Opss! can't do that\nGood
+          - generic [ref=e485] [cursor=pointer]:
+            - generic [ref=e486]: ד.
+            - generic [ref=e487]: "הקוד ידפיס Opss! can't do that\\nError: File not found"
+  - alert [ref=e488]

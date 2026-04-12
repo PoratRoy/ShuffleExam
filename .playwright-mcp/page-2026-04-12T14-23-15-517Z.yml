@@ -1,0 +1,596 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - heading "Shuffle Exam" [level=2] [ref=e5]
+      - generic [ref=e6]:
+        - button "Java" [ref=e7] [cursor=pointer]
+        - button "הסקה סטטיסטית" [ref=e8] [cursor=pointer]
+        - button "כלכלה" [ref=e9] [cursor=pointer]
+        - button "שיטות מחקר" [ref=e10] [cursor=pointer]
+        - button "Python" [ref=e11] [cursor=pointer]
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - button "מחיקת תוצאות" [ref=e543]
+        - button "סיום מבחן" [disabled]
+        - button "ערבוב מבחן חדש" [ref=e16]
+      - generic [ref=e545]:
+        - generic [ref=e546]: "ציון: 0 / 100"
+        - generic [ref=e547]: 25 תשובות שגויות מתוך 25 שאלות
+    - generic [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: שאלה 1
+        - generic [ref=e21]:
+          - generic [ref=e24]: חוקרים רוצים לבדוק האם שינוי בממשק משתמש של אפליקציה בנקאית משפיע על שביעות רצון המשתמשים. מהי הדרך המתאימה ביותר לביצוע המחקר?
+          - generic [ref=e549]:
+            - img [ref=e550]
+            - generic [ref=e553]: שגוי
+        - generic [ref=e25]:
+          - generic [ref=e26] [cursor=pointer]:
+            - generic [ref=e27]: א.
+            - generic [ref=e28]: איסוף נתוני שימוש בממשק הישן בלבד.
+          - generic [ref=e29] [cursor=pointer]:
+            - generic [ref=e30]: ב.
+            - generic [ref=e31]: ניסוי A/B שבו מחצית מהמשתמשים נחשפים לממשק החדש ומחצית לממשק הישן.
+            - img [ref=e554]
+          - generic [ref=e32] [cursor=pointer]:
+            - generic [ref=e33]: ג.
+            - generic [ref=e34]: המשתמשים ימלאו סקר שביעות רצון.
+          - generic [ref=e35] [cursor=pointer]:
+            - generic [ref=e36]: ד.
+            - generic [ref=e37]: ראיונות עומק עם משתמשים שניסו את שני הממשקים.
+          - generic [ref=e38] [cursor=pointer]:
+            - generic [ref=e39]: ה.
+            - generic [ref=e40]: ניתוח תלונות לקוחות מתקופת השינוי.
+      - generic [ref=e41]:
+        - generic [ref=e42]: שאלה 2
+        - generic [ref=e43]:
+          - generic [ref=e46]: מהי מהימנות בין שופטים (inter-rater reliability)?
+          - generic [ref=e557]:
+            - img [ref=e558]
+            - generic [ref=e561]: שגוי
+        - generic [ref=e47]:
+          - generic [ref=e48] [cursor=pointer]:
+            - generic [ref=e49]: א.
+            - generic [ref=e50]: מידת ההסכמה בין מעריכים שונים של אותו משתנה.
+            - img [ref=e562]
+          - generic [ref=e51] [cursor=pointer]:
+            - generic [ref=e52]: ב.
+            - generic [ref=e53]: היכולת לחזות משתנה עתידי על סמך מדידה.
+          - generic [ref=e54] [cursor=pointer]:
+            - generic [ref=e55]: ג.
+            - generic [ref=e56]: היציבות של מדידה אחת לאורך פרק זמן.
+          - generic [ref=e57] [cursor=pointer]:
+            - generic [ref=e58]: ד.
+            - generic [ref=e59]: מידת הקשר בין שני משתנים שונים במדידה אחת.
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - generic [ref=e62]: "קבוצת שאלות:"
+          - generic [ref=e65]: במחקר נרחב נמצא כי שימוש ברשתות חברתיות קשור למצב הרוח. ניסוי נוסף ביקש לבדוק את הקשר הזה – הוא חילק את המדגם באופן רנדומלי ל־2 קבוצות. אחת המשיכה להשתמש בטיקטוק כרגיל, והשנייה הפסיקה לשבוע. הגיל הממוצע של המשתתפים והמשתתפות היה 18.5, מספר העוקבים והעוקבות הממוצע שלהם בטיקטוק היה 350 והם נהגו לבלות יותר משעה ביום באפליקציה בממוצע. שאלונים שנערכו בסוף שבוע ההפסקה העלו כי הקבוצה שהפסיקה את השימוש בטיקטוק הגבירה את מצב הרוח (נבדק על ידי מענה לשאלה לדירוג מצב הרוח מסולם של 1 עד 4). כלומר, מצב הרוח בקבוצה שהפסיקה להשתמש בטיקטוק היה גבוה יותר מאשר בקבוצה השנייה.
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - generic [ref=e68]: שאלה 3
+            - generic [ref=e69]:
+              - generic [ref=e72]: "המשתנה הבלתי תלוי הוא:"
+              - generic [ref=e565]:
+                - img [ref=e566]
+                - generic [ref=e569]: שגוי
+            - generic [ref=e73]:
+              - generic [ref=e74] [cursor=pointer]:
+                - generic [ref=e75]: א.
+                - generic [ref=e76]: פעילות בטיקטוק
+              - generic [ref=e77] [cursor=pointer]:
+                - generic [ref=e78]: ב.
+                - generic [ref=e79]: מצב הרוח
+              - generic [ref=e80] [cursor=pointer]:
+                - generic [ref=e81]: ג.
+                - generic [ref=e82]: הפסקה מפעילות בטיקטוק
+                - img [ref=e570]
+              - generic [ref=e83] [cursor=pointer]:
+                - generic [ref=e84]: ד.
+                - generic [ref=e85]: מספר העוקבים והעוקבות
+          - generic [ref=e86]:
+            - generic [ref=e87]: שאלה 4
+            - generic [ref=e88]:
+              - generic [ref=e91]: "באופן תיאורטי, המשתנה מצב רוח נחשב כמשתנה מסולם:"
+              - generic [ref=e573]:
+                - img [ref=e574]
+                - generic [ref=e577]: שגוי
+            - generic [ref=e92]:
+              - generic [ref=e93] [cursor=pointer]:
+                - generic [ref=e94]: א.
+                - generic [ref=e95]: רווח
+              - generic [ref=e96] [cursor=pointer]:
+                - generic [ref=e97]: ב.
+                - generic [ref=e98]: שמי
+              - generic [ref=e99] [cursor=pointer]:
+                - generic [ref=e100]: ג.
+                - generic [ref=e101]: סדר
+                - img [ref=e578]
+              - generic [ref=e102] [cursor=pointer]:
+                - generic [ref=e103]: ד.
+                - generic [ref=e104]: מנה
+      - generic [ref=e105]:
+        - generic [ref=e106]: שאלה 5
+        - generic [ref=e107]:
+          - generic [ref=e110]: מהו תוקף פנימי במחקר ניסויי?
+          - generic [ref=e581]:
+            - img [ref=e582]
+            - generic [ref=e585]: שגוי
+        - generic [ref=e111]:
+          - generic [ref=e112] [cursor=pointer]:
+            - generic [ref=e113]: א.
+            - generic [ref=e114]: המידה שבה כלי המדידה עקבי לאורך זמן.
+          - generic [ref=e115] [cursor=pointer]:
+            - generic [ref=e116]: ב.
+            - generic [ref=e117]: היכולת להכליל ממצאים לאוכלוסיות אחרות.
+          - generic [ref=e118] [cursor=pointer]:
+            - generic [ref=e119]: ג.
+            - generic [ref=e120]: המידה שבה המדגם מייצג את האוכלוסייה.
+          - generic [ref=e121] [cursor=pointer]:
+            - generic [ref=e122]: ד.
+            - generic [ref=e123]: היכולת להסיק קשר סיבתי בין המשתנים במחקר.
+            - img [ref=e586]
+      - generic [ref=e124]:
+        - generic [ref=e125]: שאלה 6
+        - generic [ref=e126]:
+          - generic [ref=e129]: חוקר בדק את השפעת מעבר לשירותי מחשוב ענן על היקף השימוש במשאבי המחשוב בארגון. איזו מגבלה מתודולוגית קיימת אם המחקר אינו כולל קבוצת ביקורת?
+          - generic [ref=e589]:
+            - img [ref=e590]
+            - generic [ref=e593]: שגוי
+        - generic [ref=e130]:
+          - generic [ref=e131] [cursor=pointer]:
+            - generic [ref=e132]: א.
+            - generic [ref=e133]: התוצאות אינן ניתנות למדידה כמותית.
+          - generic [ref=e134] [cursor=pointer]:
+            - generic [ref=e135]: ב.
+            - generic [ref=e136]: השפעת המעבר אינה תלויה במשאבי המחשוב
+          - generic [ref=e137] [cursor=pointer]:
+            - generic [ref=e138]: ג.
+            - generic [ref=e139]: אין דרך לקבוע שהמעבר לשירותי ענן הוא הגורם לשינוי.
+            - img [ref=e594]
+          - generic [ref=e140] [cursor=pointer]:
+            - generic [ref=e141]: ד.
+            - generic [ref=e142]: לא ניתן לבדוק את שביעות רצון העובדים מהמעבר.
+          - generic [ref=e143] [cursor=pointer]:
+            - generic [ref=e144]: ה.
+            - generic [ref=e145]: המדגם קטן מדי ולכן המסקנות לא תקפות.
+      - generic [ref=e146]:
+        - generic [ref=e147]: שאלה 7
+        - generic [ref=e148]:
+          - generic [ref=e151]: מהו משתנה מתערב (confounding variable)?
+          - generic [ref=e597]:
+            - img [ref=e598]
+            - generic [ref=e601]: שגוי
+        - generic [ref=e152]:
+          - generic [ref=e153] [cursor=pointer]:
+            - generic [ref=e154]: א.
+            - generic [ref=e155]: משתנה תלוי שנמדד בצורה לא מדויקת.
+          - generic [ref=e156] [cursor=pointer]:
+            - generic [ref=e157]: ב.
+            - generic [ref=e158]: משתנה בלתי תלוי שנבחר באקראי.
+          - generic [ref=e159] [cursor=pointer]:
+            - generic [ref=e160]: ג.
+            - generic [ref=e161]: משתנה שנמדד אך אינו נכלל בניתוח.
+          - generic [ref=e162] [cursor=pointer]:
+            - generic [ref=e163]: ד.
+            - generic [ref=e164]: משתנה חיצוני המשפיע על הקשר בין המשתנים.
+            - img [ref=e602]
+      - generic [ref=e165]:
+        - generic [ref=e166]: שאלה 8
+        - generic [ref=e167]:
+          - generic [ref=e170]: במסגרת פיתוח אפליקציית "שאנטרי" אתם משווים בין הרגלי השימוש של נשים וגברים. מה מהקביעות הבאות נכון?
+          - generic [ref=e605]:
+            - img [ref=e606]
+            - generic [ref=e609]: שגוי
+        - generic [ref=e171]:
+          - generic [ref=e172] [cursor=pointer]:
+            - generic [ref=e173]: א.
+            - generic [ref=e174]: מערך המחקר היה צריך להשוות בין שתי אפליקציות שונות
+          - generic [ref=e175] [cursor=pointer]:
+            - generic [ref=e176]: ב.
+            - generic [ref=e177]: הגדרה אופרטיונלית יכולה להיות דקות שימוש ביממה
+            - img [ref=e610]
+          - generic [ref=e178] [cursor=pointer]:
+            - generic [ref=e179]: ג.
+            - generic [ref=e180]: לא ניתן לקבוע על הרגלי השימוש במערך מחקר זה
+          - generic [ref=e181] [cursor=pointer]:
+            - generic [ref=e182]: ד.
+            - generic [ref=e183]: המשתנה התלוי הוא המגדר
+      - generic [ref=e184]:
+        - generic [ref=e185]: שאלה 9
+        - generic [ref=e186]:
+          - generic [ref=e189]: חוקרת מעוניינת לבדוק כיצד הכשרה טכנולוגית של עובדים משפיעה על מספר פעולות התחזוקה שהם מבצעים בפועל במערכות מידע ארגוניות (למשל, עדכוני תוכנה, גיבויים, תיקון תקלות). איזו שיטת איסוף נתונים מתאימה ביותר למדידת המשתנה התלוי?
+          - generic [ref=e613]:
+            - img [ref=e614]
+            - generic [ref=e617]: שגוי
+        - generic [ref=e190]:
+          - generic [ref=e191] [cursor=pointer]:
+            - generic [ref=e192]: א.
+            - generic [ref=e193]: סקר שבו העובדים מדרגים את תחושת האחריות שלהם לתחזוקת המערכת.
+          - generic [ref=e194] [cursor=pointer]:
+            - generic [ref=e195]: ב.
+            - generic [ref=e196]: ניסוי שבו חלק מהעובדים מקבלים הכשרה טכנולוגית וחלק לא, ולאחר מכן נבדקת רמת התחזוקה שלהם.
+          - generic [ref=e197] [cursor=pointer]:
+            - generic [ref=e198]: ג.
+            - generic [ref=e199]: ניתוח דוחות מערכת שמפרטים את מספר פעולות התחזוקה שבוצעו על ידי כל עובד.
+            - img [ref=e618]
+          - generic [ref=e200] [cursor=pointer]:
+            - generic [ref=e201]: ד.
+            - generic [ref=e202]: מדגם אקראי של עובדים מארגונים שונים ובדיקת רמת התחזוקה שביצעו.
+          - generic [ref=e203] [cursor=pointer]:
+            - generic [ref=e204]: ה.
+            - generic [ref=e205]: מחקר תצפיתי שבו מנהלי IT מעריכים את רמת המעורבות של העובדים בתחזוקה.
+      - generic [ref=e206]:
+        - generic [ref=e207]: שאלה 10
+        - generic [ref=e208]:
+          - generic [ref=e211]: "חוקרת פיתחה מדד להערכת סגנון העבודה של עובדים בארגון, באמצעות שאלון הכולל את הפריטים הבאים: 1. סוג סגנון העבודה (עבודה עצמאית / עבודה בצוות / שילוב של שניהם). 2. מספר שעות העבודה הממוצע בשבוע (ערך מספרי). 3. רמת שביעות הרצון מהעבודה (בסולם 1-7). 4. מחלקה בה העובד מועסק (משאבי אנוש / פיתוח / מכירות / תמיכה טכנית). כיצד ניתן לחשב משתנה כולל של \"סגנון עבודה כללי\" על בסיס הנתונים מהשאלון?"
+          - generic [ref=e621]:
+            - img [ref=e622]
+            - generic [ref=e625]: שגוי
+        - generic [ref=e212]:
+          - generic [ref=e213] [cursor=pointer]:
+            - generic [ref=e214]: א.
+            - generic [ref=e215]: לחשב ממוצע של כל המשתנים כדי לקבל מדד כללי לסגנון העבודה של העובד.
+          - generic [ref=e216] [cursor=pointer]:
+            - generic [ref=e217]: ב.
+            - generic [ref=e218]: לבצע חיבור של כל הערכים ולחלק במספר הפריטים כדי לקבל מדד כולל.
+          - generic [ref=e219] [cursor=pointer]:
+            - generic [ref=e220]: ג.
+            - generic [ref=e221]: לא ניתן לחשב ממוצע או לחבר את הנתונים, כי חלק מהמשתנים הם קטגוריים ולא מספריים.
+            - img [ref=e626]
+          - generic [ref=e222] [cursor=pointer]:
+            - generic [ref=e223]: ד.
+            - generic [ref=e224]: להמיר את כל המשתנים לערכים מספריים ואז לבצע ממוצע.
+          - generic [ref=e225] [cursor=pointer]:
+            - generic [ref=e226]: ה.
+            - generic [ref=e227]: לחשב ממוצע של שעות העבודה ורמת שביעות הרצון בלבד.
+      - generic [ref=e228]:
+        - generic [ref=e229]: שאלה 11
+        - generic [ref=e230]:
+          - generic [ref=e233]: במחקר על השפעת זמן הטעינה של אתר מסחר אלקטרוני על אחוז ההמרה (conversion rate), נמצא מתאם של 0.72- = r. מהי המשמעות של מתאם זה?
+          - generic [ref=e629]:
+            - img [ref=e630]
+            - generic [ref=e633]: שגוי
+        - generic [ref=e234]:
+          - generic [ref=e235] [cursor=pointer]:
+            - generic [ref=e236]: א.
+            - generic [ref=e237]: המחקר אינו תקף כי ערך המתאם אינו מובהק.
+          - generic [ref=e238] [cursor=pointer]:
+            - generic [ref=e239]: ב.
+            - generic [ref=e240]: אין משמעות לערך המתאם כי לא מדובר בקשר סיבתי.
+          - generic [ref=e241] [cursor=pointer]:
+            - generic [ref=e242]: ג.
+            - generic [ref=e243]: ככל שזמן הטעינה עולה, אחוז ההמרה עולה.
+          - generic [ref=e244] [cursor=pointer]:
+            - generic [ref=e245]: ד.
+            - generic [ref=e246]: ככל שזמן הטעינה עולה, אחוז ההמרה יורד.
+            - img [ref=e634]
+          - generic [ref=e247] [cursor=pointer]:
+            - generic [ref=e248]: ה.
+            - generic [ref=e249]: אין קשר בין זמן הטעינה לבין אחוז ההמרה.
+      - generic [ref=e250]:
+        - generic [ref=e251]: שאלה 12
+        - generic [ref=e252]:
+          - generic [ref=e255]: מהי הבעיה העיקרית של מדגם נוחות מבחינת תוקף חיצוני (External Validity)?
+          - generic [ref=e637]:
+            - img [ref=e638]
+            - generic [ref=e641]: שגוי
+        - generic [ref=e256]:
+          - generic [ref=e257] [cursor=pointer]:
+            - generic [ref=e258]: א.
+            - generic [ref=e259]: חשש לאיסוף נתונים שגויים.
+          - generic [ref=e260] [cursor=pointer]:
+            - generic [ref=e261]: ב.
+            - generic [ref=e262]: חוסר יכולת למדוד משתנים תלויים.
+          - generic [ref=e263] [cursor=pointer]:
+            - generic [ref=e264]: ג.
+            - generic [ref=e265]: מגבלות טכניות בתפעול כלי המחקר.
+          - generic [ref=e266] [cursor=pointer]:
+            - generic [ref=e267]: ד.
+            - generic [ref=e268]: אינו מאפשר ניתוח נתונים סטטיסטי.
+          - generic [ref=e269] [cursor=pointer]:
+            - generic [ref=e270]: ה.
+            - generic [ref=e271]: קושי בהכללה על כלל האוכלוסייה.
+            - img [ref=e642]
+      - generic [ref=e272]:
+        - generic [ref=e273]: שאלה 13
+        - generic [ref=e274]:
+          - generic [ref=e277]: איזו דגימה נחשבת לבעלת הסיכוי הגבוה ביותר לייצוג האוכלוסייה?
+          - generic [ref=e645]:
+            - img [ref=e646]
+            - generic [ref=e649]: שגוי
+        - generic [ref=e278]:
+          - generic [ref=e279] [cursor=pointer]:
+            - generic [ref=e280]: א.
+            - generic [ref=e281]: דגימה מכוונת לפי שיקול דעת החוקר.
+          - generic [ref=e282] [cursor=pointer]:
+            - generic [ref=e283]: ב.
+            - generic [ref=e284]: דגימת מתנדבים שהביעו רצון להשתתף.
+          - generic [ref=e285] [cursor=pointer]:
+            - generic [ref=e286]: ג.
+            - generic [ref=e287]: דגימה מקרית פשוטה מכלל האוכלוסייה.
+            - img [ref=e650]
+          - generic [ref=e288] [cursor=pointer]:
+            - generic [ref=e289]: ד.
+            - generic [ref=e290]: דגימת נוחות של נבדקים זמינים.
+      - generic [ref=e291]:
+        - generic [ref=e292]: שאלה 14
+        - generic [ref=e293]:
+          - generic [ref=e296]: חוקרת מנתחת את השפעת זמן תגובה של מערכות מידע על שביעות רצון משתמשים. איזה משתנה היא צריכה למדוד כמשתנה תלוי?
+          - generic [ref=e653]:
+            - img [ref=e654]
+            - generic [ref=e657]: שגוי
+        - generic [ref=e297]:
+          - generic [ref=e298] [cursor=pointer]:
+            - generic [ref=e299]: א.
+            - generic [ref=e300]: זמן תגובה ממוצע של המערכת.
+          - generic [ref=e301] [cursor=pointer]:
+            - generic [ref=e302]: ב.
+            - generic [ref=e303]: מספר הפניות לתמיכה טכנית.
+          - generic [ref=e304] [cursor=pointer]:
+            - generic [ref=e305]: ג.
+            - generic [ref=e306]: מספר הפעמים שהמשתמש נכנס למערכת ביום.
+          - generic [ref=e307] [cursor=pointer]:
+            - generic [ref=e308]: ד.
+            - generic [ref=e309]: דירוג שביעות הרצון של המשתמשים בסולם 1-5.
+            - img [ref=e658]
+          - generic [ref=e310] [cursor=pointer]:
+            - generic [ref=e311]: ה.
+            - generic [ref=e312]: מספר קריסות של המערכת במהלך השבוע.
+      - generic [ref=e313]:
+        - generic [ref=e314]: שאלה 15
+        - generic [ref=e315]:
+          - generic [ref=e318]: כדי לבדוק האם למידה מקוונת או פרונטלית משפיעה על למידה, קבוצה אחת בקורס שיטות מחקר למדה באופן מקוון וקבוצה אחרת למדה באופן פרונטלי. יואב חשד שהקבוצה המקוונת לא מייצגת כיוון שהיא שייכת למסלול מיוחד של גיבורי על. משה חשב שהציונים הושפעו מכך שהקבוצה שלמדה באופן פרונטלי בכיתה שבה קר יותר. יואב חושש מאיום על ________, ומשה חושש מאיום על ________.
+          - generic [ref=e661]:
+            - img [ref=e662]
+            - generic [ref=e665]: שגוי
+        - generic [ref=e319]:
+          - generic [ref=e320] [cursor=pointer]:
+            - generic [ref=e321]: א.
+            - generic [ref=e322]: תוקף פנימי, תוקף אקולוגי
+          - generic [ref=e323] [cursor=pointer]:
+            - generic [ref=e324]: ב.
+            - generic [ref=e325]: תוקף חיצוני, תוקף פנימי
+            - img [ref=e666]
+          - generic [ref=e326] [cursor=pointer]:
+            - generic [ref=e327]: ג.
+            - generic [ref=e328]: תוקף חיצוני, תוקף אקולוגי
+          - generic [ref=e329] [cursor=pointer]:
+            - generic [ref=e330]: ד.
+            - generic [ref=e331]: תוקף פנימי, תוקף חיצוני
+      - generic [ref=e332]:
+        - generic [ref=e333]: שאלה 16
+        - generic [ref=e334]:
+          - generic [ref=e337]: איזה סולם מדידה מאפשר חישוב ממוצע וסטיית תקן?
+          - generic [ref=e669]:
+            - img [ref=e670]
+            - generic [ref=e673]: שגוי
+        - generic [ref=e338]:
+          - generic [ref=e339] [cursor=pointer]:
+            - generic [ref=e340]: א.
+            - generic [ref=e341]: סולם סדר עם דירוג יחסי בלבד.
+          - generic [ref=e342] [cursor=pointer]:
+            - generic [ref=e343]: ב.
+            - generic [ref=e344]: סולם רווח או מנה עם מרווחים שווים.
+            - img [ref=e674]
+          - generic [ref=e345] [cursor=pointer]:
+            - generic [ref=e346]: ג.
+            - generic [ref=e347]: סולם שמי ללא סדר בין הקטגוריות.
+          - generic [ref=e348] [cursor=pointer]:
+            - generic [ref=e349]: ד.
+            - generic [ref=e350]: סולם איכותני המבוסס על תיאור מילולי.
+      - generic [ref=e351]:
+        - generic [ref=e352]: שאלה 17
+        - generic [ref=e353]:
+          - generic [ref=e356]: מה משמעות ערך p קטן מ-0.05?
+          - generic [ref=e677]:
+            - img [ref=e678]
+            - generic [ref=e681]: שגוי
+        - generic [ref=e357]:
+          - generic [ref=e358] [cursor=pointer]:
+            - generic [ref=e359]: א.
+            - generic [ref=e360]: ההשערה האפס נכונה בוודאות גבוהה מאוד.
+          - generic [ref=e361] [cursor=pointer]:
+            - generic [ref=e362]: ב.
+            - generic [ref=e363]: גודל האפקט גדול ולכן התוצאה חשובה מעשית.
+          - generic [ref=e364] [cursor=pointer]:
+            - generic [ref=e365]: ג.
+            - generic [ref=e366]: המדגם קטן מדי ולכן יש חוסר מובהקות.
+          - generic [ref=e367] [cursor=pointer]:
+            - generic [ref=e368]: ד.
+            - generic [ref=e369]: הסיכוי שהתוצאה מקרית נמוך לפי הקריטריון שנקבע.
+            - img [ref=e682]
+      - generic [ref=e370]:
+        - generic [ref=e371]: שאלה 18
+        - generic [ref=e372]:
+          - generic [ref=e375]: חוקר רוצה לבדוק האם שימוש בבינה מלאכותית (AI) בניתוח נתוני לקוחות משפיע על רמת הדיוק בתחזיות המכירה. מהי הדרך הטובה ביותר לבדוק קשר סיבתי בין המשתנים?
+          - generic [ref=e685]:
+            - img [ref=e686]
+            - generic [ref=e689]: שגוי
+        - generic [ref=e376]:
+          - generic [ref=e377] [cursor=pointer]:
+            - generic [ref=e378]: א.
+            - generic [ref=e379]: ניתוח מתאמי בין מספר השימושים ב-AI לבין רמת הדיוק.
+          - generic [ref=e380] [cursor=pointer]:
+            - generic [ref=e381]: ב.
+            - generic [ref=e382]: איסוף נתונים מסקרים על תפיסת העובדים את הדיוק בתחזיות.
+          - generic [ref=e383] [cursor=pointer]:
+            - generic [ref=e384]: ג.
+            - generic [ref=e385]: הקצאה אקראית של צוותי מכירות לשימוש או אי-שימוש ב-AI והשוואת הביצועים.
+            - img [ref=e690]
+          - generic [ref=e386] [cursor=pointer]:
+            - generic [ref=e387]: ד.
+            - generic [ref=e388]: השוואת ממוצעים של דיוק התחזיות לפני ואחרי השימוש ב-AI.
+          - generic [ref=e389] [cursor=pointer]:
+            - generic [ref=e390]: ה.
+            - generic [ref=e391]: ביצוע ראיונות עומק עם מנהלי צוותי המכירות.
+      - generic [ref=e392]:
+        - generic [ref=e393]: שאלה 19
+        - generic [ref=e394]:
+          - generic [ref=e397]: "שרית פיתחה כלי לבדיקת איכות ההרצאה, שמודד את כמות הנהונים של הסטודנטים בשיעור ומחלק אותו בכמות המילים שהמרצה אמר. אילה טוענת בתוקף כי לתוצאה שמתקבלת אין קשר לאיכות ההרצאה. לטענתה של אילה, לכלי יש:"
+          - generic [ref=e693]:
+            - img [ref=e694]
+            - generic [ref=e697]: שגוי
+        - generic [ref=e398]:
+          - generic [ref=e399] [cursor=pointer]:
+            - generic [ref=e400]: א.
+            - generic [ref=e401]: הטיית הצופה
+          - generic [ref=e402] [cursor=pointer]:
+            - generic [ref=e403]: ב.
+            - generic [ref=e404]: תוקף נמוך
+            - img [ref=e698]
+          - generic [ref=e405] [cursor=pointer]:
+            - generic [ref=e406]: ג.
+            - generic [ref=e407]: מהימנות נמוכה
+          - generic [ref=e408] [cursor=pointer]:
+            - generic [ref=e409]: ד.
+            - generic [ref=e410]: אפקט בשילה
+      - generic [ref=e411]:
+        - generic [ref=e412]: שאלה 20
+        - generic [ref=e413]:
+          - generic [ref=e416]: "חוקרים ביצעו מחקר הבוחן את השפעת שעות שינה על ביצועים קוגניטיביים. במהלך הניסוי, 50 משתתפים חולקו אקראית לשתי קבוצות: קבוצה אחת ישנה 4 שעות בלילה במשך שבוע, ואילו הקבוצה השנייה ישנה 8 שעות בלילה. בתום השבוע, המשתתפים ביצעו סדרת מבחנים קוגניטיביים. נמצא כי קבוצת ה-8 שעות השיגה תוצאות גבוהות משמעותית בהשוואה לקבוצת ה-4 שעות (p < 0.01). איזו מגבלה עיקרית עשויה לפגוע בתוקף החיצוני של המחקר?"
+          - generic [ref=e701]:
+            - img [ref=e702]
+            - generic [ref=e705]: שגוי
+        - generic [ref=e417]:
+          - generic [ref=e418] [cursor=pointer]:
+            - generic [ref=e419]: א.
+            - generic [ref=e420]: החוקרים לא עקבו אחרי המשתתפים לאחר סיום הניסוי כדי לבדוק השפעות ארוכות טווח.
+          - generic [ref=e421] [cursor=pointer]:
+            - generic [ref=e422]: ב.
+            - generic [ref=e423]: המשתתפים היו צעירים בגילאי 18-25, ולכן ייתכן שהתוצאות אינן מייצגות אוכלוסיות אחרות.
+            - img [ref=e706]
+          - generic [ref=e424] [cursor=pointer]:
+            - generic [ref=e425]: ג.
+            - generic [ref=e426]: החוקרים לא התחשבו בהרגלי השינה של המשתתפים לפני הניסוי.
+          - generic [ref=e427] [cursor=pointer]:
+            - generic [ref=e428]: ד.
+            - generic [ref=e429]: קבוצה אחת קיבלה מבחנים קלים יותר מהקבוצה השנייה.
+          - generic [ref=e430] [cursor=pointer]:
+            - generic [ref=e431]: ה.
+            - generic [ref=e432]: המחקר לא בדק את איכות השינה, אלא רק את מספר השעות.
+      - generic [ref=e433]:
+        - generic [ref=e434]: שאלה 21
+        - generic [ref=e435]:
+          - generic [ref=e437]:
+            - generic [ref=e438]: "במחקר על אפקטיביות של תוכנית תגמולים, החוקרת בדקה שתי מחלקות בארגון: מחלקת השיווק (שקיבלה את התגמולים) ומחלקת התפעול (שלא קיבלה)."
+            - generic [ref=e439]: איזו טענה נכונה ביותר?
+          - generic [ref=e709]:
+            - img [ref=e710]
+            - generic [ref=e713]: שגוי
+        - generic [ref=e440]:
+          - generic [ref=e441] [cursor=pointer]:
+            - generic [ref=e442]: א.
+            - generic [ref=e443]: יש להסיק שהמוטיבציה קשורה רק למערכת התגמולים.
+          - generic [ref=e444] [cursor=pointer]:
+            - generic [ref=e445]: ב.
+            - generic [ref=e446]: המחקר מראה שתוכנית התגמולים שיפרה את המוטיבציה בכל המחלקות.
+          - generic [ref=e447] [cursor=pointer]:
+            - generic [ref=e448]: ג.
+            - generic [ref=e449]: נדרשת מדידה נוספת של שביעות רצון.
+          - generic [ref=e450] [cursor=pointer]:
+            - generic [ref=e451]: ד.
+            - generic [ref=e452]: ניתן להכליל את הממצאים על כלל הארגון.
+          - generic [ref=e453] [cursor=pointer]:
+            - generic [ref=e454]: ה.
+            - generic [ref=e455]: ההבדלים בתוצאות המוטיבציה יכולים לנבוע מההבדלים בתפקידי המחלקות.
+            - img [ref=e714]
+      - generic [ref=e456]:
+        - generic [ref=e457]: שאלה 22
+        - generic [ref=e458]:
+          - generic [ref=e460]:
+            - generic [ref=e461]: חוקר בדק את ההשפעה של הפסקות קצרות בעבודה על רמת הריכוז של עובדים. הוא חילק את המשתתפים לקבוצות לפי מספר ההפסקות (ללא הפסקות, הפסקה אחת ושלוש הפסקות).
+            - generic [ref=e462]: איזו שיטת ניתוח מתאימה ביותר?
+          - generic [ref=e717]:
+            - img [ref=e718]
+            - generic [ref=e721]: שגוי
+        - generic [ref=e463]:
+          - generic [ref=e464] [cursor=pointer]:
+            - generic [ref=e465]: א.
+            - generic [ref=e466]: ניתוח מתאמי בין מספר ההפסקות לרמת הריכוז (זמן).
+          - generic [ref=e467] [cursor=pointer]:
+            - generic [ref=e468]: ב.
+            - generic [ref=e469]: ניתוח של תשובות העובדים.
+          - generic [ref=e470] [cursor=pointer]:
+            - generic [ref=e471]: ג.
+            - generic [ref=e472]: השוואת ממוצעי רמת הריכוז (זמן) בין הקבוצות.
+            - img [ref=e722]
+          - generic [ref=e473] [cursor=pointer]:
+            - generic [ref=e474]: ד.
+            - generic [ref=e475]: פילוח לפי סוג העבודה בלב
+          - generic [ref=e476] [cursor=pointer]:
+            - generic [ref=e477]: ה.
+            - generic [ref=e478]: בדיקת ממוצעי רמת הריכוז (זמן) לפני ואחרי הפסקות.
+      - generic [ref=e479]:
+        - generic [ref=e480]: שאלה 23
+        - generic [ref=e481]:
+          - generic [ref=e484]: חוקרת בחרה דגימה שיטתית כדי לבדוק את השפעת מערכת ניהול למידה (LMS) על ציוני סטודנטים. איזו בעיה עלולה להתעורר כתוצאה מבחירה זו?
+          - generic [ref=e725]:
+            - img [ref=e726]
+            - generic [ref=e729]: שגוי
+        - generic [ref=e485]:
+          - generic [ref=e486] [cursor=pointer]:
+            - generic [ref=e487]: א.
+            - generic [ref=e488]: אי אפשר להבטיח גיוון דמוגרפי במדגם.
+          - generic [ref=e489] [cursor=pointer]:
+            - generic [ref=e490]: ב.
+            - generic [ref=e491]: יש צורך במדגם קטן יותר ביחס לשיטות אחרות.
+          - generic [ref=e492] [cursor=pointer]:
+            - generic [ref=e493]: ג.
+            - generic [ref=e494]: דגימה שיטתית אינה מאפשרת לבדוק הבדלים בין קבוצות.
+          - generic [ref=e495] [cursor=pointer]:
+            - generic [ref=e496]: ד.
+            - generic [ref=e497]: השיטה אינה מתאימה כאשר אין חלוקה שווה בין קבוצות המשתמשים.
+          - generic [ref=e498] [cursor=pointer]:
+            - generic [ref=e499]: ה.
+            - generic [ref=e500]: אם הרשימה אינה אקראית, המדגם עלול להיות מוטה.
+            - img [ref=e730]
+      - generic [ref=e501]:
+        - generic [ref=e502]: שאלה 24
+        - generic [ref=e503]:
+          - generic [ref=e506]: מהי הטיית ברירה (selection bias)?
+          - generic [ref=e733]:
+            - img [ref=e734]
+            - generic [ref=e737]: שגוי
+        - generic [ref=e507]:
+          - generic [ref=e508] [cursor=pointer]:
+            - generic [ref=e509]: א.
+            - generic [ref=e510]: עיוות הנוצר כאשר המדגם אינו מייצג את האוכלוסייה.
+            - img [ref=e738]
+          - generic [ref=e511] [cursor=pointer]:
+            - generic [ref=e512]: ב.
+            - generic [ref=e513]: שינוי בתשובות עקב רצייה חברתית של נבדקים.
+          - generic [ref=e514] [cursor=pointer]:
+            - generic [ref=e515]: ג.
+            - generic [ref=e516]: השפעה של כלי מדידה לא תקף על התוצאות.
+          - generic [ref=e517] [cursor=pointer]:
+            - generic [ref=e518]: ד.
+            - generic [ref=e519]: טעות חישובית הנובעת מניתוח סטטיסטי שגוי.
+      - generic [ref=e520]:
+        - generic [ref=e521]: שאלה 25
+        - generic [ref=e522]:
+          - generic [ref=e524]:
+            - generic [ref=e525]: חוקר בתחום מערכות מידע מעוניין לבדוק את שביעות רצונם של משתמשים מתוכנה חדשה לניהול פרויקטים. בשל מגבלות זמן ומשאבים, הוא מחליט לראיין רק את העובדים הנמצאים בסניף המרכזי של החברה שבו הוא מבצע את המחקר.
+            - generic [ref=e526]: איזו שיטת דגימה מתוארת במקרה זה?
+          - generic [ref=e741]:
+            - img [ref=e742]
+            - generic [ref=e745]: שגוי
+        - generic [ref=e527]:
+          - generic [ref=e528] [cursor=pointer]:
+            - generic [ref=e529]: א.
+            - generic [ref=e530]: מדגם נוחות.
+            - img [ref=e746]
+          - generic [ref=e531] [cursor=pointer]:
+            - generic [ref=e532]: ב.
+            - generic [ref=e533]: מדגם שיטתי.
+          - generic [ref=e534] [cursor=pointer]:
+            - generic [ref=e535]: ג.
+            - generic [ref=e536]: מדגם אשכולות.
+          - generic [ref=e537] [cursor=pointer]:
+            - generic [ref=e538]: ד.
+            - generic [ref=e539]: מדגם אקראי פשוט.
+          - generic [ref=e540] [cursor=pointer]:
+            - generic [ref=e541]: ה.
+            - generic [ref=e542]: מדגם שכבות.
+  - alert [ref=e18]

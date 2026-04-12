@@ -1,0 +1,497 @@
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - heading "Shuffle Exam" [level=2] [ref=e5]
+      - generic [ref=e6]:
+        - button "Java" [ref=e7] [cursor=pointer]
+        - button "הסקה סטטיסטית" [ref=e8] [cursor=pointer]
+        - button "כלכלה" [ref=e9] [cursor=pointer]
+        - button "שיטות מחקר" [ref=e10] [cursor=pointer]
+        - button "Python" [ref=e11] [cursor=pointer]
+  - main [ref=e12]:
+    - generic [ref=e14]:
+      - button "מחיקת תוצאות" [disabled]
+      - button "סיום מבחן" [ref=e15]
+      - button "ערבוב מבחן חדש" [active] [ref=e16]
+    - generic [ref=e17]:
+      - generic [ref=e1424]:
+        - generic [ref=e1425]: שאלה 1
+        - generic [ref=e1429]: מהי הטיית ברירה (selection bias)?
+        - generic [ref=e1430]:
+          - generic [ref=e1431] [cursor=pointer]:
+            - generic [ref=e1432]: א.
+            - generic [ref=e1433]: השפעה של כלי מדידה לא תקף על התוצאות.
+          - generic [ref=e1434] [cursor=pointer]:
+            - generic [ref=e1435]: ב.
+            - generic [ref=e1436]: שינוי בתשובות עקב רצייה חברתית של נבדקים.
+          - generic [ref=e1437] [cursor=pointer]:
+            - generic [ref=e1438]: ג.
+            - generic [ref=e1439]: טעות חישובית הנובעת מניתוח סטטיסטי שגוי.
+          - generic [ref=e1440] [cursor=pointer]:
+            - generic [ref=e1441]: ד.
+            - generic [ref=e1442]: עיוות הנוצר כאשר המדגם אינו מייצג את האוכלוסייה.
+      - generic [ref=e1443]:
+        - generic [ref=e1444]: שאלה 2
+        - generic [ref=e1448]: איזו דגימה נחשבת לבעלת הסיכוי הגבוה ביותר לייצוג האוכלוסייה?
+        - generic [ref=e1449]:
+          - generic [ref=e1450] [cursor=pointer]:
+            - generic [ref=e1451]: א.
+            - generic [ref=e1452]: דגימת נוחות של נבדקים זמינים.
+          - generic [ref=e1453] [cursor=pointer]:
+            - generic [ref=e1454]: ב.
+            - generic [ref=e1455]: דגימת מתנדבים שהביעו רצון להשתתף.
+          - generic [ref=e1456] [cursor=pointer]:
+            - generic [ref=e1457]: ג.
+            - generic [ref=e1458]: דגימה מקרית פשוטה מכלל האוכלוסייה.
+          - generic [ref=e1459] [cursor=pointer]:
+            - generic [ref=e1460]: ד.
+            - generic [ref=e1461]: דגימה מכוונת לפי שיקול דעת החוקר.
+      - generic [ref=e1462]:
+        - generic [ref=e1463]: שאלה 3
+        - generic [ref=e1467]: שיטת דגימה לא הסתברותית גורמת ל...
+        - generic [ref=e1468]:
+          - generic [ref=e1469] [cursor=pointer]:
+            - generic [ref=e1470]: א.
+            - generic [ref=e1471]: פגיעה בהכללה
+          - generic [ref=e1472] [cursor=pointer]:
+            - generic [ref=e1473]: ב.
+            - generic [ref=e1474]: כל התשובות נכונות
+          - generic [ref=e1475] [cursor=pointer]:
+            - generic [ref=e1476]: ג.
+            - generic [ref=e1477]: פגיעה בהסקה מהמדגם לאוכלוסייה
+          - generic [ref=e1478] [cursor=pointer]:
+            - generic [ref=e1479]: ד.
+            - generic [ref=e1480]: פגיעה בהסקה מהאוכלוסייה למדגם
+      - generic [ref=e793]:
+        - generic [ref=e794]: שאלה 4
+        - generic [ref=e798]: חוקר ביקש לבדוק את הקשר בין מספר ההודעות שמשתמשים שולחים ביום באפליקציית מסרים לבין רמת שביעות הרצון שלהם מהאפליקציה (נמדד בסולם של 1 עד 7). מהי רמת המדידה של כל משתנה?
+        - generic [ref=e799]:
+          - generic [ref=e800] [cursor=pointer]:
+            - generic [ref=e801]: א.
+            - generic [ref=e802]: מספר ההודעות – נומינלי, שביעות רצון – כמותי אינטרוולי.
+          - generic [ref=e803] [cursor=pointer]:
+            - generic [ref=e804]: ב.
+            - generic [ref=e805]: מספר ההודעות – כמותי יחס (Ratio), שביעות רצון – אורדינלי.
+          - generic [ref=e806] [cursor=pointer]:
+            - generic [ref=e807]: ג.
+            - generic [ref=e808]: מספר ההודעות – כמותי יחס (Ratio), שביעות רצון – נומינלי.
+          - generic [ref=e809] [cursor=pointer]:
+            - generic [ref=e810]: ד.
+            - generic [ref=e811]: מספר ההודעות – כמותי אינטרוולי, שביעות רצון – אורדינלי.
+          - generic [ref=e812] [cursor=pointer]:
+            - generic [ref=e813]: ה.
+            - generic [ref=e814]: מספר ההודעות – אורדינלי, שביעות רצון – אורדינלי.
+      - generic [ref=e1481]:
+        - generic [ref=e1482]:
+          - generic [ref=e1483]: "קבוצת שאלות:"
+          - generic [ref=e1485]:
+            - generic [ref=e1486]: "חלק א: מחקר: השפעת משוב על הערכת ביצועים"
+            - generic [ref=e1487]: "במחקר ביקשו לבחון את השפעתו של משוב (feedback) על ההערכה הסובייקטיבית של נבדקים בנוגע לאופן שבו ביצעו משימה. נדגמו 40 מומחים לפיזיקה ו-40 סטודנטים לפיזיקה שנה א'. בתחילת הניסוי מילאו כל הנבדקים מבחן בנושאים שונים בפיזיקה. לאחר המבחן הם התבקשו להעריך איזה ציון קיבלו, ובעבור כל נבדק חושב ההפרש בין הציון שהעריך שקיבל לבין ציונו האמיתי במבחן. לאחר מכן, הוקצו הנבדקים באופן אקראי לשתי קבוצות (בכל אחת מהן 20 מומחים ו-20 סטודנטים). בכל קבוצה מילאו הנבדקים עוד שלושה מבחנים מקבילים בפיזיקה. לאחר כל מבחן ניתן להם משוב על הישגיהם, אך המשוב היה שקרי:"
+            - generic [ref=e1488]: בקבוצה א' הציון שנמסר לנבחנים היה גבוה ב-15 נקודות מציונם האמיתי.
+            - generic [ref=e1489]: לנבחנים בקבוצה ב' נמסר ציון שהיה נמוך ב-15 נקודות מציונם האמיתי.
+            - generic [ref=e1490]: לבסוף, מילאו הנבחנים מבחן חמישי, שבסופו נתבקשו להעריך איזה ציון קיבלו בו, ושוב חושב ההפרש שהוזכר לעיל.
+            - generic [ref=e1491]: תוצאות המחקר הראו כי הנבדקים שקיבלו משוב חיובי, כלומר ציון גבוה ב-15 נקודות מהציון האמיתי שלהם, נטו להעריך את ביצועיהם כגבוהים יותר מהמציאות. גם לאחר שהמשוב הופסק, הם המשיכו להאמין שהם מצליחים יותר מכפי שהיו בפועל (p = 0.009). לעומת זאת, הנבדקים שקיבלו משוב שלילי, כלומר ציון נמוך ב-15 נקודות מציונם האמיתי, נטו להפחית מערך ביצועיהם. גם כאשר הצליחו בפועל במבחנים הבאים, הם המשיכו להעריך שהם קיבלו ציונים נמוכים יותר ממה שקיבלו באמת (p = 0.03). בנוסף, נמצא כי מומחים וסטודנטים הגיבו למשוב בצורה שונה. בעוד שהסטודנטים נטו להיות מושפעים יותר מהמשוב (p = 0.001), המומחים העריכו את ביצועיהם בצורה יציבה יותר, גם כאשר קיבלו משוב חיובי או שלילי (p = 0.08).
+        - generic [ref=e1492]:
+          - generic [ref=e1493]:
+            - generic [ref=e1494]: שאלה 5
+            - generic [ref=e1498]: מהו המשתנה הבלתי תלוי ומהו המשתנה התלוי?
+            - generic [ref=e1499]:
+              - generic [ref=e1500] [cursor=pointer]:
+                - generic [ref=e1501]: א.
+                - generic [ref=e1502]: אוכלוסיית הנבדקים (סטודנטים או מומחים); ציון המבחן.
+              - generic [ref=e1503] [cursor=pointer]:
+                - generic [ref=e1504]: ב.
+                - generic [ref=e1505]: סוג המשוב שניתן לנבדקים; הפער בין הערכת הציון לציון בפועל.
+              - generic [ref=e1506] [cursor=pointer]:
+                - generic [ref=e1507]: ג.
+                - generic [ref=e1508]: מספר המבחנים שבוצעו; השינוי בביצועים לאורך זמן.
+              - generic [ref=e1509] [cursor=pointer]:
+                - generic [ref=e1510]: ד.
+                - generic [ref=e1511]: סוג המשוב; ממוצע הציונים במבחנים.
+              - generic [ref=e1512] [cursor=pointer]:
+                - generic [ref=e1513]: ה.
+                - generic [ref=e1514]: ציון הבחינה בפועל; סוג הקבוצה (מומחים או סטודנטים).
+          - generic [ref=e1515]:
+            - generic [ref=e1516]: שאלה 6
+            - generic [ref=e1520]: איך הוגדר המשתנה התלוי באופן תצפיתי (אופרציונאלי)?
+            - generic [ref=e1521]:
+              - generic [ref=e1522] [cursor=pointer]:
+                - generic [ref=e1523]: א.
+                - generic [ref=e1524]: הזמן שארך לכל נבדק להשלים מבחן.
+              - generic [ref=e1525] [cursor=pointer]:
+                - generic [ref=e1526]: ב.
+                - generic [ref=e1527]: ציון הבחינה כפי שהתקבל בפועל.
+              - generic [ref=e1528] [cursor=pointer]:
+                - generic [ref=e1529]: ג.
+                - generic [ref=e1530]: ההפרש בין ציון מוערך לבין ציון אמיתי.
+              - generic [ref=e1531] [cursor=pointer]:
+                - generic [ref=e1532]: ד.
+                - generic [ref=e1533]: ממוצע התשובות הנכונות בכל מבחן.
+              - generic [ref=e1534] [cursor=pointer]:
+                - generic [ref=e1535]: ה.
+                - generic [ref=e1536]: מספר המשתתפים בכל קבוצה.
+          - generic [ref=e1537]:
+            - generic [ref=e1538]: שאלה 7
+            - generic [ref=e1542]: כיצד נבחרו קבוצות הניסוי והביקורת במחקר?
+            - generic [ref=e1543]:
+              - generic [ref=e1544] [cursor=pointer]:
+                - generic [ref=e1545]: א.
+                - generic [ref=e1546]: החוקרים השתמשו במדדים מוקדמים כדי לשבץ את הנבדקים לכל קבוצה.
+              - generic [ref=e1547] [cursor=pointer]:
+                - generic [ref=e1548]: ב.
+                - generic [ref=e1549]: הקצאה אקראית לכל אחת מהקבוצות.
+              - generic [ref=e1550] [cursor=pointer]:
+                - generic [ref=e1551]: ג.
+                - generic [ref=e1552]: כל קבוצה כללה נבדקים עם הישגים שונים כדי לשמור על איזון.
+              - generic [ref=e1553] [cursor=pointer]:
+                - generic [ref=e1554]: ד.
+                - generic [ref=e1555]: המומחים קיבלו משוב חיובי והסטודנטים משוב שלילי.
+              - generic [ref=e1556] [cursor=pointer]:
+                - generic [ref=e1557]: ה.
+                - generic [ref=e1558]: החוקרים בחרו ידנית את הנבדקים לכל קבוצה.
+          - generic [ref=e1559]:
+            - generic [ref=e1560]: שאלה 8
+            - generic [ref=e1564]: מהי מטרת מתן המשוב השקרי במחקר זה?
+            - generic [ref=e1565]:
+              - generic [ref=e1566] [cursor=pointer]:
+                - generic [ref=e1567]: א.
+                - generic [ref=e1568]: להגדיל את המוטיבציה של הסטודנטים להצליח.
+              - generic [ref=e1569] [cursor=pointer]:
+                - generic [ref=e1570]: ב.
+                - generic [ref=e1571]: לבדוק כיצד משוב חיובי או שלילי משפיע על הערכת הביצועים העצמית.
+              - generic [ref=e1572] [cursor=pointer]:
+                - generic [ref=e1573]: ג.
+                - generic [ref=e1574]: להטעות את הנבדקים כדי למנוע הטיית תשובה.
+              - generic [ref=e1575] [cursor=pointer]:
+                - generic [ref=e1576]: ד.
+                - generic [ref=e1577]: לשמור על רמה גבוהה של מחויבות לניסוי.
+              - generic [ref=e1578] [cursor=pointer]:
+                - generic [ref=e1579]: ה.
+                - generic [ref=e1580]: לבדוק האם נבדקים מסוגלים לגלות אי-דיוקים במשוב.
+          - generic [ref=e1581]:
+            - generic [ref=e1582]: שאלה 9
+            - generic [ref=e1586]: מדוע בחרו החוקרים להשתמש גם בסטודנטים וגם במומחים לפיזיקה?
+            - generic [ref=e1587]:
+              - generic [ref=e1588] [cursor=pointer]:
+                - generic [ref=e1589]: א.
+                - generic [ref=e1590]: כדי להגדיל את גודל המדגם ולשפר את מהימנות התוצאות.
+              - generic [ref=e1591] [cursor=pointer]:
+                - generic [ref=e1592]: ב.
+                - generic [ref=e1593]: כדי לבדוק האם רמת הידע משפיעה על האופן שבו משוב משנה תפיסת ביצועים.
+              - generic [ref=e1594] [cursor=pointer]:
+                - generic [ref=e1595]: ג.
+                - generic [ref=e1596]: כדי להשוות את הביצועים שלהם על פני כל חמשת המבחנים.
+              - generic [ref=e1597] [cursor=pointer]:
+                - generic [ref=e1598]: ד.
+                - generic [ref=e1599]: כי לא היו מספיק סטודנטים בניסוי.
+              - generic [ref=e1600] [cursor=pointer]:
+                - generic [ref=e1601]: ה.
+                - generic [ref=e1602]: כדי לבחון אם מומחים מקבלים ציונים גבוהים יותר מסטודנטים.
+          - generic [ref=e1603]:
+            - generic [ref=e1604]: שאלה 10
+            - generic [ref=e1608]: איזו אוכלוסייה הושפעה יותר מהמשוב?
+            - generic [ref=e1609]:
+              - generic [ref=e1610] [cursor=pointer]:
+                - generic [ref=e1611]: א.
+                - generic [ref=e1612]: נבדקים בעלי ניסיון בינוני.
+              - generic [ref=e1613] [cursor=pointer]:
+                - generic [ref=e1614]: ב.
+                - generic [ref=e1615]: נבדקים שלא פתרו את כל המבחנים.
+              - generic [ref=e1616] [cursor=pointer]:
+                - generic [ref=e1617]: ג.
+                - generic [ref=e1618]: משתתפים שקיבלו ציונים אמיתיים בלבד.
+              - generic [ref=e1619] [cursor=pointer]:
+                - generic [ref=e1620]: ד.
+                - generic [ref=e1621]: מומחים לפיזיקה.
+              - generic [ref=e1622] [cursor=pointer]:
+                - generic [ref=e1623]: ה.
+                - generic [ref=e1624]: סטודנטים בשנה א'.
+          - generic [ref=e1625]:
+            - generic [ref=e1626]: שאלה 11
+            - generic [ref=e1630]: איזו מסקנה אפשר להסיק לגבי אמינות ההערכה העצמית של ביצועים במבחן?
+            - generic [ref=e1631]:
+              - generic [ref=e1632] [cursor=pointer]:
+                - generic [ref=e1633]: א.
+                - generic [ref=e1634]: משוב חיצוני יכול להשפיע על ההערכה העצמית באופן משמעותי.
+              - generic [ref=e1635] [cursor=pointer]:
+                - generic [ref=e1636]: ב.
+                - generic [ref=e1637]: הערכה עצמית מדויקת תמיד.
+              - generic [ref=e1638] [cursor=pointer]:
+                - generic [ref=e1639]: ג.
+                - generic [ref=e1640]: הערכה עצמית אינה קשורה כלל למשוב חיצוני.
+              - generic [ref=e1641] [cursor=pointer]:
+                - generic [ref=e1642]: ד.
+                - generic [ref=e1643]: המשוב השקרי לא השפיע על אף אחת מהקבוצות.
+              - generic [ref=e1644] [cursor=pointer]:
+                - generic [ref=e1645]: ה.
+                - generic [ref=e1646]: מומחים תמיד מעריכים את עצמם גבוה יותר מהמציאות.
+          - generic [ref=e1647]:
+            - generic [ref=e1648]: שאלה 12
+            - generic [ref=e1652]: האם מחקר זה מאפשר להסיק מסקנות לגבי כל אוכלוסיית הסטודנטים לפיזיקה?
+            - generic [ref=e1653]:
+              - generic [ref=e1654] [cursor=pointer]:
+                - generic [ref=e1655]: א.
+                - generic [ref=e1656]: לא, כי החוקרים לא בחנו את השפעת המשוב על סטודנטים ממדינות שונות.
+              - generic [ref=e1657] [cursor=pointer]:
+                - generic [ref=e1658]: ב.
+                - generic [ref=e1659]: כן, כי נמצא מתאם גבוה בין הציונים האמיתיים לבין הציונים שהוערכו.
+              - generic [ref=e1660] [cursor=pointer]:
+                - generic [ref=e1661]: ג.
+                - generic [ref=e1662]: לא, כי מדובר במדגם מוגבל שלא בהכרח מייצג את כלל הסטודנטים.
+              - generic [ref=e1663] [cursor=pointer]:
+                - generic [ref=e1664]: ד.
+                - generic [ref=e1665]: כן, כי הניסוי נמשך לאורך מספר מבחנים.
+              - generic [ref=e1666] [cursor=pointer]:
+                - generic [ref=e1667]: ה.
+                - generic [ref=e1668]: כן, כי החוקרים השתמשו בהקצאה אקראית של הנבדקים.
+          - generic [ref=e1669]:
+            - generic [ref=e1670]: שאלה 13
+            - generic [ref=e1674]: האם ניתן להגדיר את המחקר כמתאמי (קורלטיבי) בלבד?
+            - generic [ref=e1675]:
+              - generic [ref=e1676] [cursor=pointer]:
+                - generic [ref=e1677]: א.
+                - generic [ref=e1678]: כן, כי הוא בדק קשר בין משוב להערכת ביצועים.
+              - generic [ref=e1679] [cursor=pointer]:
+                - generic [ref=e1680]: ב.
+                - generic [ref=e1681]: לא, כי המחקר כלל מניפולציה ניסויית (משוב שקרי).
+              - generic [ref=e1682] [cursor=pointer]:
+                - generic [ref=e1683]: ג.
+                - generic [ref=e1684]: לא, כי לא נבדק קשר סטטיסטי בין משתנים.
+              - generic [ref=e1685] [cursor=pointer]:
+                - generic [ref=e1686]: ד.
+                - generic [ref=e1687]: כן, כי הוא לא כלל השוואה בין קבוצות שונות.
+              - generic [ref=e1688] [cursor=pointer]:
+                - generic [ref=e1689]: ה.
+                - generic [ref=e1690]: כן, כי לא נבדק משתנה תלוי.
+          - generic [ref=e1691]:
+            - generic [ref=e1692]: שאלה 14
+            - generic [ref=e1696]: האם ניתן להסיק שהתוצאות יהיו זהות גם במקצועות אחרים מלבד פיזיקה?
+            - generic [ref=e1697]:
+              - generic [ref=e1698] [cursor=pointer]:
+                - generic [ref=e1699]: א.
+                - generic [ref=e1700]: לא, כי מחקרים אחרים הצביעו על קשר חלש בין משוב למידה במקצועות הומניים.
+              - generic [ref=e1701] [cursor=pointer]:
+                - generic [ref=e1702]: ב.
+                - generic [ref=e1703]: כן, כי עקרונות המשוב אינם תלויים בתחום הידע.
+              - generic [ref=e1704] [cursor=pointer]:
+                - generic [ref=e1705]: ג.
+                - generic [ref=e1706]: כן, כי ניסויים דומים בעבר הראו דפוסים זהים במתמטיקה.
+              - generic [ref=e1707] [cursor=pointer]:
+                - generic [ref=e1708]: ד.
+                - generic [ref=e1709]: כן, כי משוב שקרי משפיע על כל סוגי הלמידה באותו אופן.
+              - generic [ref=e1710] [cursor=pointer]:
+                - generic [ref=e1711]: ה.
+                - generic [ref=e1712]: לא, כי המחקר נערך על מבחני פיזיקה בלבד ואין הוכחה שהשפעת המשוב זהה בתחומים אחרים.
+          - generic [ref=e1713]:
+            - generic [ref=e1714]: שאלה 15
+            - generic [ref=e1718]: אם רוצים לשפר את תוקף המסקנות ולשלול את האפשרות שהמשוב השקרי יצר אפקט פסיכולוגי קצר-טווח, איזה שינוי מתודולוגי (הקשור לשיטת המחקר) ניתן לבצע?
+            - generic [ref=e1719]:
+              - generic [ref=e1720] [cursor=pointer]:
+                - generic [ref=e1721]: א.
+                - generic [ref=e1722]: ביצוע המחקר על נבדקים מאותה רמת ידע בלבד.
+              - generic [ref=e1723] [cursor=pointer]:
+                - generic [ref=e1724]: ב.
+                - generic [ref=e1725]: הוספת קבוצה שלישית שלא מקבלת משוב כלל.
+              - generic [ref=e1726] [cursor=pointer]:
+                - generic [ref=e1727]: ג.
+                - generic [ref=e1728]: הקנית גודל המדגם על מנת להקטין שונות.
+              - generic [ref=e1729] [cursor=pointer]:
+                - generic [ref=e1730]: ד.
+                - generic [ref=e1731]: ביצוע ניתוח נתונים תוך שימוש בשיטות איכותניות.
+              - generic [ref=e1732] [cursor=pointer]:
+                - generic [ref=e1733]: ה.
+                - generic [ref=e1734]: מתן משוב אמיתי לצד המשוב השקרי.
+          - generic [ref=e1735]:
+            - generic [ref=e1736]: שאלה 16
+            - generic [ref=e1740]: איזו התפלגות צפויה להופיע בנתוני המחקר אם המשוב השקרי השפיע באופן שווה על כל הנבדקים?
+            - generic [ref=e1741]:
+              - generic [ref=e1742] [cursor=pointer]:
+                - generic [ref=e1743]: א.
+                - generic [ref=e1744]: התפלגות שטוחה (Uniform).
+              - generic [ref=e1745] [cursor=pointer]:
+                - generic [ref=e1746]: ב.
+                - generic [ref=e1747]: התפלגות דו-שיאית (Bimodal).
+              - generic [ref=e1748] [cursor=pointer]:
+                - generic [ref=e1749]: ג.
+                - generic [ref=e1750]: התפלגות נורמלית עם שונות גבוהה.
+              - generic [ref=e1751] [cursor=pointer]:
+                - generic [ref=e1752]: ד.
+                - generic [ref=e1753]: התפלגות חיובית מוטה (skewed right).
+              - generic [ref=e1754] [cursor=pointer]:
+                - generic [ref=e1755]: ה.
+                - generic [ref=e1756]: התפלגות סימטרית סביב הממוצע.
+          - generic [ref=e1757]:
+            - generic [ref=e1758]: שאלה 17
+            - generic [ref=e1762]: מהי מגבלה אפשרית של המחקר מבחינת תוקף חיצוני?
+            - generic [ref=e1763]:
+              - generic [ref=e1764] [cursor=pointer]:
+                - generic [ref=e1765]: א.
+                - generic [ref=e1766]: השפעת המשוב עשויה להשתנות בהתאם למקצועות לימוד אחרים.
+              - generic [ref=e1767] [cursor=pointer]:
+                - generic [ref=e1768]: ב.
+                - generic [ref=e1769]: המחקר נערך רק בקרב סטודנטים ומומחים לפיזיקה.
+              - generic [ref=e1770] [cursor=pointer]:
+                - generic [ref=e1771]: ג.
+                - generic [ref=e1772]: אף אחת מהתשובות אינה נכונה.
+              - generic [ref=e1773] [cursor=pointer]:
+                - generic [ref=e1774]: ד.
+                - generic [ref=e1775]: המשוב ניתן אך ורק לאחר מבחנים אקדמיים.
+              - generic [ref=e1776] [cursor=pointer]:
+                - generic [ref=e1777]: ה.
+                - generic [ref=e1778]: כל התשובות נכונות
+          - generic [ref=e1779]:
+            - generic [ref=e1780]: שאלה 18
+            - generic [ref=e1784]: "התוצאה 0.009 = p שנמצאה עבור המשוב החיובי מציינת כי:"
+            - generic [ref=e1785]:
+              - generic [ref=e1786] [cursor=pointer]:
+                - generic [ref=e1787]: א.
+                - generic [ref=e1788]: המשוב החיובי גרם לשינוי משמעותי בהערכה העצמית של הנבדקים, אך לא ניתן להסיק שהוא משפיע יותר ממשוב שלילי.
+              - generic [ref=e1789] [cursor=pointer]:
+                - generic [ref=e1790]: ב.
+                - generic [ref=e1791]: יש סיכוי של פחות מ-1% שהתוצאה התקבלה במקרה, ולכן מדובר בהשפעה חזקה מאוד.
+              - generic [ref=e1792] [cursor=pointer]:
+                - generic [ref=e1793]: ג.
+                - generic [ref=e1794]: ההשפעה של המשוב החיובי אינה מובהקת סטטיסטית ולכן אין לו השפעה כלל.
+              - generic [ref=e1795] [cursor=pointer]:
+                - generic [ref=e1796]: ד.
+                - generic [ref=e1797]: ככל שערך ה p-נמוך יותר, כך הסיכוי לקבל את התוצאה במקרה גבוה יותר.
+              - generic [ref=e1798] [cursor=pointer]:
+                - generic [ref=e1799]: ה.
+                - generic [ref=e1800]: המשוב החיובי אינו שונה סטטיסטית מהמשוב השלילי, מכיוון שערך ה p-של המשוב השלילי (0.03) גם נמוך מ-0.05.
+          - generic [ref=e1801]:
+            - generic [ref=e1802]: שאלה 19
+            - generic [ref=e1806]: מה המשמעות של 0.08 = p עבור תגובת המומחים למשוב?
+            - generic [ref=e1807]:
+              - generic [ref=e1808] [cursor=pointer]:
+                - generic [ref=e1809]: א.
+                - generic [ref=e1810]: מאחר ש-p קרוב ל-0, ניתן להסיק שהמשוב השפיע מאוד על המומחים.
+              - generic [ref=e1811] [cursor=pointer]:
+                - generic [ref=e1812]: ב.
+                - generic [ref=e1813]: המומחים לא הושפעו מהמשוב
+              - generic [ref=e1814] [cursor=pointer]:
+                - generic [ref=e1815]: ג.
+                - generic [ref=e1816]: ככל שערך ה-p נמוך יותר, כך השפעת המשוב על המומחים חזקה יותר.
+              - generic [ref=e1817] [cursor=pointer]:
+                - generic [ref=e1818]: ד.
+                - generic [ref=e1819]: מכיוון ש-p גדול מ-0.05, ניתן להסיק שהמומחים הושפעו מהמשוב
+              - generic [ref=e1820] [cursor=pointer]:
+                - generic [ref=e1821]: ה.
+                - generic [ref=e1822]: תוצאה זו מראה בבירור שהמומחים הגיבו יותר למשוב מאשר הסטודנטים.
+      - generic [ref=e1823]:
+        - generic [ref=e1824]: שאלה 20
+        - generic [ref=e1828]: חוקרת מעוניינת לבדוק כיצד הכשרה טכנולוגית של עובדים משפיעה על מספר פעולות התחזוקה שהם מבצעים בפועל במערכות מידע ארגוניות (למשל, עדכוני תוכנה, גיבויים, תיקון תקלות). איזו שיטת איסוף נתונים מתאימה ביותר למדידת המשתנה התלוי?
+        - generic [ref=e1829]:
+          - generic [ref=e1830] [cursor=pointer]:
+            - generic [ref=e1831]: א.
+            - generic [ref=e1832]: סקר שבו העובדים מדרגים את תחושת האחריות שלהם לתחזוקת המערכת.
+          - generic [ref=e1833] [cursor=pointer]:
+            - generic [ref=e1834]: ב.
+            - generic [ref=e1835]: מדגם אקראי של עובדים מארגונים שונים ובדיקת רמת התחזוקה שביצעו.
+          - generic [ref=e1836] [cursor=pointer]:
+            - generic [ref=e1837]: ג.
+            - generic [ref=e1838]: מחקר תצפיתי שבו מנהלי IT מעריכים את רמת המעורבות של העובדים בתחזוקה.
+          - generic [ref=e1839] [cursor=pointer]:
+            - generic [ref=e1840]: ד.
+            - generic [ref=e1841]: ניסוי שבו חלק מהעובדים מקבלים הכשרה טכנולוגית וחלק לא, ולאחר מכן נבדקת רמת התחזוקה שלהם.
+          - generic [ref=e1842] [cursor=pointer]:
+            - generic [ref=e1843]: ה.
+            - generic [ref=e1844]: ניתוח דוחות מערכת שמפרטים את מספר פעולות התחזוקה שבוצעו על ידי כל עובד.
+      - generic [ref=e1845]:
+        - generic [ref=e1846]: שאלה 21
+        - generic [ref=e1849]:
+          - generic [ref=e1850]: חוקר רצה לבדוק את הטענה כי סטודנטים ממוסדות אקדמיים שונים בארץ נבדלים גם בהעדפותיהם לגבי מערכות מידע לניהול למידה, (LMS) מתוך הנחה שבמרכז הארץ יש גישה רבה יותר לטכנולוגיות מתקדמות.
+          - generic [ref=e1851]: מהי שיטת הדגימה הטובה ביותר לבדיקת טענה זו?
+        - generic [ref=e1852]:
+          - generic [ref=e1853] [cursor=pointer]:
+            - generic [ref=e1854]: א.
+            - generic [ref=e1855]: דגימת שכבות לפי גישה לטכנולוגיות, לאחר מכן דגימת אשכולות של מוסדות אקדמיים ולאחר מכן דגימה אקראית פשוטה.
+          - generic [ref=e1856] [cursor=pointer]:
+            - generic [ref=e1857]: ב.
+            - generic [ref=e1858]: דגימת שכבות לפי מוסדות אקדמיים ואחר-כך דגימה אקראית פשוטה.
+          - generic [ref=e1859] [cursor=pointer]:
+            - generic [ref=e1860]: ג.
+            - generic [ref=e1861]: דגימת אשכולות על פי טכנולוגיות מתקדמות, דגימת שכבות על פי מוסדות אקדמיים ולאחר מכן דגימה אקראית פשוטה.
+          - generic [ref=e1862] [cursor=pointer]:
+            - generic [ref=e1863]: ד.
+            - generic [ref=e1864]: דגימת אשכולות לפי מוסדות אקדמיים ואחר-כך דגימה אקראית פשוטה.
+          - generic [ref=e1865] [cursor=pointer]:
+            - generic [ref=e1866]: ה.
+            - generic [ref=e1867]: דגימה אקראית רב-שלבית הכוללת שילוב של דגימת אשכולות ודגימת שכבות.
+      - generic [ref=e1868]:
+        - generic [ref=e1869]: שאלה 22
+        - generic [ref=e1873]: איזה מחקר מתאים ביותר לבחינת קשר ללא הסקת סיבתיות?
+        - generic [ref=e1874]:
+          - generic [ref=e1875] [cursor=pointer]:
+            - generic [ref=e1876]: א.
+            - generic [ref=e1877]: מחקר אורך עם התערבות חוזרת לאורך זמן.
+          - generic [ref=e1878] [cursor=pointer]:
+            - generic [ref=e1879]: ב.
+            - generic [ref=e1880]: מחקר מתאמי הבודק קשר סטטיסטי בין משתנים.
+          - generic [ref=e1881] [cursor=pointer]:
+            - generic [ref=e1882]: ג.
+            - generic [ref=e1883]: מחקר ניסויי עם מניפולציה והקצאה אקראית.
+          - generic [ref=e1884] [cursor=pointer]:
+            - generic [ref=e1885]: ד.
+            - generic [ref=e1886]: מחקר שדה עם שליטה מלאה בתנאים.
+      - generic [ref=e1887]:
+        - generic [ref=e1888]: שאלה 23
+        - generic [ref=e1891]:
+          - generic [ref=e1892]: חוקרת בדקה את ההשפעה של שינוי בעיצוב אתר מסחר אלקטרוני על רמת ההכנסות. היא השוותה נתוני מכירות בין משתמשים שעשו שימוש בעיצוב החדש לבין נתוני עבר של משתמשים בעיצוב הישן.
+          - generic [ref=e1893]: איזו מגבלה מרכזית קיימת במחקר זה?
+        - generic [ref=e1894]:
+          - generic [ref=e1895] [cursor=pointer]:
+            - generic [ref=e1896]: א.
+            - generic [ref=e1897]: המדגם קטן מדי.
+          - generic [ref=e1898] [cursor=pointer]:
+            - generic [ref=e1899]: ב.
+            - generic [ref=e1900]: אין צורך להשוות לעיצוב הישן.
+          - generic [ref=e1901] [cursor=pointer]:
+            - generic [ref=e1902]: ג.
+            - generic [ref=e1903]: ניתן להסיק שהעיצוב החדש משפר הכנסות.
+          - generic [ref=e1904] [cursor=pointer]:
+            - generic [ref=e1905]: ד.
+            - generic [ref=e1906]: ההבדלים בהכנסות יכולים לנבוע מההבדלים במשתמשים ולא מהעיצוב
+          - generic [ref=e1907] [cursor=pointer]:
+            - generic [ref=e1908]: ה.
+            - generic [ref=e1909]: לא נמדדו גורמים חיצוניים כמו שביעות רצון.
+      - generic [ref=e1910]:
+        - generic [ref=e1911]: שאלה 24
+        - generic [ref=e1914]:
+          - generic [ref=e1915]: חוקר בדק את ההשפעה של הפסקות קצרות בעבודה על רמת הריכוז של עובדים. הוא חילק את המשתתפים לקבוצות לפי מספר ההפסקות (ללא הפסקות, הפסקה אחת ושלוש הפסקות).
+          - generic [ref=e1916]: איזו שיטת ניתוח מתאימה ביותר?
+        - generic [ref=e1917]:
+          - generic [ref=e1918] [cursor=pointer]:
+            - generic [ref=e1919]: א.
+            - generic [ref=e1920]: בדיקת ממוצעי רמת הריכוז (זמן) לפני ואחרי הפסקות.
+          - generic [ref=e1921] [cursor=pointer]:
+            - generic [ref=e1922]: ב.
+            - generic [ref=e1923]: ניתוח של תשובות העובדים.
+          - generic [ref=e1924] [cursor=pointer]:
+            - generic [ref=e1925]: ג.
+            - generic [ref=e1926]: פילוח לפי סוג העבודה בלב
+          - generic [ref=e1927] [cursor=pointer]:
+            - generic [ref=e1928]: ד.
+            - generic [ref=e1929]: ניתוח מתאמי בין מספר ההפסקות לרמת הריכוז (זמן).
+          - generic [ref=e1930] [cursor=pointer]:
+            - generic [ref=e1931]: ה.
+            - generic [ref=e1932]: השוואת ממוצעי רמת הריכוז (זמן) בין הקבוצות.
+      - generic [ref=e1933]:
+        - generic [ref=e1934]: שאלה 25
+        - generic [ref=e1938]: מהי הבעיה העיקרית של מדגם נוחות מבחינת תוקף חיצוני (External Validity)?
+        - generic [ref=e1939]:
+          - generic [ref=e1940] [cursor=pointer]:
+            - generic [ref=e1941]: א.
+            - generic [ref=e1942]: מגבלות טכניות בתפעול כלי המחקר.
+          - generic [ref=e1943] [cursor=pointer]:
+            - generic [ref=e1944]: ב.
+            - generic [ref=e1945]: חוסר יכולת למדוד משתנים תלויים.
+          - generic [ref=e1946] [cursor=pointer]:
+            - generic [ref=e1947]: ג.
+            - generic [ref=e1948]: אינו מאפשר ניתוח נתונים סטטיסטי.
+          - generic [ref=e1949] [cursor=pointer]:
+            - generic [ref=e1950]: ד.
+            - generic [ref=e1951]: קושי בהכללה על כלל האוכלוסייה.
+          - generic [ref=e1952] [cursor=pointer]:
+            - generic [ref=e1953]: ה.
+            - generic [ref=e1954]: חשש לאיסוף נתונים שגויים.
+  - alert [ref=e18]

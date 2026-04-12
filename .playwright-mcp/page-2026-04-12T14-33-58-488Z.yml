@@ -1,0 +1,454 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - heading "Shuffle Exam" [level=2] [ref=e5]
+      - generic [ref=e6]:
+        - button "Java" [ref=e7] [cursor=pointer]
+        - button "הסקה סטטיסטית" [ref=e8] [cursor=pointer]
+        - button "כלכלה" [ref=e9] [cursor=pointer]
+        - button "שיטות מחקר" [ref=e10] [cursor=pointer]
+        - button "Python" [ref=e11] [cursor=pointer]
+  - main [ref=e12]:
+    - generic [ref=e14]:
+      - button "מחיקת תוצאות" [disabled]
+      - button "סיום מבחן" [ref=e15]
+      - button "ערבוב מבחן חדש" [ref=e16]
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]: שאלה 1
+        - generic [ref=e21]:
+          - generic [ref=e23]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e29]:
+            - generic [ref=e30]:
+              - generic [ref=e35]: "1"
+              - generic [ref=e41]: d
+              - textbox "Editor content" [ref=e46]
+        - generic [ref=e48]:
+          - generic [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: א.
+            - generic [ref=e51]: תתקבל שגיאת זמן ריצה מכיוון שקיימים שני משתנים בעלי אותו שם.
+          - generic [ref=e52] [cursor=pointer]:
+            - generic [ref=e53]: ב.
+            - generic [ref=e54]: תתקבל שגיאת זמן ריצה מכיוון שפונקציית ה main קוראת לפונקציה שמוגדרת אחריה בקובץ.
+          - generic [ref=e55] [cursor=pointer]:
+            - generic [ref=e56]: ג.
+            - generic [ref=e57]: יודפס Hello\nHello
+          - generic [ref=e58] [cursor=pointer]:
+            - generic [ref=e59]: ד.
+            - generic [ref=e60]: יודפס Hello\nGoodbye
+      - generic [ref=e61]:
+        - generic [ref=e62]: שאלה 2
+        - generic [ref=e64]:
+          - generic [ref=e66]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e72]:
+            - generic [ref=e73]:
+              - generic [ref=e78]: "1"
+              - generic [ref=e84]: "n"
+              - textbox "Editor content" [ref=e89]
+        - generic [ref=e91]:
+          - generic [ref=e92] [cursor=pointer]:
+            - generic [ref=e93]: א.
+            - generic [ref=e94]: "יודפס 'Student: Dana | Score: 87.46' כי :<10 מיישר שמאלה ו-.2f מעגל לשתי ספרות."
+          - generic [ref=e95] [cursor=pointer]:
+            - generic [ref=e96]: ב.
+            - generic [ref=e97]: תתקבל שגיאת זמן ריצה כי לא ניתן לשלב פורמט יישור יחד עם פורמט עיגול ב-f-string.
+          - generic [ref=e98] [cursor=pointer]:
+            - generic [ref=e99]: ג.
+            - generic [ref=e100]: "יודפס 'Student: Dana | Score: 87.456' כי פורמט :<10 אינו נתמך בתוך f-string."
+          - generic [ref=e101] [cursor=pointer]:
+            - generic [ref=e102]: ד.
+            - generic [ref=e103]: "יודפס 'Student: Dana | Score: 87.46' כי :<10 מיישר ימינה ומוסיף רווחים משמאל."
+      - generic [ref=e104]:
+        - generic [ref=e105]: שאלה 3
+        - generic [ref=e107]:
+          - generic [ref=e109]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e115]:
+            - generic [ref=e116]:
+              - generic [ref=e121]: "1"
+              - generic [ref=e127]: d
+              - textbox "Editor content" [ref=e132]
+        - generic [ref=e134]:
+          - generic [ref=e135] [cursor=pointer]:
+            - generic [ref=e136]: א.
+            - generic [ref=e137]: תתקבל שגיאת זמן ריצה כי לא ניתן לדלג על הפרמטר msg ולהעביר times ישירות.
+          - generic [ref=e138] [cursor=pointer]:
+            - generic [ref=e139]: ב.
+            - generic [ref=e140]: יודפס 'Hello, Amit!' פעם אחת כי Python מתעלם מ-keyword arguments שאינם ראשוניים.
+          - generic [ref=e141] [cursor=pointer]:
+            - generic [ref=e142]: ג.
+            - generic [ref=e143]: יודפס 'Hello, Amit!' שלוש פעמים כי msg לא הועבר ולכן נשתמש בברירת המחדל Hello.
+          - generic [ref=e144] [cursor=pointer]:
+            - generic [ref=e145]: ד.
+            - generic [ref=e146]: יודפס 'Amit, Hello!' שלוש פעמים כי סדר הפרמטרים מתהפך בעת שימוש ב-keyword.
+      - generic [ref=e147]:
+        - generic [ref=e148]: שאלה 4
+        - generic [ref=e150]:
+          - generic [ref=e152]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e158]:
+            - generic [ref=e159]:
+              - generic [ref=e164]: "1"
+              - generic [ref=e170]: "n"
+              - textbox "Editor content" [ref=e172]
+        - generic [ref=e174]:
+          - generic [ref=e175] [cursor=pointer]:
+            - generic [ref=e176]: א.
+            - generic [ref=e177]: יודפס [2, 4, 6] כי הביטוי x**2 עם תנאי if מחזיר את המספרים הזוגיים כפולים.
+          - generic [ref=e178] [cursor=pointer]:
+            - generic [ref=e179]: ב.
+            - generic [ref=e180]: יודפס [4, 16, 36] כי הרשימה כוללת את ריבועי המספרים הזוגיים בלבד מהרשימה.
+          - generic [ref=e181] [cursor=pointer]:
+            - generic [ref=e182]: ג.
+            - generic [ref=e183]: יודפס [1, 4, 9, 16, 25, 36] כי הביטוי if לא חוסם אף מספר מהרשימה המקורית.
+          - generic [ref=e184] [cursor=pointer]:
+            - generic [ref=e185]: ד.
+            - generic [ref=e186]: תתקבל שגיאת תחביר כי לא ניתן לשלב תנאי if בתוך list comprehension בפייתון.
+      - generic [ref=e187]:
+        - generic [ref=e188]: שאלה 5
+        - generic [ref=e190]:
+          - generic [ref=e192]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e198]:
+            - generic [ref=e199]:
+              - generic [ref=e204]: "1"
+              - generic [ref=e210]: w
+              - textbox "Editor content" [ref=e212]
+        - generic [ref=e214]:
+          - generic [ref=e215] [cursor=pointer]:
+            - generic [ref=e216]: א.
+            - generic [ref=e217]: "שורה 3 תדפיס {2, 5} ושורה 4 תדפיס 2 כי set comprehension שומר ערכים ייחודיים בלבד."
+          - generic [ref=e218] [cursor=pointer]:
+            - generic [ref=e219]: ב.
+            - generic [ref=e220]: "שורה 3 תדפיס [2, 5, 3, 2, 5] ושורה 4 תדפיס 5 כי {} עם comprehension מחזיר רשימה."
+          - generic [ref=e221] [cursor=pointer]:
+            - generic [ref=e222]: ג.
+            - generic [ref=e223]: תתקבל שגיאת זמן ריצה כי set comprehension אינו נתמך בגרסאות Python מתחת ל-3.10.
+          - generic [ref=e224] [cursor=pointer]:
+            - generic [ref=e225]: ד.
+            - generic [ref=e226]: "שורה 3 תדפיס {2, 5, 2, 5} ושורה 4 תדפיס 4 כי comprehension שומר כפילויות כברירת מחדל."
+      - generic [ref=e227]:
+        - generic [ref=e228]: שאלה 6
+        - generic [ref=e230]:
+          - generic [ref=e232]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e238]:
+            - generic [ref=e239]:
+              - generic [ref=e244]: "1"
+              - generic [ref=e250]: t
+              - textbox "Editor content" [ref=e252]
+        - generic [ref=e254]:
+          - generic [ref=e255] [cursor=pointer]:
+            - generic [ref=e256]: א.
+            - generic [ref=e257]: יודפס 100 ולאחר מכן 150 כי הפונקציה קוראת את הגלובלי ואז מגדירה משתנה מקומי.
+          - generic [ref=e258] [cursor=pointer]:
+            - generic [ref=e259]: ב.
+            - generic [ref=e260]: הקוד יקרוס בשגיאת זמן ריצה כבר בשורת ה-print הראשונה כי Python מזהה total כמקומי.
+          - generic [ref=e261] [cursor=pointer]:
+            - generic [ref=e262]: ג.
+            - generic [ref=e263]: הקוד ידפיס 150 פעמיים כי Python מזהה את הכוונה ומגדיר global אוטומטית בפונקציה.
+          - generic [ref=e264] [cursor=pointer]:
+            - generic [ref=e265]: ד.
+            - generic [ref=e266]: יודפס 100 ולאחר מכן 100 כי השמה לתוך הפונקציה יוצרת עותק ולא משנה את הגלובלי.
+      - generic [ref=e267]:
+        - generic [ref=e268]: שאלה 7
+        - generic [ref=e270]:
+          - generic [ref=e272]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e278]:
+            - generic [ref=e279]:
+              - generic [ref=e284]: "1"
+              - generic [ref=e290]: s
+              - textbox "Editor content" [ref=e292]
+        - generic [ref=e294]:
+          - generic [ref=e295] [cursor=pointer]:
+            - generic [ref=e296]: א.
+            - generic [ref=e297]: "שורה 3 תדפיס {3, 4}, שורה 4 תדפיס {3, 4}, שורה 5 תדפיס {1, 2, 5, 6}."
+          - generic [ref=e298] [cursor=pointer]:
+            - generic [ref=e299]: ב.
+            - generic [ref=e300]: "שורה 3 תדפיס {3, 4}, שורה 4 תדפיס {1,2,3,4,5,6}, שורה 5 תדפיס {1, 2}."
+          - generic [ref=e301] [cursor=pointer]:
+            - generic [ref=e302]: ג.
+            - generic [ref=e303]: "שורה 3 תדפיס {1,2,5,6}, שורה 4 תדפיס {3,4}, שורה 5 תדפיס {1,2,3,4,5,6}."
+          - generic [ref=e304] [cursor=pointer]:
+            - generic [ref=e305]: ד.
+            - generic [ref=e306]: "שורה 3 תדפיס {1, 2}, שורה 4 תדפיס {1,2,3,4,5,6}, שורה 5 תדפיס {3, 4}."
+      - generic [ref=e307]:
+        - generic [ref=e308]: שאלה 8
+        - generic [ref=e310]:
+          - generic [ref=e312]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e318]:
+            - generic [ref=e319]:
+              - generic [ref=e324]: "1"
+              - generic [ref=e330]: s
+              - textbox "Editor content" [ref=e332]
+        - generic [ref=e334]:
+          - generic [ref=e335] [cursor=pointer]:
+            - generic [ref=e336]: א.
+            - generic [ref=e337]: יודפס 3 90 כי הפעולה += על ערך בתוך מילון מקונן אינה משנה את הערך המקורי.
+          - generic [ref=e338] [cursor=pointer]:
+            - generic [ref=e339]: ב.
+            - generic [ref=e340]: תתקבל שגיאת זמן ריצה כי לא ניתן להוסיף מפתח חדש למילון לאחר הגדרתו הראשונית.
+          - generic [ref=e341] [cursor=pointer]:
+            - generic [ref=e342]: ג.
+            - generic [ref=e343]: יודפס 2 100 כי הוספת Charlie לא מצליחה כי המילון כבר הוגדר עם שני מפתחות בלבד.
+          - generic [ref=e344] [cursor=pointer]:
+            - generic [ref=e345]: ד.
+            - generic [ref=e346]: יודפס 3 100 כי נוספה רשומה חדשה למילון ושדה הציון של Alice עודכן ב-10 נקודות.
+      - generic [ref=e347]:
+        - generic [ref=e348]: שאלה 9
+        - generic [ref=e350]:
+          - generic [ref=e352]: בחרו את הטענה המדויקת ביותר בקוד הבא
+          - code [ref=e358]:
+            - generic [ref=e359]:
+              - generic [ref=e364]: "1"
+              - generic [ref=e370]: s
+              - textbox "Editor content" [ref=e372]
+        - generic [ref=e374]:
+          - generic [ref=e375] [cursor=pointer]:
+            - generic [ref=e376]: א.
+            - generic [ref=e377]: I\namam\na\ncatcatcat יודפס למסך
+          - generic [ref=e378] [cursor=pointer]:
+            - generic [ref=e379]: ב.
+            - generic [ref=e380]: תהיה שגיאת זמן ריצה מכיוון שלא ניתן להכפיל מחרוזת במספר ללא המרה.
+          - generic [ref=e381] [cursor=pointer]:
+            - generic [ref=e382]: ג.
+            - generic [ref=e383]: במידה והמשפט יכיל את אותה מילה מספר פעמים אז נקבל שגיאת זמן ריצה מכיוון שמילון לא יכול להכיל מפתחות זהים.
+          - generic [ref=e384] [cursor=pointer]:
+            - generic [ref=e385]: ד.
+            - generic [ref=e386]: I\na\namam\ncatcatcat יודפס למסך
+      - generic [ref=e387]:
+        - generic [ref=e388]: שאלה 10
+        - generic [ref=e392]: בחרו את הטענה הלא נכונה מבין כל הטענות העוסקת בחריגות.
+        - generic [ref=e393]:
+          - generic [ref=e394] [cursor=pointer]:
+            - generic [ref=e395]: א.
+            - generic [ref=e396]: לא חייבים תמיד להוסיף בלוק else בסוף.
+          - generic [ref=e397] [cursor=pointer]:
+            - generic [ref=e398]: ב.
+            - generic [ref=e399]: חייבים תמיד להוסיף בלוק finally בסוף.
+          - generic [ref=e400] [cursor=pointer]:
+            - generic [ref=e401]: ג.
+            - generic [ref=e402]: אין הגבלה לסדר או כמות הבלוקים של except.
+          - generic [ref=e403] [cursor=pointer]:
+            - generic [ref=e404]: ד.
+            - generic [ref=e405]: ניתן לבצע בלוקים של try-except אחד בתוך השני.
+      - generic [ref=e406]:
+        - generic [ref=e407]: שאלה 11
+        - generic [ref=e409]:
+          - generic [ref=e411]: הניחו שהמשתנה d הינו מילון חוקי וקבעו אילו מבין שורות הקוד הבאות עלולות לגרום לשגיאת זמן ריצה. יש להתייחס לכל שורה באופן נפרד.
+          - code [ref=e417]:
+            - generic [ref=e418]:
+              - generic [ref=e423]: "1"
+              - generic [ref=e429]: "1"
+              - textbox "Editor content" [ref=e431]
+        - generic [ref=e433]:
+          - generic [ref=e434] [cursor=pointer]:
+            - generic [ref=e435]: א.
+            - generic [ref=e436]: שורה 3.
+          - generic [ref=e437] [cursor=pointer]:
+            - generic [ref=e438]: ב.
+            - generic [ref=e439]: שורה 4.
+          - generic [ref=e440] [cursor=pointer]:
+            - generic [ref=e441]: ג.
+            - generic [ref=e442]: שורות 2 ו-4.
+          - generic [ref=e443] [cursor=pointer]:
+            - generic [ref=e444]: ד.
+            - generic [ref=e445]: שורות 1 או 3.
+      - generic [ref=e446]:
+        - generic [ref=e447]: שאלה 12
+        - generic [ref=e449]:
+          - generic [ref=e451]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e457]:
+            - generic [ref=e458]:
+              - generic [ref=e463]: "1"
+              - generic [ref=e469]: d
+              - textbox "Editor content" [ref=e471]
+        - generic [ref=e473]:
+          - generic [ref=e474] [cursor=pointer]:
+            - generic [ref=e475]: א.
+            - generic [ref=e476]: הקוד ידפיס את כל המספרים הקטנים מ 20 שהם אי-זוגיים ואינם 7.
+          - generic [ref=e477] [cursor=pointer]:
+            - generic [ref=e478]: ב.
+            - generic [ref=e479]: הקוד נכנס ללולאה אינסופית.
+          - generic [ref=e480] [cursor=pointer]:
+            - generic [ref=e481]: ג.
+            - generic [ref=e482]: הקוד יקרוס בשל שגיאת זמן ריצה.
+          - generic [ref=e483] [cursor=pointer]:
+            - generic [ref=e484]: ד.
+            - generic [ref=e485]: אף תשובה אינה נכונה.
+      - generic [ref=e486]:
+        - generic [ref=e487]: שאלה 13
+        - generic [ref=e489]:
+          - generic [ref=e491]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e497]:
+            - generic [ref=e498]:
+              - generic [ref=e503]: "1"
+              - generic [ref=e509]: c
+              - textbox "Editor content" [ref=e511]
+        - generic [ref=e513]:
+          - generic [ref=e514] [cursor=pointer]:
+            - generic [ref=e515]: א.
+            - generic [ref=e516]: צריך להגדיר את המחלקה בקובץ נפרד.
+          - generic [ref=e517] [cursor=pointer]:
+            - generic [ref=e518]: ב.
+            - generic [ref=e519]: הקוד תקין אך לא יודפס כלום בסיום הריצה.
+          - generic [ref=e520] [cursor=pointer]:
+            - generic [ref=e521]: ג.
+            - generic [ref=e522]: התוכנית תקרוס מכיוון שלא ניתן להשתמש בו זמנית גם בבנאי מלא וגם בברירת מחדל.
+          - generic [ref=e523] [cursor=pointer]:
+            - generic [ref=e524]: ד.
+            - generic [ref=e525]: חסרים setter-ים כדי שהקוד ירוץ באופן תקין.
+      - generic [ref=e526]:
+        - generic [ref=e527]: שאלה 14
+        - generic [ref=e529]:
+          - generic [ref=e531]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e537]:
+            - generic [ref=e538]:
+              - generic [ref=e543]: "1"
+              - generic [ref=e549]: c
+              - textbox "Editor content" [ref=e551]
+        - generic [ref=e553]:
+          - generic [ref=e554] [cursor=pointer]:
+            - generic [ref=e555]: א.
+            - generic [ref=e556]: יודפס 0, 78.5, 78.5 כי ברגע ש-Circle נוצר הוא עוקף את area גם עבור אובייקטי Shape.
+          - generic [ref=e557] [cursor=pointer]:
+            - generic [ref=e558]: ב.
+            - generic [ref=e559]: יודפס 0, 0, 0 כי הלולאה עוברת על רשימה מסוג Shape ותמיד קוראת ל-area של Shape.
+          - generic [ref=e560] [cursor=pointer]:
+            - generic [ref=e561]: ג.
+            - generic [ref=e562]: יודפס 0, 78.5, 0 כי כל אובייקט קורא למתודת area שלו עצמו לפי הטיפוס האמיתי.
+          - generic [ref=e563] [cursor=pointer]:
+            - generic [ref=e564]: ד.
+            - generic [ref=e565]: תתקבל שגיאת זמן ריצה כי לא ניתן לאחסן אובייקטים מסוגים שונים ברשימה אחת.
+      - generic [ref=e566]:
+        - generic [ref=e567]: שאלה 15
+        - generic [ref=e569]:
+          - generic [ref=e571]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e577]:
+            - generic [ref=e578]:
+              - generic [ref=e583]: "1"
+              - generic [ref=e589]: d
+              - textbox "Editor content" [ref=e591]
+        - generic [ref=e593]:
+          - generic [ref=e594] [cursor=pointer]:
+            - generic [ref=e595]: א.
+            - generic [ref=e596]: שורה 10 מדפיסה Bob currently studying at Ankori
+          - generic [ref=e597] [cursor=pointer]:
+            - generic [ref=e598]: ב.
+            - generic [ref=e599]: שורה 9 גורמת לשגיאת זמן ריצה מכיוון שהאינדקס לא קיים.
+          - generic [ref=e600] [cursor=pointer]:
+            - generic [ref=e601]: ג.
+            - generic [ref=e602]: שורה 8 מדפיסה Alice
+          - generic [ref=e603] [cursor=pointer]:
+            - generic [ref=e604]: ד.
+            - generic [ref=e605]: שורה 9 מדפיסה Osher currently working at Apple
+      - generic [ref=e606]:
+        - generic [ref=e607]: שאלה 16
+        - generic [ref=e609]:
+          - generic [ref=e611]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e617]:
+            - generic [ref=e618]:
+              - generic [ref=e623]: "1"
+              - generic [ref=e629]: a
+              - textbox "Editor content" [ref=e631]
+        - generic [ref=e633]:
+          - generic [ref=e634] [cursor=pointer]:
+            - generic [ref=e635]: א.
+            - generic [ref=e636]: יודפס [1,1,3,4,5] ולאחר מכן [1,1,3,4,5] כי sorted מחזיר תמיד מיון עולה לשניהם.
+          - generic [ref=e637] [cursor=pointer]:
+            - generic [ref=e638]: ב.
+            - generic [ref=e639]: יודפס [5,4,3,1,1] ולאחר מכן [1,1,3,4,5] כי sort משנה את a ו-sorted יצר עותק חדש.
+          - generic [ref=e640] [cursor=pointer]:
+            - generic [ref=e641]: ג.
+            - generic [ref=e642]: יודפס [5,4,3,1,1] ולאחר מכן [5,4,3,1,1] כי b ו-a מצביעים לאותה רשימה בזיכרון.
+          - generic [ref=e643] [cursor=pointer]:
+            - generic [ref=e644]: ד.
+            - generic [ref=e645]: תתקבל שגיאת זמן ריצה כי לא ניתן לקרוא sort ו-sorted על אותה רשימה באותו קוד.
+      - generic [ref=e646]:
+        - generic [ref=e647]: שאלה 17
+        - generic [ref=e649]:
+          - generic [ref=e651]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e657]:
+            - generic [ref=e658]:
+              - generic [ref=e663]: "1"
+              - generic [ref=e669]: d
+              - textbox "Editor content" [ref=e671]
+        - generic [ref=e673]:
+          - generic [ref=e674] [cursor=pointer]:
+            - generic [ref=e675]: א.
+            - generic [ref=e676]: בסיום הריצה יודפס error\nKeyError\nZeroDivisionError\n
+          - generic [ref=e677] [cursor=pointer]:
+            - generic [ref=e678]: ב.
+            - generic [ref=e679]: בסיום הריצה יודפס ValueError\nKeyError\nZeroDivisionError\n
+          - generic [ref=e680] [cursor=pointer]:
+            - generic [ref=e681]: ג.
+            - generic [ref=e682]: בסיום הריצה יודפס error\nerror\nerror\n
+          - generic [ref=e683] [cursor=pointer]:
+            - generic [ref=e684]: ד.
+            - generic [ref=e685]: במהלך הריצה תיזרק חריגה שלא נתפוס והתוכנית תקרוס.
+      - generic [ref=e686]:
+        - generic [ref=e687]: שאלה 18
+        - generic [ref=e689]:
+          - generic [ref=e691]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e697]:
+            - generic [ref=e698]:
+              - generic [ref=e703]: "1"
+              - generic [ref=e709]: m
+              - textbox "Editor content" [ref=e711]
+        - generic [ref=e713]:
+          - generic [ref=e714] [cursor=pointer]:
+            - generic [ref=e715]: א.
+            - generic [ref=e716]: יודפס 24 כי row[-1] מחזיר את השורה האחרונה ולא את האיבר האחרון בשורה.
+          - generic [ref=e717] [cursor=pointer]:
+            - generic [ref=e718]: ב.
+            - generic [ref=e719]: תתקבל שגיאת זמן ריצה כי לא ניתן להשתמש באינדקס שלילי על רשימה דו-ממדית.
+          - generic [ref=e720] [cursor=pointer]:
+            - generic [ref=e721]: ג.
+            - generic [ref=e722]: יודפס 45 כי הלולאה מסכמת את כל האיברים בכל שורות המטריצה ביחד.
+          - generic [ref=e723] [cursor=pointer]:
+            - generic [ref=e724]: ד.
+            - generic [ref=e725]: "יודפס 18 כי הלולאה מסכמת את האיבר האחרון בכל שורה: 3 + 6 + 9."
+      - generic [ref=e726]:
+        - generic [ref=e727]: שאלה 19
+        - generic [ref=e729]:
+          - generic [ref=e731]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e737]:
+            - generic [ref=e738]:
+              - generic [ref=e743]: "1"
+              - generic [ref=e749]: c
+              - textbox "Editor content" [ref=e751]
+        - generic [ref=e753]:
+          - generic [ref=e754] [cursor=pointer]:
+            - generic [ref=e755]: א.
+            - generic [ref=e756]: תתקבל שגיאת זמן ריצה כי לא ניתן לגשת למשתנה מחלקה דרך שם האובייקט c1.
+          - generic [ref=e757] [cursor=pointer]:
+            - generic [ref=e758]: ב.
+            - generic [ref=e759]: יודפס 1 1 כי כל אובייקט יוצר עותק פרטי של count ומאתחל אותו מחדש לאפס.
+          - generic [ref=e760] [cursor=pointer]:
+            - generic [ref=e761]: ג.
+            - generic [ref=e762]: יודפס 3 3 כי count הוא משתנה מחלקה משותף לכל האובייקטים ומתעדכן בכל יצירת מופע.
+          - generic [ref=e763] [cursor=pointer]:
+            - generic [ref=e764]: ד.
+            - generic [ref=e765]: יודפס 3 0 כי Counter.count ו-c1.count מצביעים לאזורי זיכרון שונים לחלוטין.
+      - generic [ref=e766]:
+        - generic [ref=e767]: שאלה 20
+        - generic [ref=e769]:
+          - generic [ref=e771]: בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+          - code [ref=e777]:
+            - generic [ref=e778]:
+              - generic [ref=e783]: "1"
+              - generic [ref=e789]: c
+              - textbox "Editor content" [ref=e791]
+        - generic [ref=e793]:
+          - generic [ref=e794] [cursor=pointer]:
+            - generic [ref=e795]: א.
+            - generic [ref=e796]: יודפס None כי __name מוגדר כפרטי ולכן __str__ מחזירה None בירושה.
+          - generic [ref=e797] [cursor=pointer]:
+            - generic [ref=e798]: ב.
+            - generic [ref=e799]: יודפס Rex Labrador כי __str__ ב-Dog עוקף אוטומטית את זו של Animal.
+          - generic [ref=e800] [cursor=pointer]:
+            - generic [ref=e801]: ג.
+            - generic [ref=e802]: יודפס Rex כי Dog יורש את __str__ מ-Animal שמחזיר את השם הפרטי.
+          - generic [ref=e803] [cursor=pointer]:
+            - generic [ref=e804]: ד.
+            - generic [ref=e805]: תתקבל שגיאת זמן ריצה כי __name הוא פרטי ו-Dog אינו יכול לגשת אליו.
+  - alert [ref=e806]
+  - generic [ref=e807]:
+    - alert
+    - alert
