@@ -1,6 +1,6 @@
 import { StatisticsQuestions } from './questions_statistics';
 import { JavaQuestions } from './questions_java';
-import { PythonQuestions } from './questions_python';
+import { PythonExamQuestions as PythonQuestions } from './questions_python';
 import { Exam, ExamType } from '../types/exam';
 import { EconomyQuestions } from './questions_economy';
 import { ResearchQuestions } from './questions_research';
