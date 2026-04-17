@@ -1508,4 +1508,458 @@ print(MathHelper.multiply(3, 4))
       },
     ],
   },
+  {
+    // Q1 - Recursion: sum of digits
+    questions: [
+      {
+        id: 61,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+def digit_sum(n):
+    if n < 10:
+        return n
+    return n % 10 + digit_sum(n // 10)
+
+print(digit_sum(493))
+\`\`\``,
+        answers: [
+          'יודפס 16 כי הפונקציה מחשבת את סכום ספרות המספר: 3 + 9 + 4.',
+          'יודפס 493 כי תנאי הבסיס n < 10 לא מתקיים ולכן הפונקציה מחזירה את n כפי שהוא.',
+          'יודפס 49 כי הפונקציה מסירה רק את הספרה הימנית ומחזירה את שאר המספר.',
+          'הקוד ייכנס ללולאה אינסופית כי n // 10 לעולם לא יגיע לפחות מ-10 עבור מספרים שלמים.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q2 - Tricky: sorted with key=len keeps original order for ties (stable sort)
+    questions: [
+      {
+        id: 62,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+names = ["Dan", "Bob", "Eve", "Alice", "Carol"]
+result = sorted(names, key=len)
+print(result)
+\`\`\``,
+        answers: [
+          "יודפס ['Dan', 'Bob', 'Eve', 'Alice', 'Carol'] כי sorted הוא stable ושומר על הסדר המקורי בין איברים שווי אורך.",
+          "יודפס ['Alice', 'Carol', 'Bob', 'Dan', 'Eve'] כי sorted ממיין לפי אורך בסדר יורד ושומר על סדר אלפבתי.",
+          "יודפס ['Bob', 'Dan', 'Eve', 'Alice', 'Carol'] כי sorted ממיין אלפבתית בתוך כל קבוצת אורך.",
+          'תתקבל שגיאת זמן ריצה כי sorted אינו מאפשר להשתמש בפונקציה מובנית כגון len כ-key.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q3 - map with multiple iterables
+    questions: [
+      {
+        id: 63,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+a = [1, 2, 3]
+b = [10, 20, 30]
+result = list(map(lambda x, y: x + y, a, b))
+print(result)
+\`\`\``,
+        answers: [
+          'יודפס [11, 22, 33] כי map מקבל שתי רשימות ומפעיל את ה-lambda על זוגות מקבילים.',
+          'יודפס [1, 2, 3, 10, 20, 30] כי map עם שתי רשימות מחבר אותן לרשימה אחת ארוכה.',
+          'תתקבל שגיאת זמן ריצה כי map אינו מקבל יותר מרשימה אחת כארגומנט נוסף ל-lambda.',
+          'יודפס [(1,10), (2,20), (3,30)] כי map עם שתי רשימות יוצר רשימה של טאפלים מזוגות.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q4 - Tricky: list.sort() returns None
+    questions: [
+      {
+        id: 64,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+nums = [5, 3, 8, 1]
+result = nums.sort()
+print(result)
+print(nums)
+\`\`\``,
+        answers: [
+          'שורה 3 תדפיס None ושורה 4 תדפיס [1, 3, 5, 8] כי sort() פועל in-place ומחזיר None.',
+          'שורה 3 תדפיס [1, 3, 5, 8] ושורה 4 תדפיס [5, 3, 8, 1] כי sort() מחזיר רשימה חדשה.',
+          'שורה 3 תדפיס [1, 3, 5, 8] ושורה 4 תדפיס [1, 3, 5, 8] כי sort() משנה ומחזיר את הרשימה.',
+          'תתקבל שגיאת זמן ריצה כי לא ניתן להשים את תוצאת sort() למשתנה חדש.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q5 - Recursion: counting elements in nested list
+    questions: [
+      {
+        id: 65,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+def count_items(lst):
+    if not isinstance(lst, list):
+        return 1
+    total = 0
+    for item in lst:
+        total += count_items(item)
+    return total
+
+print(count_items([1, [2, 3], [4, [5, 6]]]))
+\`\`\``,
+        answers: [
+          'יודפס 6 כי הפונקציה סופרת רקורסיבית את כל האיברים שאינם רשימות בכל הרמות.',
+          'יודפס 3 כי הפונקציה סופרת רק את האיברים ברמה הראשונה של הרשימה החיצונית.',
+          'יודפס 7 כי הפונקציה סופרת גם את הרשימות הפנימיות עצמן כאיברים ברי-ספירה.',
+          'תתקבל שגיאת זמן ריצה כי isinstance אינו מאפשר להשוות רשימה לטיפוס list.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q6 - filter with None
+    questions: [
+      {
+        id: 66,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+values = [0, 1, "", "hello", None, False, 42]
+result = list(filter(None, values))
+print(result)
+\`\`\``,
+        answers: [
+          'יודפס [1, "hello", 42] כי filter עם None מסנן ערכים שהם falsy כגון 0, "", None ו-False.',
+          'יודפס [0, 1, "", "hello", None, False, 42] כי filter עם None לא מסנן דבר מהרשימה.',
+          'תתקבל שגיאת זמן ריצה כי filter חייב לקבל פונקציה כארגומנט ראשון ולא None.',
+          'יודפס [None] כי filter עם None שומר רק את האיברים שערכם None ברשימה.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q7 - Tricky: lambda in a loop captures variable by reference
+    questions: [
+      {
+        id: 67,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+funcs = []
+for i in range(3):
+    funcs.append(lambda x: x + i)
+
+print(funcs[0](10))
+print(funcs[1](10))
+\`\`\``,
+        answers: [
+          'שתי ההדפסות יודפסו 12 כי ה-lambda לוכדת את i לפי הפניה וערכו הסופי הוא 2.',
+          'שורה 5 תדפיס 10 ושורה 6 תדפיס 11 כי כל lambda שומרת את ערך i בעת יצירתה.',
+          'שורה 5 תדפיס 10 ושורה 6 תדפיס 10 כי כל ה-lambda מתעלמות מ-i ומחזירות רק x.',
+          'תתקבל שגיאת זמן ריצה כי לא ניתן לאחסן lambda בתוך רשימה ולקרוא לה מאוחר יותר.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q8 - sorted with reverse and key together
+    questions: [
+      {
+        id: 68,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+data = [("Alice", 85), ("Bob", 92), ("Carol", 78), ("Dan", 92)]
+result = sorted(data, key=lambda t: t[1], reverse=True)
+print(result[0], result[-1])
+\`\`\``,
+        answers: [
+          "יודפס ('Bob', 92) ('Carol', 78) כי המיון הוא לפי ציון יורד ו-Bob מופיע לפני Dan.",
+          "יודפס ('Dan', 92) ('Alice', 85) כי sorted ממיין אלפבתית כאשר הציון שווה.",
+          "יודפס ('Carol', 78) ('Bob', 92) כי reverse=True הופך את סדר ה-key ולא את הרשימה.",
+          "יודפס ('Alice', 85) ('Dan', 92) כי sorted עם reverse=True ממיין לפי השם ולא הציון.",
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q9 - Recursion: returns value but missing return on recursive call
+    questions: [
+      {
+        id: 69,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+def find_max(lst, i=0):
+    if i == len(lst) - 1:
+        return lst[i]
+    rest = find_max(lst, i + 1)
+    if lst[i] > rest:
+        return lst[i]
+    return rest
+
+print(find_max([3, 7, 1, 9, 4]))
+\`\`\``,
+        answers: [
+          'יודפס 9 כי הפונקציה מוצאת את המקסימום ברקורסיה על ידי השוואה בין האיבר הנוכחי לשאר.',
+          'יודפס 3 כי הפונקציה מחזירה תמיד את האיבר הראשון ברשימה מבלי להשוות את השאר.',
+          'יודפס None כי חסרה שורת return בתנאי הבסיס והפונקציה לא מחזירה ערך תקין.',
+          'תתקבל שגיאת זמן ריצה כי לא ניתן להעביר ערך ברירת מחדל לפרמטר i בפונקציה רקורסיבית.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q10 - map returns iterator, not list
+    questions: [
+      {
+        id: 70,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+nums = [1, 2, 3, 4]
+result = map(lambda x: x ** 2, nums)
+print(type(result))
+print(result[0])
+\`\`\``,
+        answers: [
+          "שורה 3 תדפיס <class 'map'> ושורה 4 תגרום לשגיאת זמן ריצה כי map object אינו subscriptable.",
+          "שורה 3 תדפיס <class 'list'> ושורה 4 תדפיס 1 כי map ממיר אוטומטית את התוצאה לרשימה.",
+          "שורה 3 תדפיס <class 'map'> ושורה 4 תדפיס 1 כי map object תומך בגישה לפי אינדקס.",
+          "שורה 3 תדפיס <class 'generator'> ושורה 4 תדפיס None כי map מחזיר generator בפייתון.",
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q11 - List comprehension vs map performance theory
+    questions: [
+      {
+        id: 71,
+        question: 'בחרו את הטענה המדויקת ביותר העוסקת בהבדל בין list comprehension ל-map בפייתון.',
+        answers: [
+          'list comprehension מחזיר תמיד רשימה, בעוד map מחזיר אובייקט iterator שנצרך בזמן הגישה.',
+          'map תמיד מהיר יותר מ-list comprehension כי הוא מחושב במקביל על כל האיברים ביחד.',
+          'list comprehension אינו יכול לכלול תנאי if, בעוד map תומך בסינון אוטומטי של איברים.',
+          'map ו-list comprehension זהים לחלוטין בתוצאה ובסוג הנתון שהם מחזירים.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q12 - Tricky: recursion with mutable default (list accumulator)
+    questions: [
+      {
+        id: 72,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+def collect(n, acc=[]):
+    if n == 0:
+        return acc
+    acc.append(n)
+    return collect(n - 1, acc)
+
+print(collect(3))
+print(collect(2))
+\`\`\``,
+        answers: [
+          'שורה 7 תדפיס [3, 2, 1] ושורה 8 תדפיס [3, 2, 1, 2, 1] כי acc הוא mutable default ומצטבר בין קריאות.',
+          'שורה 7 תדפיס [3, 2, 1] ושורה 8 תדפיס [2, 1] כי כל קריאה לפונקציה מתחילה עם רשימה ריקה.',
+          'שורה 7 תדפיס [] ושורה 8 תדפיס [] כי הרשימה acc מאופסת בכל קריאה רקורסיבית חדשה.',
+          'תתקבל שגיאת זמן ריצה כי לא ניתן להשתמש ברשימה כברירת מחדל בפונקציה רקורסיבית.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q13 - Sorting list of dicts
+    questions: [
+      {
+        id: 73,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+students = [
+    {"name": "Alice", "grade": 88},
+    {"name": "Bob",   "grade": 72},
+    {"name": "Carol", "grade": 95},
+]
+students.sort(key=lambda s: s["grade"], reverse=True)
+print(students[0]["name"])
+\`\`\``,
+        answers: [
+          'יודפס Carol כי המיון הוא לפי ציון בסדר יורד ו-Carol היא בעלת הציון הגבוה ביותר.',
+          'יודפס Alice כי sort ממיין לפי סדר אלפבתי של שם כאשר מועבר מפתח מסוג מחרוזת.',
+          'יודפס Bob כי reverse=True הופך את כיוון ה-key ומחזיר את הציון הנמוך ביותר ראשון.',
+          'תתקבל שגיאת זמן ריצה כי sort אינו מאפשר lambda שניגשת למפתח מילון כ-key.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q14 - Tricky: filter returns iterator, consumed once
+    questions: [
+      {
+        id: 74,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+nums = [1, 2, 3, 4, 5, 6]
+evens = filter(lambda x: x % 2 == 0, nums)
+print(list(evens))
+print(list(evens))
+\`\`\``,
+        answers: [
+          'שורה 3 תדפיס [2, 4, 6] ושורה 4 תדפיס [] כי ה-iterator של filter נצרך בקריאה הראשונה.',
+          'שורה 3 תדפיס [2, 4, 6] ושורה 4 תדפיס [2, 4, 6] כי list() יוצר עותק חדש של הסינון.',
+          'שורה 3 תדפיס [] ושורה 4 תדפיס [2, 4, 6] כי filter מתחיל לפעול רק בקריאה השנייה.',
+          'תתקבל שגיאת זמן ריצה בשורה 4 כי לא ניתן לקרוא list() פעמיים על אותו filter object.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q15 - Recursion: Fibonacci tracing
+    questions: [
+      {
+        id: 75,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+def fib(n):
+    if n <= 1:
+        return n
+    return fib(n - 1) + fib(n - 2)
+
+print(fib(6))
+\`\`\``,
+        answers: [
+          'יודפס 8 כי סדרת פיבונאצ׳י היא 0,1,1,2,3,5,8 ו-fib(6) הוא האיבר השביעי בסדרה.',
+          'יודפס 6 כי הפונקציה מחזירה את n כאשר n <= 1 ולכן הערך הסופי הוא תמיד n.',
+          'יודפס 12 כי הפונקציה מחשבת 2 בחזקת n וכך fib(6) שווה ל-2 כפול fib(5).',
+          'הקוד יקרוס בשגיאת עומק רקורסיה מכיוון ש-fib קוראת לעצמה פעמיים בכל שלב.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q16 - Two-key sort with tuple
+    questions: [
+      {
+        id: 76,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+people = [("Alice", 30), ("Bob", 25), ("Carol", 30), ("Dan", 25)]
+result = sorted(people, key=lambda p: (p[1], p[0]))
+print(result[0], result[-1])
+\`\`\``,
+        answers: [
+          "יודפס ('Bob', 25) ('Carol', 30) כי המיון הוא קודם לפי גיל עולה ואחר כך לפי שם עולה.",
+          "יודפס ('Alice', 30) ('Dan', 25) כי sorted ממיין לפי הפרמטר האחרון בטאפל ה-key.",
+          "יודפס ('Dan', 25) ('Alice', 30) כי sorted עם tuple key ממיין לפי האיבר האחרון בלבד.",
+          'תתקבל שגיאת זמן ריצה כי לא ניתן להחזיר טאפל מתוך lambda שמשמשת כ-key ל-sorted.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q17 - Tricky: map on string
+    questions: [
+      {
+        id: 77,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+word = "hello"
+result = list(map(str.upper, word))
+print(result)
+print(type(result[0]))
+\`\`\``,
+        answers: [
+          "יודפס ['H','E','L','L','O'] ו-<class 'str'> כי map מפעיל str.upper על כל תו במחרוזת.",
+          "יודפס 'HELLO' ו-<class 'str'> כי map מחבר את כל התווים חזרה למחרוזת אחת.",
+          'תתקבל שגיאת זמן ריצה כי map אינו יכול לקבל מחרוזת כ-iterable, רק רשימה.',
+          "יודפס ['hello'] ו-<class 'str'> כי str.upper מועברת כהפניה ולא מופעלת על האיברים.",
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q18 - Recursion: missing base case
+    questions: [
+      {
+        id: 78,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+def countdown(n):
+    print(n)
+    return countdown(n - 1)
+
+countdown(3)
+\`\`\``,
+        answers: [
+          'הקוד יקרוס לאחר הדפסת מספרים יורדים כי חסר תנאי בסיס וה-stack יתמלא.',
+          'יודפס 3, 2, 1 ואז הפונקציה עוצרת מכיוון שפייתון מזהה שn מגיע ל-0 ומפסיק.',
+          'יודפס 3 בלבד כי return countdown(n-1) מפסיק את הרקורסיה אחרי הקריאה הראשונה.',
+          'הקוד ידפיס מספרים יורדים ללא הגבלה כי Python אינו מגביל את עומק הרקורסיה.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q19 - reduce to find max
+    questions: [
+      {
+        id: 79,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+from functools import reduce
+
+nums = [4, 7, 2, 9, 1, 5]
+result = reduce(lambda a, b: a if a > b else b, nums)
+print(result)
+\`\`\``,
+        answers: [
+          'יודפס 9 כי reduce משווה זוגות ברצף ושומר תמיד את הגדול ביניהם כ-accumulator.',
+          'יודפס 4 כי reduce מחזיר תמיד את האיבר הראשון ברשימה כ-accumulator ההתחלתי.',
+          'יודפס 28 כי reduce מחבר ברירת מחדל את כל האיברים ולא משתמש ב-lambda שניתנה.',
+          'תתקבל שגיאת זמן ריצה כי lambda עם ביטוי תנאי if/else אינה תקינה כארגומנט ל-reduce.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
+  {
+    // Q20 - Tricky: list comprehension with nested loop vs map+filter
+    questions: [
+      {
+        id: 80,
+        question: `בחרו את הטענה המדויקת ביותר בקטע הקוד הבא
+\`\`\`python
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flat = [x for row in matrix for x in row if x % 3 == 0]
+print(flat)
+\`\`\``,
+        answers: [
+          'יודפס [3, 6, 9] כי ה-comprehension מרדד את המטריצה ושומר רק כפולות של 3.',
+          'יודפס [[3], [6], [9]] כי כל כפולת 3 נשמרת כרשימה נפרדת בתוך ה-comprehension.',
+          'יודפס [1, 2, 3, 4, 5, 6, 7, 8, 9] כי תנאי ה-if מתעלם ממנו בתוך לולאות מקוננות.',
+          'תתקבל שגיאת תחביר כי לא ניתן לכלול שתי לולאות for בתוך list comprehension אחד.',
+        ],
+        correctAnswer: 0,
+      },
+    ],
+  },
 ];
